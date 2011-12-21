@@ -1,0 +1,107 @@
+Flow report for multiplier
+Wed Dec 21 10:14:58 2011
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------+
+; Flow Summary                                                        ;
++--------------------------+------------------------------------------+
+; Flow Status              ; Successful - Wed Dec 21 10:14:58 2011    ;
+; Quartus II Version       ; 8.0 Build 215 05/29/2008 SJ Full Version ;
+; Revision Name            ; multiplier                               ;
+; Top-level Entity Name    ; multiplier                               ;
+; Family                   ; Cyclone                                  ;
+; Device                   ; EP1C20F400C7                             ;
+; Timing Models            ; Final                                    ;
+; Met timing requirements  ; No                                       ;
+; Total logic elements     ; 62 / 20,060 ( < 1 % )                    ;
+; Total pins               ; 39 / 301 ( 13 % )                        ;
+; Total virtual pins       ; 0                                        ;
+; Total memory bits        ; 0 / 294,912 ( 0 % )                      ;
+; DSP block 9-bit elements ; N/A until Partition Merge                ;
+; Total PLLs               ; 0 / 2 ( 0 % )                            ;
+; Total DLLs               ; N/A until Partition Merge                ;
++--------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/21/2011 10:14:30 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; multiplier          ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                              ;
++------------------------------------+-------------------------------+---------------+-------------+------------+
+; Assignment Name                    ; Value                         ; Default Value ; Entity Name ; Section Id ;
++------------------------------------+-------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID              ; 8796758409933.132446247003908 ; --            ; --          ; --         ;
+; IP_TOOL_NAME                       ; LPM_ADD_SUB                   ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                    ; 8.0                           ; --            ; --          ; --         ;
+; MISC_FILE                          ; lpm_add_sub0.bsf              ; --            ; --          ; --         ;
+; MISC_FILE                          ; lpm_add_sub0.cmp              ; --            ; --          ; --         ;
+; PARTITION_COLOR                    ; 14622752                      ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                        ; --            ; --          ; Top        ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                           ; --            ; --          ; eda_palace ;
++------------------------------------+-------------------------------+---------------+-------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:09     ; 1.0                     ; 180 MB              ; 00:00:06                           ;
+; Fitter                  ; 00:00:08     ; 1.0                     ; 186 MB              ; 00:00:06                           ;
+; Assembler               ; 00:00:05     ; 1.0                     ; 173 MB              ; 00:00:03                           ;
+; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 108 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:25     ; --                      ; --                  ; 00:00:16                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off multiplier -c multiplier
+quartus_fit --read_settings_files=off --write_settings_files=off multiplier -c multiplier
+quartus_asm --read_settings_files=off --write_settings_files=off multiplier -c multiplier
+quartus_tan --read_settings_files=off --write_settings_files=off multiplier -c multiplier --timing_analysis_only
+
+
+
