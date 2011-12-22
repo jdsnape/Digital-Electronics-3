@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.421 ns
-From           : b[3]
-To             : np_register:inst16|inst2
+Actual Time    : 11.077 ns
+From           : b[1]
+To             : np_register:inst16|inst3
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 18.910 ns
-From           : np_register:inst16|inst3
-To             : p_input[6]
+Actual Time    : 18.569 ns
+From           : np_register:inst16|inst7
+To             : p_input[5]
 From Clock     : clock
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 19.749 ns
-From           : b[3]
-To             : p_input[6]
+Actual Time    : 22.992 ns
+From           : b[1]
+To             : p_input[7]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,8 +35,8 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 2.872 ns
-From           : b[1]
+Actual Time    : 0.784 ns
+From           : a[1]
 To             : np_register:inst16|inst6
 From Clock     : --
 To Clock       : clock
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 218.25 MHz ( period = 4.582 ns )
-From           : np_register:inst16|inst3
-To             : np_register:inst16|inst2
+Actual Time    : 145.79 MHz ( period = 6.859 ns )
+From           : np_register:inst16|inst7
+To             : np_register:inst16|inst3
 From Clock     : clock
 To Clock       : clock
 Failed Paths   : 0
@@ -57,10 +57,10 @@ Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
 From           : state_machine:inst1|inst1
-To             : np_register:inst16|inst2
+To             : np_register:inst16|inst
 From Clock     : clock
 To Clock       : clock
-Failed Paths   : 20
+Failed Paths   : 21
 
 Type           : Total number of failed paths
 Slack          : 
@@ -70,7 +70,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 20
+Failed Paths   : 21
 
 --------------------------------------------------------------------------------------
 

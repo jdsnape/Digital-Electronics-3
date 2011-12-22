@@ -1,9 +1,14 @@
 |multiplier
 complete <= state_machine:inst1.complete
+Enable <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+start => inst28~0.IN1
+clock => inst28.CLK
 clock => state_machine:inst1.clock
-clock => inst20.IN0
+clock => inst32.IN1
 Las <= state_machine:inst1.Las
 Li <= state_machine:inst1.Li
+sm_start <= state_machine:inst1.start
+p_load <= inst43.DB_MAX_OUTPUT_PORT_TYPE
 data[8] <= np_register:inst16.data[8]
 data[7] <= np_register:inst16.data[7]
 data[6] <= np_register:inst16.data[6]
@@ -46,8 +51,11 @@ Li <= inst65.DB_MAX_OUTPUT_PORT_TYPE
 clock => inst1.CLK
 clock => inst2.CLK
 clock => inst.CLK
-complete <= inst66.DB_MAX_OUTPUT_PORT_TYPE
-Las <= inst64.DB_MAX_OUTPUT_PORT_TYPE
+Enable => inst~1.IN0
+Enable => inst~0.IN1
+Las <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+complete <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+start <= inst66.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplier|np_register:inst16
@@ -129,25 +137,25 @@ select => inst8.IN1
 
 
 |multiplier|bus_combine:inst19
-data_out[8] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
-data_out[7] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
-data_out[6] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
-data_out[5] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
-data_out[4] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-data_out[0] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-old_data_in[4] => inst6.IN0
-old_data_in[3] => inst4.IN0
-old_data_in[2] => inst2.IN0
-old_data_in[1] => inst.IN0
+data_out[8] <= new_data_in[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= new_data_in[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= new_data_in[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= new_data_in[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= new_data_in[3].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= old_data_in[4].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= old_data_in[3].DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= old_data_in[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[0] <= old_data_in[1].DB_MAX_OUTPUT_PORT_TYPE
+old_data_in[4] => data_out[3].DATAIN
+old_data_in[3] => data_out[2].DATAIN
+old_data_in[2] => data_out[1].DATAIN
+old_data_in[1] => data_out[0].DATAIN
 old_data_in[0] => ~NO_FANOUT~
-new_data_in[3] => inst8.IN0
-new_data_in[2] => inst10.IN0
-new_data_in[1] => inst12.IN0
-new_data_in[0] => inst14.IN0
-new_data_in[0] => inst16.IN0
+new_data_in[3] => data_out[4].DATAIN
+new_data_in[2] => data_out[5].DATAIN
+new_data_in[1] => data_out[6].DATAIN
+new_data_in[0] => data_out[7].DATAIN
+new_data_in[0] => data_out[8].DATAIN
 
 
 |multiplier|add_subt_select:inst21

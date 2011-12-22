@@ -976,26 +976,6 @@ AUTO
 
 # end
 # entity
-multiplier
-# storage
-db|multiplier.(0).cnf
-db|multiplier.(0).cnf
-# case_insensitive
-# source_file
-multiplier.bdf
-2d614b32ae553e541690bed4e6969ee0
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 state_machine
 # storage
 db|multiplier.(1).cnf
@@ -1003,7 +983,7 @@ db|multiplier.(1).cnf
 # case_insensitive
 # source_file
 state_machine.bdf
-ef37e4a665b914e54a7acf084a2bd60
+1c78689b237cfac99fc47b419ded2c
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -1023,7 +1003,7 @@ db|multiplier.(22).cnf
 # case_insensitive
 # source_file
 bus_combine.bdf
-f9ae7e7a3f65f30aefea0fab199d37
+436ce9618338f9bb81e0c429ee14f5a2
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -1031,6 +1011,26 @@ AUTO
 }
 # hierarchies {
 bus_combine:inst19
+}
+# macro_sequence
+
+# end
+# entity
+multiplier
+# storage
+db|multiplier.(0).cnf
+db|multiplier.(0).cnf
+# case_insensitive
+# source_file
+multiplier.bdf
+27e8c9107c584fe1996cf2c253d99636
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
 }
 # macro_sequence
 

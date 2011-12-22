@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Dec 21 10:14:47 2011
+Fitter Status : Successful - Thu Dec 22 10:09:43 2011
 Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
 Revision Name : multiplier
 Top-level Entity Name : multiplier
 Family : Cyclone
 Device : EP1C20F400C7
 Timing Models : Final
-Total logic elements : 62 / 20,060 ( < 1 % )
-Total pins : 39 / 301 ( 13 % )
+Total logic elements : 60 / 20,060 ( < 1 % )
+Total pins : 43 / 301 ( 14 % )
 Total virtual pins : 0
 Total memory bits : 0 / 294,912 ( 0 % )
 Total PLLs : 0 / 2 ( 0 % )
