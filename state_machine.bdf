@@ -22,7 +22,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.3"))
 (pin
 	(input)
-	(rect -136 256 32 272)
+	(rect -104 256 64 272)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "clock" (rect 5 0 30 12)(font "Arial" ))
 	(pt 168 8)
@@ -38,7 +38,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -104 40 64 56)
+	(rect -104 120 64 136)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "Enable" (rect 5 0 38 12)(font "Arial" ))
 	(pt 168 8)
@@ -661,10 +661,6 @@ applicable agreement for further details.
 	(pt 408 264)
 )
 (connector
-	(pt 408 264)
-	(pt 600 264)
-)
-(connector
 	(pt 296 176)
 	(pt 248 176)
 )
@@ -683,14 +679,6 @@ applicable agreement for further details.
 (connector
 	(pt 136 176)
 	(pt 136 264)
-)
-(connector
-	(pt 32 264)
-	(pt 136 264)
-)
-(connector
-	(pt 136 264)
-	(pt 248 264)
 )
 (connector
 	(pt 368 24)
@@ -1008,23 +996,30 @@ applicable agreement for further details.
 	(pt 1056 64)
 )
 (connector
+	(pt 144 128)
+	(pt 64 128)
+)
+(connector
+	(pt 144 128)
+	(pt 144 160)
+)
+(connector
 	(pt 144 160)
 	(pt 144 192)
 )
 (connector
-	(pt 64 48)
-	(pt 144 48)
+	(pt 64 264)
+	(pt 136 264)
 )
 (connector
-	(pt 144 48)
-	(pt 144 160)
+	(pt 136 264)
+	(pt 248 264)
 )
 (junction (pt 272 160))
 (junction (pt 272 88))
 (junction (pt 456 160))
 (junction (pt 368 104))
 (junction (pt 144 160))
-(junction (pt 408 264))
 (junction (pt 248 264))
 (junction (pt 136 264))
 (junction (pt 368 24))
