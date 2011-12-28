@@ -1,0 +1,408 @@
+Classic Timing Analyzer report for top_level
+Wed Dec 28 10:04:43 2011
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clock'
+  6. Clock Hold: 'clock'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                              ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------+---------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                           ; To                              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------+---------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 4.932 ns                         ; instruction[8]                 ; instruction_decode:inst1|inst24 ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 17.960 ns                        ; 4bit_register:inst5|inst3      ; a_contents[0]                   ; clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A                                      ; None          ; 14.817 ns                        ; instruction[7]                 ; address[1]                      ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 9.927 ns                         ; instruction[5]                 ; 4bit_register:inst5|inst2       ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A                                      ; None          ; 153.47 MHz ( period = 6.516 ns ) ; instruction_decode:inst1|inst1 ; instruction_decode:inst1|inst24 ; clock      ; clock    ; 0            ;
+; Clock Hold: 'clock'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; instruction_decode:inst1|inst  ; 4bit_register:inst5|inst2       ; clock      ; clock    ; 6            ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                ;                                 ;            ;          ; 6            ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------+---------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP1C20F400C7       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; instruction[5]  ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; instruction[4]  ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                                                   ;
++-------+------------------------------------------------+---------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                            ; To                              ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 153.47 MHz ( period = 6.516 ns )               ; instruction_decode:inst1|inst1  ; instruction_decode:inst1|inst24 ; clock      ; clock    ; None                        ; None                      ; 0.900 ns                ;
+; N/A   ; 156.37 MHz ( period = 6.395 ns )               ; instruction_decode:inst1|inst   ; instruction_decode:inst1|inst24 ; clock      ; clock    ; None                        ; None                      ; 0.779 ns                ;
+; N/A   ; 315.26 MHz ( period = 3.172 ns )               ; instruction_decode:inst1|inst1  ; 4bit_register:inst5|inst        ; clock      ; clock    ; None                        ; None                      ; 7.622 ns                ;
+; N/A   ; Restricted to 320.10 MHz ( period = 3.124 ns ) ; instruction_decode:inst1|inst   ; 4bit_register:inst5|inst        ; clock      ; clock    ; None                        ; None                      ; 7.438 ns                ;
+; N/A   ; Restricted to 320.10 MHz ( period = 3.124 ns ) ; instruction_decode:inst1|inst1  ; 4bit_register:inst5|inst1       ; clock      ; clock    ; None                        ; None                      ; 7.346 ns                ;
+; N/A   ; Restricted to 320.10 MHz ( period = 3.124 ns ) ; instruction_decode:inst1|inst   ; 4bit_register:inst5|inst1       ; clock      ; clock    ; None                        ; None                      ; 7.162 ns                ;
+; N/A   ; Restricted to 320.10 MHz ( period = 3.124 ns ) ; instruction_decode:inst1|inst   ; instruction_decode:inst1|inst   ; clock      ; clock    ; None                        ; None                      ; 1.155 ns                ;
+; N/A   ; Restricted to 320.10 MHz ( period = 3.124 ns ) ; instruction_decode:inst1|inst   ; instruction_decode:inst1|inst1  ; clock      ; clock    ; None                        ; None                      ; 0.774 ns                ;
+; N/A   ; Restricted to 320.10 MHz ( period = 3.124 ns ) ; instruction_decode:inst1|inst1  ; 4bit_register:inst5|inst3       ; clock      ; clock    ; None                        ; None                      ; 6.399 ns                ;
+; N/A   ; Restricted to 320.10 MHz ( period = 3.124 ns ) ; instruction_decode:inst1|inst1  ; instruction_decode:inst1|inst1  ; clock      ; clock    ; None                        ; None                      ; 0.542 ns                ;
+; N/A   ; Restricted to 320.10 MHz ( period = 3.124 ns ) ; instruction_decode:inst1|inst   ; 4bit_register:inst5|inst3       ; clock      ; clock    ; None                        ; None                      ; 6.215 ns                ;
+; N/A   ; Restricted to 320.10 MHz ( period = 3.124 ns ) ; instruction_decode:inst1|inst24 ; instruction_decode:inst1|inst24 ; clock      ; clock    ; None                        ; None                      ; 0.990 ns                ;
++-------+------------------------------------------------+---------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'clock'                                                                                                                                                                                                     ;
++------------------------------------------+--------------------------------+--------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                           ; To                             ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+--------------------------------+--------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; instruction_decode:inst1|inst  ; 4bit_register:inst5|inst2      ; clock      ; clock    ; None                       ; None                       ; 3.275 ns                 ;
+; Not operational: Clock Skew > Data Delay ; instruction_decode:inst1|inst1 ; 4bit_register:inst5|inst2      ; clock      ; clock    ; None                       ; None                       ; 3.459 ns                 ;
+; Not operational: Clock Skew > Data Delay ; instruction_decode:inst1|inst  ; 4bit_register:inst5|inst3      ; clock      ; clock    ; None                       ; None                       ; 6.215 ns                 ;
+; Not operational: Clock Skew > Data Delay ; instruction_decode:inst1|inst1 ; 4bit_register:inst5|inst3      ; clock      ; clock    ; None                       ; None                       ; 6.399 ns                 ;
+; Not operational: Clock Skew > Data Delay ; instruction_decode:inst1|inst1 ; instruction_decode:inst1|inst1 ; clock      ; clock    ; None                       ; None                       ; 0.542 ns                 ;
+; Not operational: Clock Skew > Data Delay ; instruction_decode:inst1|inst  ; instruction_decode:inst1|inst1 ; clock      ; clock    ; None                       ; None                       ; 0.774 ns                 ;
++------------------------------------------+--------------------------------+--------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                         ;
++-------+--------------+------------+----------------------+---------------------------------+----------------+
+; Slack ; Required tsu ; Actual tsu ; From                 ; To                              ; To Clock       ;
++-------+--------------+------------+----------------------+---------------------------------+----------------+
+; N/A   ; None         ; 4.932 ns   ; instruction[8]       ; instruction_decode:inst1|inst24 ; clock          ;
+; N/A   ; None         ; 4.641 ns   ; instruction[6]       ; instruction_decode:inst1|inst24 ; clock          ;
+; N/A   ; None         ; 4.453 ns   ; instruction[7]       ; instruction_decode:inst1|inst24 ; clock          ;
+; N/A   ; None         ; 2.015 ns   ; instruction[4]       ; 4bit_register:inst5|inst        ; instruction[5] ;
+; N/A   ; None         ; 1.819 ns   ; instruction[4]       ; 4bit_register:inst5|inst        ; instruction[4] ;
+; N/A   ; None         ; 1.819 ns   ; instruction[5]       ; 4bit_register:inst5|inst        ; instruction[5] ;
+; N/A   ; None         ; 1.739 ns   ; instruction[4]       ; 4bit_register:inst5|inst1       ; instruction[5] ;
+; N/A   ; None         ; 1.623 ns   ; instruction[5]       ; 4bit_register:inst5|inst        ; instruction[4] ;
+; N/A   ; None         ; 1.543 ns   ; instruction[4]       ; 4bit_register:inst5|inst1       ; instruction[4] ;
+; N/A   ; None         ; 1.543 ns   ; instruction[5]       ; 4bit_register:inst5|inst1       ; instruction[5] ;
+; N/A   ; None         ; 1.347 ns   ; instruction[5]       ; 4bit_register:inst5|inst1       ; instruction[4] ;
+; N/A   ; None         ; 0.792 ns   ; instruction[4]       ; 4bit_register:inst5|inst3       ; instruction[5] ;
+; N/A   ; None         ; 0.596 ns   ; instruction[4]       ; 4bit_register:inst5|inst3       ; instruction[4] ;
+; N/A   ; None         ; 0.596 ns   ; instruction[5]       ; 4bit_register:inst5|inst3       ; instruction[5] ;
+; N/A   ; None         ; 0.400 ns   ; instruction[5]       ; 4bit_register:inst5|inst3       ; instruction[4] ;
+; N/A   ; None         ; -0.373 ns  ; decode               ; instruction_decode:inst1|inst   ; clock          ;
+; N/A   ; None         ; -0.881 ns  ; fake_memory_input[3] ; 4bit_register:inst5|inst        ; instruction[5] ;
+; N/A   ; None         ; -0.881 ns  ; fake_memory_input[0] ; 4bit_register:inst5|inst3       ; instruction[5] ;
+; N/A   ; None         ; -1.016 ns  ; fake_memory_input[2] ; 4bit_register:inst5|inst1       ; instruction[5] ;
+; N/A   ; None         ; -1.077 ns  ; fake_memory_input[3] ; 4bit_register:inst5|inst        ; instruction[4] ;
+; N/A   ; None         ; -1.077 ns  ; fake_memory_input[0] ; 4bit_register:inst5|inst3       ; instruction[4] ;
+; N/A   ; None         ; -1.212 ns  ; fake_memory_input[2] ; 4bit_register:inst5|inst1       ; instruction[4] ;
+; N/A   ; None         ; -1.758 ns  ; fake_memory_input[1] ; 4bit_register:inst5|inst2       ; instruction[5] ;
+; N/A   ; None         ; -1.954 ns  ; fake_memory_input[1] ; 4bit_register:inst5|inst2       ; instruction[4] ;
+; N/A   ; None         ; -2.234 ns  ; instruction[4]       ; 4bit_register:inst5|inst2       ; instruction[5] ;
+; N/A   ; None         ; -2.430 ns  ; instruction[4]       ; 4bit_register:inst5|inst2       ; instruction[4] ;
+; N/A   ; None         ; -2.430 ns  ; instruction[5]       ; 4bit_register:inst5|inst2       ; instruction[5] ;
+; N/A   ; None         ; -2.626 ns  ; instruction[5]       ; 4bit_register:inst5|inst2       ; instruction[4] ;
+; N/A   ; None         ; -4.083 ns  ; instruction[4]       ; 4bit_register:inst5|inst        ; clock          ;
+; N/A   ; None         ; -4.279 ns  ; instruction[5]       ; 4bit_register:inst5|inst        ; clock          ;
+; N/A   ; None         ; -4.359 ns  ; instruction[4]       ; 4bit_register:inst5|inst1       ; clock          ;
+; N/A   ; None         ; -4.555 ns  ; instruction[5]       ; 4bit_register:inst5|inst1       ; clock          ;
+; N/A   ; None         ; -5.306 ns  ; instruction[4]       ; 4bit_register:inst5|inst3       ; clock          ;
+; N/A   ; None         ; -5.502 ns  ; instruction[5]       ; 4bit_register:inst5|inst3       ; clock          ;
+; N/A   ; None         ; -6.979 ns  ; fake_memory_input[3] ; 4bit_register:inst5|inst        ; clock          ;
+; N/A   ; None         ; -6.979 ns  ; fake_memory_input[0] ; 4bit_register:inst5|inst3       ; clock          ;
+; N/A   ; None         ; -7.114 ns  ; fake_memory_input[2] ; 4bit_register:inst5|inst1       ; clock          ;
+; N/A   ; None         ; -7.856 ns  ; fake_memory_input[1] ; 4bit_register:inst5|inst2       ; clock          ;
+; N/A   ; None         ; -8.332 ns  ; instruction[4]       ; 4bit_register:inst5|inst2       ; clock          ;
+; N/A   ; None         ; -8.528 ns  ; instruction[5]       ; 4bit_register:inst5|inst2       ; clock          ;
++-------+--------------+------------+----------------------+---------------------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; tco                                                                                                    ;
++-------+--------------+------------+--------------------------------+------------------+----------------+
+; Slack ; Required tco ; Actual tco ; From                           ; To               ; From Clock     ;
++-------+--------------+------------+--------------------------------+------------------+----------------+
+; N/A   ; None         ; 17.960 ns  ; 4bit_register:inst5|inst       ; a_contents[3]    ; clock          ;
+; N/A   ; None         ; 17.960 ns  ; 4bit_register:inst5|inst1      ; a_contents[2]    ; clock          ;
+; N/A   ; None         ; 17.960 ns  ; 4bit_register:inst5|inst3      ; a_contents[0]    ; clock          ;
+; N/A   ; None         ; 17.929 ns  ; instruction_decode:inst1|inst1 ; a_enable         ; clock          ;
+; N/A   ; None         ; 17.924 ns  ; 4bit_register:inst5|inst2      ; a_contents[1]    ; clock          ;
+; N/A   ; None         ; 17.745 ns  ; instruction_decode:inst1|inst  ; a_enable         ; clock          ;
+; N/A   ; None         ; 14.510 ns  ; instruction_decode:inst1|inst  ; r0_enable        ; clock          ;
+; N/A   ; None         ; 14.274 ns  ; instruction_decode:inst1|inst1 ; r0_enable        ; clock          ;
+; N/A   ; None         ; 14.111 ns  ; instruction_decode:inst1|inst  ; r1_enable        ; clock          ;
+; N/A   ; None         ; 13.868 ns  ; instruction_decode:inst1|inst1 ; r1_enable        ; clock          ;
+; N/A   ; None         ; 13.165 ns  ; instruction_decode:inst1|inst  ; data_mem_enable  ; clock          ;
+; N/A   ; None         ; 12.897 ns  ; instruction_decode:inst1|inst1 ; data_mem_enable  ; clock          ;
+; N/A   ; None         ; 12.717 ns  ; instruction_decode:inst1|inst1 ; state_machine[1] ; clock          ;
+; N/A   ; None         ; 12.707 ns  ; instruction_decode:inst1|inst  ; state_machine[0] ; clock          ;
+; N/A   ; None         ; 10.705 ns  ; 4bit_register:inst5|inst       ; a_contents[3]    ; instruction[4] ;
+; N/A   ; None         ; 10.705 ns  ; 4bit_register:inst5|inst1      ; a_contents[2]    ; instruction[4] ;
+; N/A   ; None         ; 10.705 ns  ; 4bit_register:inst5|inst3      ; a_contents[0]    ; instruction[4] ;
+; N/A   ; None         ; 10.669 ns  ; 4bit_register:inst5|inst2      ; a_contents[1]    ; instruction[4] ;
+; N/A   ; None         ; 10.509 ns  ; 4bit_register:inst5|inst       ; a_contents[3]    ; instruction[5] ;
+; N/A   ; None         ; 10.509 ns  ; 4bit_register:inst5|inst1      ; a_contents[2]    ; instruction[5] ;
+; N/A   ; None         ; 10.509 ns  ; 4bit_register:inst5|inst3      ; a_contents[0]    ; instruction[5] ;
+; N/A   ; None         ; 10.473 ns  ; 4bit_register:inst5|inst2      ; a_contents[1]    ; instruction[5] ;
++-------+--------------+------------+--------------------------------+------------------+----------------+
+
+
++---------------------------------------------------------------------------+
+; tpd                                                                       ;
++-------+-------------------+-----------------+----------------+------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From           ; To         ;
++-------+-------------------+-----------------+----------------+------------+
+; N/A   ; None              ; 14.817 ns       ; instruction[7] ; address[1] ;
+; N/A   ; None              ; 14.595 ns       ; instruction[8] ; address[1] ;
+; N/A   ; None              ; 14.580 ns       ; instruction[6] ; address[1] ;
+; N/A   ; None              ; 13.934 ns       ; instruction[3] ; address[1] ;
+; N/A   ; None              ; 11.804 ns       ; instruction[2] ; address[0] ;
+; N/A   ; None              ; 11.299 ns       ; instruction[8] ; address[0] ;
+; N/A   ; None              ; 11.070 ns       ; instruction[8] ; address[2] ;
+; N/A   ; None              ; 11.059 ns       ; instruction[4] ; r0_enable  ;
+; N/A   ; None              ; 11.013 ns       ; instruction[6] ; address[0] ;
+; N/A   ; None              ; 10.822 ns       ; instruction[7] ; address[0] ;
+; N/A   ; None              ; 10.778 ns       ; instruction[5] ; r0_enable  ;
+; N/A   ; None              ; 10.777 ns       ; instruction[6] ; address[2] ;
+; N/A   ; None              ; 10.674 ns       ; instruction[4] ; a_enable   ;
+; N/A   ; None              ; 10.652 ns       ; instruction[4] ; r1_enable  ;
+; N/A   ; None              ; 10.592 ns       ; instruction[7] ; address[2] ;
+; N/A   ; None              ; 10.478 ns       ; instruction[5] ; a_enable   ;
+; N/A   ; None              ; 10.376 ns       ; instruction[5] ; r1_enable  ;
+; N/A   ; None              ; 9.987 ns        ; instruction[4] ; address[2] ;
++-------+-------------------+-----------------+----------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                ;
++---------------+-------------+-----------+----------------------+---------------------------------+----------------+
+; Minimum Slack ; Required th ; Actual th ; From                 ; To                              ; To Clock       ;
++---------------+-------------+-----------+----------------------+---------------------------------+----------------+
+; N/A           ; None        ; 9.927 ns  ; instruction[5]       ; 4bit_register:inst5|inst2       ; clock          ;
+; N/A           ; None        ; 9.731 ns  ; instruction[4]       ; 4bit_register:inst5|inst2       ; clock          ;
+; N/A           ; None        ; 9.255 ns  ; fake_memory_input[1] ; 4bit_register:inst5|inst2       ; clock          ;
+; N/A           ; None        ; 8.513 ns  ; fake_memory_input[2] ; 4bit_register:inst5|inst1       ; clock          ;
+; N/A           ; None        ; 8.378 ns  ; fake_memory_input[3] ; 4bit_register:inst5|inst        ; clock          ;
+; N/A           ; None        ; 8.378 ns  ; fake_memory_input[0] ; 4bit_register:inst5|inst3       ; clock          ;
+; N/A           ; None        ; 6.901 ns  ; instruction[5]       ; 4bit_register:inst5|inst3       ; clock          ;
+; N/A           ; None        ; 6.705 ns  ; instruction[4]       ; 4bit_register:inst5|inst3       ; clock          ;
+; N/A           ; None        ; 5.954 ns  ; instruction[5]       ; 4bit_register:inst5|inst1       ; clock          ;
+; N/A           ; None        ; 5.758 ns  ; instruction[4]       ; 4bit_register:inst5|inst1       ; clock          ;
+; N/A           ; None        ; 5.678 ns  ; instruction[5]       ; 4bit_register:inst5|inst        ; clock          ;
+; N/A           ; None        ; 5.482 ns  ; instruction[4]       ; 4bit_register:inst5|inst        ; clock          ;
+; N/A           ; None        ; 2.672 ns  ; instruction[5]       ; 4bit_register:inst5|inst2       ; instruction[4] ;
+; N/A           ; None        ; 2.476 ns  ; instruction[4]       ; 4bit_register:inst5|inst2       ; instruction[4] ;
+; N/A           ; None        ; 2.476 ns  ; instruction[5]       ; 4bit_register:inst5|inst2       ; instruction[5] ;
+; N/A           ; None        ; 2.280 ns  ; instruction[4]       ; 4bit_register:inst5|inst2       ; instruction[5] ;
+; N/A           ; None        ; 2.000 ns  ; fake_memory_input[1] ; 4bit_register:inst5|inst2       ; instruction[4] ;
+; N/A           ; None        ; 1.804 ns  ; fake_memory_input[1] ; 4bit_register:inst5|inst2       ; instruction[5] ;
+; N/A           ; None        ; 1.588 ns  ; decode               ; instruction_decode:inst1|inst   ; clock          ;
+; N/A           ; None        ; 1.258 ns  ; fake_memory_input[2] ; 4bit_register:inst5|inst1       ; instruction[4] ;
+; N/A           ; None        ; 1.123 ns  ; fake_memory_input[3] ; 4bit_register:inst5|inst        ; instruction[4] ;
+; N/A           ; None        ; 1.123 ns  ; fake_memory_input[0] ; 4bit_register:inst5|inst3       ; instruction[4] ;
+; N/A           ; None        ; 1.062 ns  ; fake_memory_input[2] ; 4bit_register:inst5|inst1       ; instruction[5] ;
+; N/A           ; None        ; 0.927 ns  ; fake_memory_input[3] ; 4bit_register:inst5|inst        ; instruction[5] ;
+; N/A           ; None        ; 0.927 ns  ; fake_memory_input[0] ; 4bit_register:inst5|inst3       ; instruction[5] ;
+; N/A           ; None        ; -0.354 ns ; instruction[5]       ; 4bit_register:inst5|inst3       ; instruction[4] ;
+; N/A           ; None        ; -0.550 ns ; instruction[4]       ; 4bit_register:inst5|inst3       ; instruction[4] ;
+; N/A           ; None        ; -0.550 ns ; instruction[5]       ; 4bit_register:inst5|inst3       ; instruction[5] ;
+; N/A           ; None        ; -0.746 ns ; instruction[4]       ; 4bit_register:inst5|inst3       ; instruction[5] ;
+; N/A           ; None        ; -1.301 ns ; instruction[5]       ; 4bit_register:inst5|inst1       ; instruction[4] ;
+; N/A           ; None        ; -1.497 ns ; instruction[4]       ; 4bit_register:inst5|inst1       ; instruction[4] ;
+; N/A           ; None        ; -1.497 ns ; instruction[5]       ; 4bit_register:inst5|inst1       ; instruction[5] ;
+; N/A           ; None        ; -1.577 ns ; instruction[5]       ; 4bit_register:inst5|inst        ; instruction[4] ;
+; N/A           ; None        ; -1.693 ns ; instruction[4]       ; 4bit_register:inst5|inst1       ; instruction[5] ;
+; N/A           ; None        ; -1.773 ns ; instruction[4]       ; 4bit_register:inst5|inst        ; instruction[4] ;
+; N/A           ; None        ; -1.773 ns ; instruction[5]       ; 4bit_register:inst5|inst        ; instruction[5] ;
+; N/A           ; None        ; -1.969 ns ; instruction[4]       ; 4bit_register:inst5|inst        ; instruction[5] ;
+; N/A           ; None        ; -4.407 ns ; instruction[7]       ; instruction_decode:inst1|inst24 ; clock          ;
+; N/A           ; None        ; -4.595 ns ; instruction[6]       ; instruction_decode:inst1|inst24 ; clock          ;
+; N/A           ; None        ; -4.886 ns ; instruction[8]       ; instruction_decode:inst1|inst24 ; clock          ;
++---------------+-------------+-----------+----------------------+---------------------------------+----------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Wed Dec 28 10:04:40 2011
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off top_level -c top_level --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+    Info: Assuming node "instruction[5]" is an undefined clock
+    Info: Assuming node "instruction[4]" is an undefined clock
+Warning: Found 5 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "instruction_decode:inst1|inst20" as buffer
+    Info: Detected ripple clock "instruction_decode:inst1|inst24" as buffer
+    Info: Detected ripple clock "instruction_decode:inst1|inst1" as buffer
+    Info: Detected gated clock "instruction_decode:inst1|inst25" as buffer
+    Info: Detected ripple clock "instruction_decode:inst1|inst" as buffer
+Info: Clock "clock" has Internal fmax of 153.47 MHz between source register "instruction_decode:inst1|inst1" and destination register "instruction_decode:inst1|inst24" (period= 6.516 ns)
+    Info: + Longest register to register delay is 0.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X6_Y20_N8; Fanout = 7; REG Node = 'instruction_decode:inst1|inst1'
+        Info: 2: + IC(0.477 ns) + CELL(0.423 ns) = 0.900 ns; Loc. = LC_X6_Y20_N0; Fanout = 2; REG Node = 'instruction_decode:inst1|inst24'
+        Info: Total cell delay = 0.423 ns ( 47.00 % )
+        Info: Total interconnect delay = 0.477 ns ( 53.00 % )
+    Info: - Smallest clock skew is -5.385 ns
+        Info: + Shortest clock path from clock "clock" to destination register is 3.333 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_J7; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(1.405 ns) + CELL(0.629 ns) = 3.333 ns; Loc. = LC_X6_Y20_N0; Fanout = 2; REG Node = 'instruction_decode:inst1|inst24'
+            Info: Total cell delay = 1.928 ns ( 57.85 % )
+            Info: Total interconnect delay = 1.405 ns ( 42.15 % )
+        Info: - Longest clock path from clock "clock" to source register is 8.718 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_J7; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(1.405 ns) + CELL(0.827 ns) = 3.531 ns; Loc. = LC_X6_Y20_N0; Fanout = 2; REG Node = 'instruction_decode:inst1|inst24'
+            Info: 3: + IC(0.468 ns) + CELL(0.101 ns) = 4.100 ns; Loc. = LC_X6_Y20_N2; Fanout = 2; COMB Node = 'instruction_decode:inst1|inst25'
+            Info: 4: + IC(3.989 ns) + CELL(0.629 ns) = 8.718 ns; Loc. = LC_X6_Y20_N8; Fanout = 7; REG Node = 'instruction_decode:inst1|inst1'
+            Info: Total cell delay = 2.856 ns ( 32.76 % )
+            Info: Total interconnect delay = 5.862 ns ( 67.24 % )
+    Info: + Micro clock to output delay of source is 0.198 ns
+    Info: + Micro setup delay of destination is 0.033 ns
+Info: No valid register-to-register data paths exist for clock "instruction[5]"
+Info: No valid register-to-register data paths exist for clock "instruction[4]"
+Warning: Circuit may not operate. Detected 6 non-operational path(s) clocked by clock "clock" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "instruction_decode:inst1|inst" and destination pin or register "4bit_register:inst5|inst2" for clock "clock" (Hold time is 3.829 ns)
+    Info: + Largest clock skew is 7.289 ns
+        Info: + Longest clock path from clock "clock" to destination register is 14.838 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_J7; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(1.405 ns) + CELL(0.827 ns) = 3.531 ns; Loc. = LC_X6_Y20_N0; Fanout = 2; REG Node = 'instruction_decode:inst1|inst24'
+            Info: 3: + IC(0.468 ns) + CELL(0.101 ns) = 4.100 ns; Loc. = LC_X6_Y20_N2; Fanout = 2; COMB Node = 'instruction_decode:inst1|inst25'
+            Info: 4: + IC(3.989 ns) + CELL(0.827 ns) = 8.916 ns; Loc. = LC_X6_Y20_N8; Fanout = 7; REG Node = 'instruction_decode:inst1|inst1'
+            Info: 5: + IC(0.756 ns) + CELL(0.522 ns) = 10.194 ns; Loc. = LC_X6_Y20_N3; Fanout = 9; COMB Node = 'instruction_decode:inst1|inst20'
+            Info: 6: + IC(4.015 ns) + CELL(0.629 ns) = 14.838 ns; Loc. = LC_X1_Y27_N2; Fanout = 1; REG Node = '4bit_register:inst5|inst2'
+            Info: Total cell delay = 4.205 ns ( 28.34 % )
+            Info: Total interconnect delay = 10.633 ns ( 71.66 % )
+        Info: - Shortest clock path from clock "clock" to source register is 7.549 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_J7; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(1.374 ns) + CELL(0.258 ns) = 2.931 ns; Loc. = LC_X6_Y20_N2; Fanout = 2; COMB Node = 'instruction_decode:inst1|inst25'
+            Info: 3: + IC(3.989 ns) + CELL(0.629 ns) = 7.549 ns; Loc. = LC_X6_Y20_N6; Fanout = 8; REG Node = 'instruction_decode:inst1|inst'
+            Info: Total cell delay = 2.186 ns ( 28.96 % )
+            Info: Total interconnect delay = 5.363 ns ( 71.04 % )
+    Info: - Micro clock to output delay of source is 0.198 ns
+    Info: - Shortest register to register delay is 3.275 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X6_Y20_N6; Fanout = 8; REG Node = 'instruction_decode:inst1|inst'
+        Info: 2: + IC(0.704 ns) + CELL(0.390 ns) = 1.094 ns; Loc. = LC_X6_Y20_N3; Fanout = 9; COMB Node = 'instruction_decode:inst1|inst20'
+        Info: 3: + IC(1.758 ns) + CELL(0.423 ns) = 3.275 ns; Loc. = LC_X1_Y27_N2; Fanout = 1; REG Node = '4bit_register:inst5|inst2'
+        Info: Total cell delay = 0.813 ns ( 24.82 % )
+        Info: Total interconnect delay = 2.462 ns ( 75.18 % )
+    Info: + Micro hold delay of destination is 0.013 ns
+Info: tsu for register "instruction_decode:inst1|inst24" (data pin = "instruction[8]", clock pin = "clock") is 4.932 ns
+    Info: + Longest pin to register delay is 8.232 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.305 ns) = 1.305 ns; Loc. = PIN_D5; Fanout = 4; PIN Node = 'instruction[8]'
+        Info: 2: + IC(5.641 ns) + CELL(0.258 ns) = 7.204 ns; Loc. = LC_X6_Y20_N9; Fanout = 1; COMB Node = 'instruction_decode:inst1|inst35[2]~41'
+        Info: 3: + IC(0.375 ns) + CELL(0.653 ns) = 8.232 ns; Loc. = LC_X6_Y20_N0; Fanout = 2; REG Node = 'instruction_decode:inst1|inst24'
+        Info: Total cell delay = 2.216 ns ( 26.92 % )
+        Info: Total interconnect delay = 6.016 ns ( 73.08 % )
+    Info: + Micro setup delay of destination is 0.033 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 3.333 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_J7; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(1.405 ns) + CELL(0.629 ns) = 3.333 ns; Loc. = LC_X6_Y20_N0; Fanout = 2; REG Node = 'instruction_decode:inst1|inst24'
+        Info: Total cell delay = 1.928 ns ( 57.85 % )
+        Info: Total interconnect delay = 1.405 ns ( 42.15 % )
+Info: tco from clock "clock" to destination pin "a_contents[3]" through register "4bit_register:inst5|inst" is 17.960 ns
+    Info: + Longest clock path from clock "clock" to source register is 14.752 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_J7; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(1.405 ns) + CELL(0.827 ns) = 3.531 ns; Loc. = LC_X6_Y20_N0; Fanout = 2; REG Node = 'instruction_decode:inst1|inst24'
+        Info: 3: + IC(0.468 ns) + CELL(0.101 ns) = 4.100 ns; Loc. = LC_X6_Y20_N2; Fanout = 2; COMB Node = 'instruction_decode:inst1|inst25'
+        Info: 4: + IC(3.989 ns) + CELL(0.827 ns) = 8.916 ns; Loc. = LC_X6_Y20_N8; Fanout = 7; REG Node = 'instruction_decode:inst1|inst1'
+        Info: 5: + IC(0.756 ns) + CELL(0.522 ns) = 10.194 ns; Loc. = LC_X6_Y20_N3; Fanout = 9; COMB Node = 'instruction_decode:inst1|inst20'
+        Info: 6: + IC(3.929 ns) + CELL(0.629 ns) = 14.752 ns; Loc. = LC_X56_Y32_N2; Fanout = 1; REG Node = '4bit_register:inst5|inst'
+        Info: Total cell delay = 4.205 ns ( 28.50 % )
+        Info: Total interconnect delay = 10.547 ns ( 71.50 % )
+    Info: + Micro clock to output delay of source is 0.198 ns
+    Info: + Longest register to pin delay is 3.010 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X56_Y32_N2; Fanout = 1; REG Node = '4bit_register:inst5|inst'
+        Info: 2: + IC(1.145 ns) + CELL(1.865 ns) = 3.010 ns; Loc. = PIN_E15; Fanout = 0; PIN Node = 'a_contents[3]'
+        Info: Total cell delay = 1.865 ns ( 61.96 % )
+        Info: Total interconnect delay = 1.145 ns ( 38.04 % )
+Info: Longest tpd from source pin "instruction[7]" to destination pin "address[1]" is 14.817 ns
+    Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_J4; Fanout = 4; PIN Node = 'instruction[7]'
+    Info: 2: + IC(5.384 ns) + CELL(0.522 ns) = 7.205 ns; Loc. = LC_X6_Y21_N2; Fanout = 1; COMB Node = 'instruction_decode:inst1|inst35[1]~39'
+    Info: 3: + IC(5.733 ns) + CELL(1.879 ns) = 14.817 ns; Loc. = PIN_H14; Fanout = 0; PIN Node = 'address[1]'
+    Info: Total cell delay = 3.700 ns ( 24.97 % )
+    Info: Total interconnect delay = 11.117 ns ( 75.03 % )
+Info: th for register "4bit_register:inst5|inst2" (data pin = "instruction[5]", clock pin = "clock") is 9.927 ns
+    Info: + Longest clock path from clock "clock" to destination register is 14.838 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_J7; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(1.405 ns) + CELL(0.827 ns) = 3.531 ns; Loc. = LC_X6_Y20_N0; Fanout = 2; REG Node = 'instruction_decode:inst1|inst24'
+        Info: 3: + IC(0.468 ns) + CELL(0.101 ns) = 4.100 ns; Loc. = LC_X6_Y20_N2; Fanout = 2; COMB Node = 'instruction_decode:inst1|inst25'
+        Info: 4: + IC(3.989 ns) + CELL(0.827 ns) = 8.916 ns; Loc. = LC_X6_Y20_N8; Fanout = 7; REG Node = 'instruction_decode:inst1|inst1'
+        Info: 5: + IC(0.756 ns) + CELL(0.522 ns) = 10.194 ns; Loc. = LC_X6_Y20_N3; Fanout = 9; COMB Node = 'instruction_decode:inst1|inst20'
+        Info: 6: + IC(4.015 ns) + CELL(0.629 ns) = 14.838 ns; Loc. = LC_X1_Y27_N2; Fanout = 1; REG Node = '4bit_register:inst5|inst2'
+        Info: Total cell delay = 4.205 ns ( 28.34 % )
+        Info: Total interconnect delay = 10.633 ns ( 71.66 % )
+    Info: + Micro hold delay of destination is 0.013 ns
+    Info: - Shortest pin to register delay is 4.924 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.299 ns) = 1.299 ns; Loc. = PIN_J6; Fanout = 3; CLK Node = 'instruction[5]'
+        Info: 2: + IC(1.343 ns) + CELL(0.101 ns) = 2.743 ns; Loc. = LC_X6_Y20_N3; Fanout = 9; COMB Node = 'instruction_decode:inst1|inst20'
+        Info: 3: + IC(1.758 ns) + CELL(0.423 ns) = 4.924 ns; Loc. = LC_X1_Y27_N2; Fanout = 1; REG Node = '4bit_register:inst5|inst2'
+        Info: Total cell delay = 1.823 ns ( 37.02 % )
+        Info: Total interconnect delay = 3.101 ns ( 62.98 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 122 megabytes
+    Info: Processing ended: Wed Dec 28 10:04:43 2011
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+

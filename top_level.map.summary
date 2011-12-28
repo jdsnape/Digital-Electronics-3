@@ -1,0 +1,12 @@
+Analysis & Synthesis Status : Successful - Wed Dec 28 10:04:28 2011
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : top_level
+Top-level Entity Name : top_level
+Family : Cyclone
+Total logic elements : 16
+Total pins : 33
+Total virtual pins : 0
+Total memory bits : 0
+DSP block 9-bit elements : N/A until Partition Merge
+Total PLLs : 0
+Total DLLs : N/A until Partition Merge

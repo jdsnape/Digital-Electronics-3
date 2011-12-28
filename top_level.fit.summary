@@ -1,0 +1,12 @@
+Fitter Status : Successful - Wed Dec 28 10:04:35 2011
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : top_level
+Top-level Entity Name : top_level
+Family : Cyclone
+Device : EP1C20F400C7
+Timing Models : Final
+Total logic elements : 15 / 20,060 ( < 1 % )
+Total pins : 33 / 301 ( 11 % )
+Total virtual pins : 0
+Total memory bits : 0 / 294,912 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

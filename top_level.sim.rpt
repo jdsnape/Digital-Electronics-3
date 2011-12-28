@@ -1,0 +1,278 @@
+Simulator report for top_level
+Wed Dec 28 10:27:29 2011
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 77 nodes     ;
+; Simulation Coverage         ;      40.00 % ;
+; Total Number of Transitions ; 297          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Option                                                                                     ; Setting       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Simulation mode                                                                            ; Functional    ; Timing        ;
+; Start time                                                                                 ; 0 ns          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF          ;               ;
+; Vector input source                                                                        ; top_level.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
+; Check outputs                                                                              ; Off           ; Off           ;
+; Report simulation coverage                                                                 ; On            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On            ; On            ;
+; Display missing 1-value coverage report                                                    ; On            ; On            ;
+; Display missing 0-value coverage report                                                    ; On            ; On            ;
+; Detect setup and hold time violations                                                      ; Off           ; Off           ;
+; Detect glitches                                                                            ; Off           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off           ; Off           ;
+; Generate Signal Activity File                                                              ; Off           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      40.00 % ;
+; Total nodes checked                                 ; 77           ;
+; Total output ports checked                          ; 75           ;
+; Total output ports with complete 1/0-value coverage ; 30           ;
+; Total output ports with no 1/0-value coverage       ; 35           ;
+; Total output ports with no 1-value coverage         ; 37           ;
+; Total output ports with no 0-value coverage         ; 43           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                    ;
++----------------------------------------------+----------------------------------------------+------------------+
+; Node Name                                    ; Output Port Name                             ; Output Port Type ;
++----------------------------------------------+----------------------------------------------+------------------+
+; |top_level|a_enable                          ; |top_level|a_enable                          ; pin_out          ;
+; |top_level|decode                            ; |top_level|decode                            ; out              ;
+; |top_level|clock                             ; |top_level|clock                             ; out              ;
+; |top_level|instruction[5]                    ; |top_level|instruction[5]                    ; out              ;
+; |top_level|instruction[6]                    ; |top_level|instruction[6]                    ; out              ;
+; |top_level|data_mem_enable                   ; |top_level|data_mem_enable                   ; pin_out          ;
+; |top_level|state_machine[0]                  ; |top_level|state_machine[0]                  ; pin_out          ;
+; |top_level|state_machine[1]                  ; |top_level|state_machine[1]                  ; pin_out          ;
+; |top_level|4bit_register:inst5|inst8         ; |top_level|4bit_register:inst5|inst8         ; out0             ;
+; |top_level|4bit_register:inst5|inst10        ; |top_level|4bit_register:inst5|inst10        ; out0             ;
+; |top_level|instruction_decode:inst1|inst8    ; |top_level|instruction_decode:inst1|inst8    ; out0             ;
+; |top_level|instruction_decode:inst1|inst     ; |top_level|instruction_decode:inst1|inst     ; regout           ;
+; |top_level|instruction_decode:inst1|inst~0   ; |top_level|instruction_decode:inst1|inst~0   ; out0             ;
+; |top_level|instruction_decode:inst1|inst~2   ; |top_level|instruction_decode:inst1|inst~2   ; out0             ;
+; |top_level|instruction_decode:inst1|inst24   ; |top_level|instruction_decode:inst1|inst24   ; regout           ;
+; |top_level|instruction_decode:inst1|inst24~0 ; |top_level|instruction_decode:inst1|inst24~0 ; out0             ;
+; |top_level|instruction_decode:inst1|inst24~1 ; |top_level|instruction_decode:inst1|inst24~1 ; out0             ;
+; |top_level|instruction_decode:inst1|inst24~2 ; |top_level|instruction_decode:inst1|inst24~2 ; out0             ;
+; |top_level|instruction_decode:inst1|inst34   ; |top_level|instruction_decode:inst1|inst34   ; out0             ;
+; |top_level|instruction_decode:inst1|inst25   ; |top_level|instruction_decode:inst1|inst25   ; out0             ;
+; |top_level|instruction_decode:inst1|inst1    ; |top_level|instruction_decode:inst1|inst1    ; regout           ;
+; |top_level|instruction_decode:inst1|inst1~0  ; |top_level|instruction_decode:inst1|inst1~0  ; out0             ;
+; |top_level|instruction_decode:inst1|inst1~1  ; |top_level|instruction_decode:inst1|inst1~1  ; out0             ;
+; |top_level|instruction_decode:inst1|inst1~2  ; |top_level|instruction_decode:inst1|inst1~2  ; out0             ;
+; |top_level|instruction_decode:inst1|inst12   ; |top_level|instruction_decode:inst1|inst12   ; out0             ;
+; |top_level|instruction_decode:inst1|inst20   ; |top_level|instruction_decode:inst1|inst20   ; out0             ;
+; |top_level|instruction_decode:inst1|inst10   ; |top_level|instruction_decode:inst1|inst10   ; out0             ;
+; |top_level|instruction_decode:inst1|inst38   ; |top_level|instruction_decode:inst1|inst38   ; out0             ;
+; |top_level|instruction_decode:inst1|inst37   ; |top_level|instruction_decode:inst1|inst37   ; out0             ;
+; |top_level|instruction_decode:inst1|inst4    ; |top_level|instruction_decode:inst1|inst4    ; out0             ;
++----------------------------------------------+----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                         ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |top_level|instruction[2]                     ; |top_level|instruction[2]                     ; out              ;
+; |top_level|instruction[3]                     ; |top_level|instruction[3]                     ; out              ;
+; |top_level|instruction[4]                     ; |top_level|instruction[4]                     ; out              ;
+; |top_level|instruction[7]                     ; |top_level|instruction[7]                     ; out              ;
+; |top_level|instruction[8]                     ; |top_level|instruction[8]                     ; out              ;
+; |top_level|r1_enable                          ; |top_level|r1_enable                          ; pin_out          ;
+; |top_level|r0_enable                          ; |top_level|r0_enable                          ; pin_out          ;
+; |top_level|set                                ; |top_level|set                                ; pin_out          ;
+; |top_level|a_contents[1]                      ; |top_level|a_contents[1]                      ; pin_out          ;
+; |top_level|a_contents[3]                      ; |top_level|a_contents[3]                      ; pin_out          ;
+; |top_level|address[0]                         ; |top_level|address[0]                         ; pin_out          ;
+; |top_level|address[1]                         ; |top_level|address[1]                         ; pin_out          ;
+; |top_level|address[2]                         ; |top_level|address[2]                         ; pin_out          ;
+; |top_level|data[0]                            ; |top_level|data[0]                            ; pin_out          ;
+; |top_level|data[1]                            ; |top_level|data[1]                            ; pin_out          ;
+; |top_level|data[2]                            ; |top_level|data[2]                            ; pin_out          ;
+; |top_level|data[3]                            ; |top_level|data[3]                            ; pin_out          ;
+; |top_level|data_memory:inst12|data[0]         ; |top_level|data_memory:inst12|data[0]         ; out0             ;
+; |top_level|data_memory:inst12|data[1]         ; |top_level|data_memory:inst12|data[1]         ; out0             ;
+; |top_level|data_memory:inst12|data[2]         ; |top_level|data_memory:inst12|data[2]         ; out0             ;
+; |top_level|data_memory:inst12|data[3]         ; |top_level|data_memory:inst12|data[3]         ; out0             ;
+; |top_level|data_memory:inst12|inst13[2]       ; |top_level|data_memory:inst12|inst13[2]       ; out              ;
+; |top_level|data_memory:inst12|inst13[0]       ; |top_level|data_memory:inst12|inst13[0]       ; out              ;
+; |top_level|data_memory:inst12|inst8           ; |top_level|data_memory:inst12|inst8           ; out0             ;
+; |top_level|4bit_register:inst5|inst11         ; |top_level|4bit_register:inst5|inst11         ; out              ;
+; |top_level|4bit_register:inst5|inst           ; |top_level|4bit_register:inst5|inst           ; regout           ;
+; |top_level|4bit_register:inst5|inst7          ; |top_level|4bit_register:inst5|inst7          ; out0             ;
+; |top_level|4bit_register:inst5|inst13         ; |top_level|4bit_register:inst5|inst13         ; out              ;
+; |top_level|4bit_register:inst5|inst2          ; |top_level|4bit_register:inst5|inst2          ; regout           ;
+; |top_level|4bit_register:inst5|inst9          ; |top_level|4bit_register:inst5|inst9          ; out0             ;
+; |top_level|instruction_decode:inst1|inst18    ; |top_level|instruction_decode:inst1|inst18    ; out0             ;
+; |top_level|instruction_decode:inst1|inst11    ; |top_level|instruction_decode:inst1|inst11    ; out0             ;
+; |top_level|instruction_decode:inst1|inst~1    ; |top_level|instruction_decode:inst1|inst~1    ; out0             ;
+; |top_level|instruction_decode:inst1|inst14    ; |top_level|instruction_decode:inst1|inst14    ; out0             ;
+; |top_level|instruction_decode:inst1|inst35[2] ; |top_level|instruction_decode:inst1|inst35[2] ; out0             ;
+; |top_level|instruction_decode:inst1|inst35[1] ; |top_level|instruction_decode:inst1|inst35[1] ; out0             ;
+; |top_level|instruction_decode:inst1|inst35[0] ; |top_level|instruction_decode:inst1|inst35[0] ; out0             ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                         ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |top_level|instruction[2]                     ; |top_level|instruction[2]                     ; out              ;
+; |top_level|instruction[3]                     ; |top_level|instruction[3]                     ; out              ;
+; |top_level|instruction[4]                     ; |top_level|instruction[4]                     ; out              ;
+; |top_level|instruction[7]                     ; |top_level|instruction[7]                     ; out              ;
+; |top_level|instruction[8]                     ; |top_level|instruction[8]                     ; out              ;
+; |top_level|r1_enable                          ; |top_level|r1_enable                          ; pin_out          ;
+; |top_level|r0_enable                          ; |top_level|r0_enable                          ; pin_out          ;
+; |top_level|set                                ; |top_level|set                                ; pin_out          ;
+; |top_level|a_contents[0]                      ; |top_level|a_contents[0]                      ; pin_out          ;
+; |top_level|a_contents[1]                      ; |top_level|a_contents[1]                      ; pin_out          ;
+; |top_level|a_contents[2]                      ; |top_level|a_contents[2]                      ; pin_out          ;
+; |top_level|a_contents[3]                      ; |top_level|a_contents[3]                      ; pin_out          ;
+; |top_level|address[0]                         ; |top_level|address[0]                         ; pin_out          ;
+; |top_level|address[1]                         ; |top_level|address[1]                         ; pin_out          ;
+; |top_level|address[2]                         ; |top_level|address[2]                         ; pin_out          ;
+; |top_level|data[0]                            ; |top_level|data[0]                            ; pin_out          ;
+; |top_level|data[1]                            ; |top_level|data[1]                            ; pin_out          ;
+; |top_level|data[2]                            ; |top_level|data[2]                            ; pin_out          ;
+; |top_level|data[3]                            ; |top_level|data[3]                            ; pin_out          ;
+; |top_level|data_memory:inst12|data[0]         ; |top_level|data_memory:inst12|data[0]         ; out0             ;
+; |top_level|data_memory:inst12|data[1]         ; |top_level|data_memory:inst12|data[1]         ; out0             ;
+; |top_level|data_memory:inst12|data[2]         ; |top_level|data_memory:inst12|data[2]         ; out0             ;
+; |top_level|data_memory:inst12|data[3]         ; |top_level|data_memory:inst12|data[3]         ; out0             ;
+; |top_level|data_memory:inst12|inst13[3]       ; |top_level|data_memory:inst12|inst13[3]       ; out              ;
+; |top_level|data_memory:inst12|inst13[1]       ; |top_level|data_memory:inst12|inst13[1]       ; out              ;
+; |top_level|data_memory:inst12|inst8           ; |top_level|data_memory:inst12|inst8           ; out0             ;
+; |top_level|4bit_register:inst5|inst11         ; |top_level|4bit_register:inst5|inst11         ; out              ;
+; |top_level|4bit_register:inst5|inst           ; |top_level|4bit_register:inst5|inst           ; regout           ;
+; |top_level|4bit_register:inst5|inst7          ; |top_level|4bit_register:inst5|inst7          ; out0             ;
+; |top_level|4bit_register:inst5|inst12         ; |top_level|4bit_register:inst5|inst12         ; out              ;
+; |top_level|4bit_register:inst5|inst1          ; |top_level|4bit_register:inst5|inst1          ; regout           ;
+; |top_level|4bit_register:inst5|inst13         ; |top_level|4bit_register:inst5|inst13         ; out              ;
+; |top_level|4bit_register:inst5|inst2          ; |top_level|4bit_register:inst5|inst2          ; regout           ;
+; |top_level|4bit_register:inst5|inst9          ; |top_level|4bit_register:inst5|inst9          ; out0             ;
+; |top_level|4bit_register:inst5|inst14         ; |top_level|4bit_register:inst5|inst14         ; out              ;
+; |top_level|4bit_register:inst5|inst3          ; |top_level|4bit_register:inst5|inst3          ; regout           ;
+; |top_level|instruction_decode:inst1|inst18    ; |top_level|instruction_decode:inst1|inst18    ; out0             ;
+; |top_level|instruction_decode:inst1|inst11    ; |top_level|instruction_decode:inst1|inst11    ; out0             ;
+; |top_level|instruction_decode:inst1|inst~1    ; |top_level|instruction_decode:inst1|inst~1    ; out0             ;
+; |top_level|instruction_decode:inst1|inst14    ; |top_level|instruction_decode:inst1|inst14    ; out0             ;
+; |top_level|instruction_decode:inst1|inst35[2] ; |top_level|instruction_decode:inst1|inst35[2] ; out0             ;
+; |top_level|instruction_decode:inst1|inst35[1] ; |top_level|instruction_decode:inst1|inst35[1] ; out0             ;
+; |top_level|instruction_decode:inst1|inst35[0] ; |top_level|instruction_decode:inst1|inst35[0] ; out0             ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Wed Dec 28 10:27:28 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off top_level -c top_level
+Info: Using vector source file "E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/top_level.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "fake_memory_input[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "fake_memory_input[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "fake_memory_input[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "fake_memory_input[0]" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock-sensitive change during active clock edge at time 25.0 ns on register "|top_level|instruction_decode:inst1|inst"
+Warning: Found clock-sensitive change during active clock edge at time 35.0 ns on register "|top_level|4bit_register:inst5|inst1"
+Warning: Found clock-sensitive change during active clock edge at time 35.0 ns on register "|top_level|4bit_register:inst5|inst3"
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      40.00 %
+Info: Number of transitions in simulation is 297
+Info: Quartus II Simulator was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 107 megabytes
+    Info: Processing ended: Wed Dec 28 10:27:30 2011
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
