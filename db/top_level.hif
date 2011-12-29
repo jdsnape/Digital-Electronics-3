@@ -1042,46 +1042,6 @@ multiplier:inst|state_machine:inst1
 
 # end
 # entity
-top_level
-# storage
-db|top_level.(0).cnf
-db|top_level.(0).cnf
-# case_insensitive
-# source_file
-top_level.bdf
-63d34779a3b3919ae3038910bf1c4b
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-instruction_decode
-# storage
-db|top_level.(2).cnf
-db|top_level.(2).cnf
-# case_insensitive
-# source_file
-instruction_decode.bdf
-79bd7efafc953c4971e5e8d1f89283d
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-instruction_decode:inst1
-}
-# macro_sequence
-
-# end
-# entity
 4bit_register
 # storage
 db|top_level.(22).cnf
@@ -1099,6 +1059,66 @@ AUTO
 4bit_register:inst5
 4bit_register:inst3
 4bit_register:inst4
+}
+# macro_sequence
+
+# end
+# entity
+instruction_decode
+# storage
+db|top_level.(2).cnf
+db|top_level.(2).cnf
+# case_insensitive
+# source_file
+instruction_decode.bdf
+c41eac6dfe3813b032bcc9fb99e9369
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+instruction_decode:inst1
+}
+# macro_sequence
+
+# end
+# entity
+data_memory
+# storage
+db|top_level.(26).cnf
+db|top_level.(26).cnf
+# case_insensitive
+# source_file
+data_memory.bdf
+1fded7de7f6b802c8b165a3f7e2e1ebc
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+data_memory:inst12
+}
+# macro_sequence
+
+# end
+# entity
+top_level
+# storage
+db|top_level.(0).cnf
+db|top_level.(0).cnf
+# case_insensitive
+# source_file
+top_level.bdf
+bf297f23e1fc7dd6b2b638d1cb39f4b
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
 }
 # macro_sequence
 

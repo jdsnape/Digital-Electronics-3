@@ -15,10 +15,13 @@ r1_enable <= instruction_decode:inst1.r1_enable
 r0_enable <= instruction_decode:inst1.r0_enable
 set <= instruction_decode:inst1.x_set
 data_mem_enable <= instruction_decode:inst1.data_mem_enable
-a_contents[3] <= 4bit_register:inst5.output[3]
-a_contents[2] <= 4bit_register:inst5.output[2]
-a_contents[1] <= 4bit_register:inst5.output[1]
-a_contents[0] <= 4bit_register:inst5.output[0]
+reg_select <= instruction_decode:inst1.reg_select
+data_mem_load <= instruction_decode:inst1.data_mem_load
+a_contents[3] <= data_bus[3].DB_MAX_OUTPUT_PORT_TYPE
+a_contents[2] <= data_bus[2].DB_MAX_OUTPUT_PORT_TYPE
+a_contents[1] <= data_bus[1].DB_MAX_OUTPUT_PORT_TYPE
+a_contents[0] <= data_bus[0].DB_MAX_OUTPUT_PORT_TYPE
+reg_select_overide => inst16.IN1
 address[2] <= instruction_decode:inst1.address[2]
 address[1] <= instruction_decode:inst1.address[1]
 address[0] <= instruction_decode:inst1.address[0]
@@ -26,6 +29,10 @@ data[3] <= instruction_decode:inst1.data[3]
 data[2] <= instruction_decode:inst1.data[2]
 data[1] <= instruction_decode:inst1.data[1]
 data[0] <= instruction_decode:inst1.data[0]
+memory_contents[3] <= data_memory:inst12.data[3]
+memory_contents[2] <= data_memory:inst12.data[2]
+memory_contents[1] <= data_memory:inst12.data[1]
+memory_contents[0] <= data_memory:inst12.data[0]
 state_machine[1] <= instruction_decode:inst1.state_machine[1]
 state_machine[0] <= instruction_decode:inst1.state_machine[0]
 
@@ -33,35 +40,81 @@ state_machine[0] <= instruction_decode:inst1.state_machine[0]
 |top_level|instruction_decode:inst1
 r1_enable <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 instruction[8] => inst6.IN0
+instruction[8] => inst43.IN0
 instruction[7] => inst5.IN0
+instruction[7] => inst41.IN1
 instruction[6] => inst4.IN0
+instruction[6] => inst42.IN0
 instruction[5] => inst17.IN0
 instruction[5] => inst15.IN0
 instruction[5] => inst10.IN0
+instruction[5] => BUSMUX:inst58.datab[0]
 instruction[4] => inst11.IN1
 instruction[4] => inst16.IN0
 instruction[4] => inst19.IN0
-instruction[4] => inst35[0].IN1
-instruction[3] => inst35[1].IN1
-instruction[2] => inst35[2].IN1
+instruction[4] => BUSMUX:inst58.dataa[0]
+instruction[4] => BUSMUX:inst58.datab[1]
+instruction[3] => BUSMUX:inst58.dataa[1]
+instruction[3] => BUSMUX:inst58.datab[2]
+instruction[2] => BUSMUX:inst58.dataa[2]
 instruction[1] => ~NO_FANOUT~
 instruction[0] => ~NO_FANOUT~
-state_machine[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-state_machine[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-decode => inst24~0.IN1
-clock => inst24.CLK
+decode => inst44.IN0
+decode => inst46.IN0
 clock => inst25.IN1
+clock => inst24.CLK
+clock => inst26.CLK
+clock => inst47.IN1
 r0_enable <= inst14.DB_MAX_OUTPUT_PORT_TYPE
 a_enable <= inst20.DB_MAX_OUTPUT_PORT_TYPE
 x_set <= <GND>
 data_mem_enable <= inst38.DB_MAX_OUTPUT_PORT_TYPE
-address[2] <= inst35[0].DB_MAX_OUTPUT_PORT_TYPE
-address[1] <= inst35[1].DB_MAX_OUTPUT_PORT_TYPE
-address[0] <= inst35[2].DB_MAX_OUTPUT_PORT_TYPE
+data_mem_load <= inst53.DB_MAX_OUTPUT_PORT_TYPE
+state_machine[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+state_machine[0] <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+reg_select <= inst55.DB_MAX_OUTPUT_PORT_TYPE
+address[2] <= BUSMUX:inst58.result[0]
+address[1] <= BUSMUX:inst58.result[1]
+address[0] <= BUSMUX:inst58.result[2]
 data[3] <= <GND>
 data[2] <= <GND>
 data[1] <= <GND>
 data[0] <= <GND>
+
+
+|top_level|instruction_decode:inst1|BUSMUX:inst58
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+
+
+|top_level|instruction_decode:inst1|BUSMUX:inst58|lpm_mux:$00000
+data[0][0] => mux_5fc:auto_generated.data[0]
+data[0][1] => mux_5fc:auto_generated.data[1]
+data[0][2] => mux_5fc:auto_generated.data[2]
+data[1][0] => mux_5fc:auto_generated.data[3]
+data[1][1] => mux_5fc:auto_generated.data[4]
+data[1][2] => mux_5fc:auto_generated.data[5]
+sel[0] => mux_5fc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_5fc:auto_generated.result[0]
+result[1] <= mux_5fc:auto_generated.result[1]
+result[2] <= mux_5fc:auto_generated.result[2]
+
+
+|top_level|instruction_decode:inst1|BUSMUX:inst58|lpm_mux:$00000|mux_5fc:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|4bit_register:inst5
@@ -92,18 +145,24 @@ data[3] <= data~3.DB_MAX_OUTPUT_PORT_TYPE
 data[2] <= data~2.DB_MAX_OUTPUT_PORT_TYPE
 data[1] <= data~1.DB_MAX_OUTPUT_PORT_TYPE
 data[0] <= data~0.DB_MAX_OUTPUT_PORT_TYPE
+data_in[3] => data~3.IN0
+data_in[2] => data~2.IN0
+data_in[1] => data~1.IN0
+data_in[0] => data~0.IN0
 select => inst13[3].OE
 select => inst13[2].OE
 select => inst13[1].OE
 select => inst13[0].OE
 address[2] => inst8.IN1
+address[2] => inst19.IN0
 address[1] => inst8.IN0
+address[1] => inst18.IN0
 address[0] => inst8.IN2
-load => ~NO_FANOUT~
-data_in[3] => ~NO_FANOUT~
-data_in[2] => ~NO_FANOUT~
-data_in[1] => ~NO_FANOUT~
-data_in[0] => ~NO_FANOUT~
+address[0] => inst17.IN0
+load => inst6.CLK
+load => inst7.CLK
+load => inst5.CLK
+load => inst4.CLK
 
 
 |top_level|multiplier:inst

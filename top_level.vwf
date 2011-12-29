@@ -152,56 +152,6 @@ SIGNAL("decode")
 	PARENT = "";
 }
 
-SIGNAL("fake_memory_input")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("fake_memory_input[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "fake_memory_input";
-}
-
-SIGNAL("fake_memory_input[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "fake_memory_input";
-}
-
-SIGNAL("fake_memory_input[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "fake_memory_input";
-}
-
-SIGNAL("fake_memory_input[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "fake_memory_input";
-}
-
 SIGNAL("a_contents")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -332,6 +282,66 @@ SIGNAL("data[0]")
 	PARENT = "data";
 }
 
+SIGNAL("memory_contents")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("memory_contents[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "memory_contents";
+}
+
+SIGNAL("memory_contents[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "memory_contents";
+}
+
+SIGNAL("memory_contents[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "memory_contents";
+}
+
+SIGNAL("memory_contents[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "memory_contents";
+}
+
+SIGNAL("reg_select_overide")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("instruction[8]")
 {
 	NODE
@@ -346,7 +356,9 @@ TRANSITION_LIST("instruction[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 130.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 790.0;
 	}
 }
 
@@ -357,7 +369,9 @@ TRANSITION_LIST("instruction[6]")
 		REPEAT = 1;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 900.0;
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 680.0;
 	}
 }
 
@@ -368,7 +382,9 @@ TRANSITION_LIST("instruction[5]")
 		REPEAT = 1;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 900.0;
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 680.0;
 	}
 }
 
@@ -386,7 +402,9 @@ TRANSITION_LIST("instruction[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 130.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 790.0;
 	}
 }
 
@@ -395,7 +413,9 @@ TRANSITION_LIST("instruction[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 130.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 790.0;
 	}
 }
 
@@ -404,7 +424,9 @@ TRANSITION_LIST("instruction[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 680.0;
 	}
 }
 
@@ -438,43 +460,9 @@ TRANSITION_LIST("decode")
 		REPEAT = 1;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 960.0;
-	}
-}
-
-TRANSITION_LIST("fake_memory_input[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("fake_memory_input[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("fake_memory_input[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("fake_memory_input[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 90.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 850.0;
 	}
 }
 
@@ -565,6 +553,53 @@ TRANSITION_LIST("data[0]")
 	{
 		REPEAT = 1;
 		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("memory_contents[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("memory_contents[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("memory_contents[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("memory_contents[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("reg_select_overide")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 370.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 510.0;
 	}
 }
 
@@ -688,8 +723,8 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "fake_memory_input";
-	EXPAND_STATUS = EXPANDED;
+	CHANNEL = "a_contents";
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 12;
 	TREE_LEVEL = 0;
@@ -698,7 +733,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "fake_memory_input[0]";
+	CHANNEL = "a_contents[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 13;
@@ -708,7 +743,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "fake_memory_input[1]";
+	CHANNEL = "a_contents[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 14;
@@ -718,7 +753,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "fake_memory_input[2]";
+	CHANNEL = "a_contents[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 15;
@@ -728,7 +763,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "fake_memory_input[3]";
+	CHANNEL = "a_contents[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 16;
@@ -738,17 +773,17 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "a_contents";
+	CHANNEL = "state_machine";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 17;
 	TREE_LEVEL = 0;
-	CHILDREN = 18, 19, 20, 21;
+	CHILDREN = 18, 19;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "a_contents[0]";
+	CHANNEL = "state_machine[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 18;
@@ -758,7 +793,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "a_contents[1]";
+	CHANNEL = "state_machine[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 19;
@@ -768,57 +803,57 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "a_contents[2]";
+	CHANNEL = "data";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 20;
-	TREE_LEVEL = 1;
-	PARENT = 17;
+	TREE_LEVEL = 0;
+	CHILDREN = 21, 22, 23, 24;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "a_contents[3]";
+	CHANNEL = "data[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 21;
 	TREE_LEVEL = 1;
-	PARENT = 17;
+	PARENT = 20;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "state_machine";
+	CHANNEL = "data[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 22;
-	TREE_LEVEL = 0;
-	CHILDREN = 23, 24;
+	TREE_LEVEL = 1;
+	PARENT = 20;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "state_machine[0]";
+	CHANNEL = "data[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 23;
 	TREE_LEVEL = 1;
-	PARENT = 22;
+	PARENT = 20;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "state_machine[1]";
+	CHANNEL = "data[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 24;
 	TREE_LEVEL = 1;
-	PARENT = 22;
+	PARENT = 20;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "data";
+	CHANNEL = "memory_contents";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 25;
@@ -828,7 +863,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data[0]";
+	CHANNEL = "memory_contents[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 26;
@@ -838,7 +873,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data[1]";
+	CHANNEL = "memory_contents[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 27;
@@ -848,7 +883,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data[2]";
+	CHANNEL = "memory_contents[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 28;
@@ -858,12 +893,21 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "data[3]";
+	CHANNEL = "memory_contents[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 29;
 	TREE_LEVEL = 1;
 	PARENT = 25;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "reg_select_overide";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 30;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR
