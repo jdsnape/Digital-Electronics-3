@@ -1,5 +1,5 @@
 Simulator report for top_level
-Thu Dec 29 11:40:29 2011
+Wed Jan 04 11:00:11 2012
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 125 nodes    ;
-; Simulation Coverage         ;      51.22 % ;
-; Total Number of Transitions ; 483          ;
+; Simulation Netlist Size     ; 127 nodes    ;
+; Simulation Coverage         ;      56.00 % ;
+; Total Number of Transitions ; 519          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone      ;
 +-----------------------------+--------------+
@@ -94,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      51.22 % ;
-; Total nodes checked                                 ; 125          ;
-; Total output ports checked                          ; 123          ;
-; Total output ports with complete 1/0-value coverage ; 63           ;
-; Total output ports with no 1/0-value coverage       ; 42           ;
-; Total output ports with no 1-value coverage         ; 60           ;
-; Total output ports with no 0-value coverage         ; 42           ;
+; Total coverage as a percentage                      ;      56.00 % ;
+; Total nodes checked                                 ; 127          ;
+; Total output ports checked                          ; 125          ;
+; Total output ports with complete 1/0-value coverage ; 70           ;
+; Total output ports with no 1/0-value coverage       ; 28           ;
+; Total output ports with no 1-value coverage         ; 34           ;
+; Total output ports with no 0-value coverage         ; 49           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -127,8 +127,15 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |top_level|address[2]                                                                                    ; |top_level|address[2]                                                                                    ; pin_out          ;
 ; |top_level|state_machine[0]                                                                              ; |top_level|state_machine[0]                                                                              ; pin_out          ;
 ; |top_level|state_machine[1]                                                                              ; |top_level|state_machine[1]                                                                              ; pin_out          ;
-; |top_level|data_memory:inst12|inst8                                                                      ; |top_level|data_memory:inst12|inst8                                                                      ; out0             ;
-; |top_level|data_memory:inst12|inst17                                                                     ; |top_level|data_memory:inst12|inst17                                                                     ; out0             ;
+; |top_level|data_mem2:inst18|inst21                                                                       ; |top_level|data_mem2:inst18|inst21                                                                       ; out0             ;
+; |top_level|data_mem2:inst18|inst17                                                                       ; |top_level|data_mem2:inst18|inst17                                                                       ; out0             ;
+; |top_level|data_mem2:inst18|inst8                                                                        ; |top_level|data_mem2:inst18|inst8                                                                        ; out0             ;
+; |top_level|data_mem2:inst18|inst15                                                                       ; |top_level|data_mem2:inst18|inst15                                                                       ; out0             ;
+; |top_level|data_mem2:inst18|inst20                                                                       ; |top_level|data_mem2:inst18|inst20                                                                       ; out0             ;
+; |top_level|data_mem2:inst18|inst22                                                                       ; |top_level|data_mem2:inst18|inst22                                                                       ; out0             ;
+; |top_level|4bit_register:inst5|inst8                                                                     ; |top_level|4bit_register:inst5|inst8                                                                     ; out0             ;
+; |top_level|4bit_register:inst5|inst9                                                                     ; |top_level|4bit_register:inst5|inst9                                                                     ; out0             ;
+; |top_level|4bit_register:inst5|inst10                                                                    ; |top_level|4bit_register:inst5|inst10                                                                    ; out0             ;
 ; |top_level|instruction_decode:inst1|inst8                                                                ; |top_level|instruction_decode:inst1|inst8                                                                ; out0             ;
 ; |top_level|instruction_decode:inst1|inst                                                                 ; |top_level|instruction_decode:inst1|inst                                                                 ; regout           ;
 ; |top_level|instruction_decode:inst1|inst~0                                                               ; |top_level|instruction_decode:inst1|inst~0                                                               ; out0             ;
@@ -187,51 +194,25 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |top_level|r1_enable                                                                                     ; |top_level|r1_enable                                                                                     ; pin_out          ;
 ; |top_level|r0_enable                                                                                     ; |top_level|r0_enable                                                                                     ; pin_out          ;
 ; |top_level|set                                                                                           ; |top_level|set                                                                                           ; pin_out          ;
-; |top_level|a_contents[0]                                                                                 ; |top_level|a_contents[0]                                                                                 ; pin_out          ;
-; |top_level|a_contents[1]                                                                                 ; |top_level|a_contents[1]                                                                                 ; pin_out          ;
-; |top_level|a_contents[2]                                                                                 ; |top_level|a_contents[2]                                                                                 ; pin_out          ;
 ; |top_level|a_contents[3]                                                                                 ; |top_level|a_contents[3]                                                                                 ; pin_out          ;
 ; |top_level|address[1]                                                                                    ; |top_level|address[1]                                                                                    ; pin_out          ;
 ; |top_level|data[0]                                                                                       ; |top_level|data[0]                                                                                       ; pin_out          ;
 ; |top_level|data[1]                                                                                       ; |top_level|data[1]                                                                                       ; pin_out          ;
 ; |top_level|data[2]                                                                                       ; |top_level|data[2]                                                                                       ; pin_out          ;
 ; |top_level|data[3]                                                                                       ; |top_level|data[3]                                                                                       ; pin_out          ;
-; |top_level|memory_contents[0]                                                                            ; |top_level|memory_contents[0]                                                                            ; pin_out          ;
-; |top_level|memory_contents[1]                                                                            ; |top_level|memory_contents[1]                                                                            ; pin_out          ;
-; |top_level|memory_contents[2]                                                                            ; |top_level|memory_contents[2]                                                                            ; pin_out          ;
 ; |top_level|memory_contents[3]                                                                            ; |top_level|memory_contents[3]                                                                            ; pin_out          ;
-; |top_level|data_memory:inst12|data[0]                                                                    ; |top_level|data_memory:inst12|data[0]                                                                    ; out0             ;
-; |top_level|data_memory:inst12|data[1]                                                                    ; |top_level|data_memory:inst12|data[1]                                                                    ; out0             ;
-; |top_level|data_memory:inst12|data[2]                                                                    ; |top_level|data_memory:inst12|data[2]                                                                    ; out0             ;
-; |top_level|data_memory:inst12|data[3]                                                                    ; |top_level|data_memory:inst12|data[3]                                                                    ; out0             ;
-; |top_level|data_memory:inst12|inst13[3]                                                                  ; |top_level|data_memory:inst12|inst13[3]                                                                  ; out              ;
-; |top_level|data_memory:inst12|inst13[2]                                                                  ; |top_level|data_memory:inst12|inst13[2]                                                                  ; out              ;
-; |top_level|data_memory:inst12|inst13[1]                                                                  ; |top_level|data_memory:inst12|inst13[1]                                                                  ; out              ;
-; |top_level|data_memory:inst12|inst13[0]                                                                  ; |top_level|data_memory:inst12|inst13[0]                                                                  ; out              ;
-; |top_level|data_memory:inst12|inst26                                                                     ; |top_level|data_memory:inst12|inst26                                                                     ; out0             ;
-; |top_level|data_memory:inst12|inst6                                                                      ; |top_level|data_memory:inst12|inst6                                                                      ; regout           ;
-; |top_level|data_memory:inst12|inst22                                                                     ; |top_level|data_memory:inst12|inst22                                                                     ; out0             ;
-; |top_level|data_memory:inst12|inst27                                                                     ; |top_level|data_memory:inst12|inst27                                                                     ; out0             ;
-; |top_level|data_memory:inst12|inst7                                                                      ; |top_level|data_memory:inst12|inst7                                                                      ; regout           ;
-; |top_level|data_memory:inst12|inst23                                                                     ; |top_level|data_memory:inst12|inst23                                                                     ; out0             ;
-; |top_level|data_memory:inst12|inst25                                                                     ; |top_level|data_memory:inst12|inst25                                                                     ; out0             ;
-; |top_level|data_memory:inst12|inst5                                                                      ; |top_level|data_memory:inst12|inst5                                                                      ; regout           ;
-; |top_level|data_memory:inst12|inst21                                                                     ; |top_level|data_memory:inst12|inst21                                                                     ; out0             ;
-; |top_level|data_memory:inst12|inst24                                                                     ; |top_level|data_memory:inst12|inst24                                                                     ; out0             ;
-; |top_level|data_memory:inst12|inst4                                                                      ; |top_level|data_memory:inst12|inst4                                                                      ; regout           ;
-; |top_level|data_memory:inst12|inst20                                                                     ; |top_level|data_memory:inst12|inst20                                                                     ; out0             ;
+; |top_level|data_mem2:inst18|data[3]                                                                      ; |top_level|data_mem2:inst18|data[3]                                                                      ; out0             ;
+; |top_level|data_mem2:inst18|inst29                                                                       ; |top_level|data_mem2:inst18|inst29                                                                       ; out              ;
+; |top_level|data_mem2:inst18|inst28                                                                       ; |top_level|data_mem2:inst18|inst28                                                                       ; out0             ;
+; |top_level|data_mem2:inst18|inst30                                                                       ; |top_level|data_mem2:inst18|inst30                                                                       ; out              ;
+; |top_level|data_mem2:inst18|inst1                                                                        ; |top_level|data_mem2:inst18|inst1                                                                        ; out              ;
+; |top_level|data_mem2:inst18|inst32                                                                       ; |top_level|data_mem2:inst18|inst32                                                                       ; out              ;
+; |top_level|data_mem2:inst18|inst7                                                                        ; |top_level|data_mem2:inst18|inst7                                                                        ; regout           ;
+; |top_level|data_mem2:inst18|inst23                                                                       ; |top_level|data_mem2:inst18|inst23                                                                       ; out0             ;
+; |top_level|data_mem2:inst18|inst31                                                                       ; |top_level|data_mem2:inst18|inst31                                                                       ; out              ;
 ; |top_level|4bit_register:inst5|inst11                                                                    ; |top_level|4bit_register:inst5|inst11                                                                    ; out              ;
 ; |top_level|4bit_register:inst5|inst                                                                      ; |top_level|4bit_register:inst5|inst                                                                      ; regout           ;
 ; |top_level|4bit_register:inst5|inst7                                                                     ; |top_level|4bit_register:inst5|inst7                                                                     ; out0             ;
-; |top_level|4bit_register:inst5|inst12                                                                    ; |top_level|4bit_register:inst5|inst12                                                                    ; out              ;
-; |top_level|4bit_register:inst5|inst1                                                                     ; |top_level|4bit_register:inst5|inst1                                                                     ; regout           ;
-; |top_level|4bit_register:inst5|inst8                                                                     ; |top_level|4bit_register:inst5|inst8                                                                     ; out0             ;
-; |top_level|4bit_register:inst5|inst13                                                                    ; |top_level|4bit_register:inst5|inst13                                                                    ; out              ;
-; |top_level|4bit_register:inst5|inst2                                                                     ; |top_level|4bit_register:inst5|inst2                                                                     ; regout           ;
-; |top_level|4bit_register:inst5|inst9                                                                     ; |top_level|4bit_register:inst5|inst9                                                                     ; out0             ;
-; |top_level|4bit_register:inst5|inst14                                                                    ; |top_level|4bit_register:inst5|inst14                                                                    ; out              ;
-; |top_level|4bit_register:inst5|inst3                                                                     ; |top_level|4bit_register:inst5|inst3                                                                     ; regout           ;
-; |top_level|4bit_register:inst5|inst10                                                                    ; |top_level|4bit_register:inst5|inst10                                                                    ; out0             ;
 ; |top_level|instruction_decode:inst1|inst18                                                               ; |top_level|instruction_decode:inst1|inst18                                                               ; out0             ;
 ; |top_level|instruction_decode:inst1|inst11                                                               ; |top_level|instruction_decode:inst1|inst11                                                               ; out0             ;
 ; |top_level|instruction_decode:inst1|inst~1                                                               ; |top_level|instruction_decode:inst1|inst~1                                                               ; out0             ;
@@ -264,17 +245,24 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |top_level|data[1]                                                                                       ; |top_level|data[1]                                                                                       ; pin_out          ;
 ; |top_level|data[2]                                                                                       ; |top_level|data[2]                                                                                       ; pin_out          ;
 ; |top_level|data[3]                                                                                       ; |top_level|data[3]                                                                                       ; pin_out          ;
-; |top_level|memory_contents[3]                                                                            ; |top_level|memory_contents[3]                                                                            ; pin_out          ;
-; |top_level|data_memory:inst12|data[3]                                                                    ; |top_level|data_memory:inst12|data[3]                                                                    ; out0             ;
-; |top_level|data_memory:inst12|inst13[3]                                                                  ; |top_level|data_memory:inst12|inst13[3]                                                                  ; out              ;
-; |top_level|data_memory:inst12|inst13[2]                                                                  ; |top_level|data_memory:inst12|inst13[2]                                                                  ; out              ;
-; |top_level|data_memory:inst12|inst13[1]                                                                  ; |top_level|data_memory:inst12|inst13[1]                                                                  ; out              ;
-; |top_level|data_memory:inst12|inst6                                                                      ; |top_level|data_memory:inst12|inst6                                                                      ; regout           ;
-; |top_level|data_memory:inst12|inst27                                                                     ; |top_level|data_memory:inst12|inst27                                                                     ; out0             ;
-; |top_level|data_memory:inst12|inst7                                                                      ; |top_level|data_memory:inst12|inst7                                                                      ; regout           ;
-; |top_level|data_memory:inst12|inst23                                                                     ; |top_level|data_memory:inst12|inst23                                                                     ; out0             ;
-; |top_level|data_memory:inst12|inst5                                                                      ; |top_level|data_memory:inst12|inst5                                                                      ; regout           ;
-; |top_level|data_memory:inst12|inst4                                                                      ; |top_level|data_memory:inst12|inst4                                                                      ; regout           ;
+; |top_level|memory_contents[0]                                                                            ; |top_level|memory_contents[0]                                                                            ; pin_out          ;
+; |top_level|memory_contents[1]                                                                            ; |top_level|memory_contents[1]                                                                            ; pin_out          ;
+; |top_level|memory_contents[2]                                                                            ; |top_level|memory_contents[2]                                                                            ; pin_out          ;
+; |top_level|data_mem2:inst18|data[0]                                                                      ; |top_level|data_mem2:inst18|data[0]                                                                      ; out0             ;
+; |top_level|data_mem2:inst18|data[1]                                                                      ; |top_level|data_mem2:inst18|data[1]                                                                      ; out0             ;
+; |top_level|data_mem2:inst18|data[2]                                                                      ; |top_level|data_mem2:inst18|data[2]                                                                      ; out0             ;
+; |top_level|data_mem2:inst18|inst29                                                                       ; |top_level|data_mem2:inst18|inst29                                                                       ; out              ;
+; |top_level|data_mem2:inst18|inst5                                                                        ; |top_level|data_mem2:inst18|inst5                                                                        ; regout           ;
+; |top_level|data_mem2:inst18|inst28                                                                       ; |top_level|data_mem2:inst18|inst28                                                                       ; out0             ;
+; |top_level|data_mem2:inst18|inst3                                                                        ; |top_level|data_mem2:inst18|inst3                                                                        ; out              ;
+; |top_level|data_mem2:inst18|inst13                                                                       ; |top_level|data_mem2:inst18|inst13                                                                       ; out              ;
+; |top_level|data_mem2:inst18|inst30                                                                       ; |top_level|data_mem2:inst18|inst30                                                                       ; out              ;
+; |top_level|data_mem2:inst18|inst4                                                                        ; |top_level|data_mem2:inst18|inst4                                                                        ; regout           ;
+; |top_level|data_mem2:inst18|inst32                                                                       ; |top_level|data_mem2:inst18|inst32                                                                       ; out              ;
+; |top_level|data_mem2:inst18|inst7                                                                        ; |top_level|data_mem2:inst18|inst7                                                                        ; regout           ;
+; |top_level|data_mem2:inst18|inst2                                                                        ; |top_level|data_mem2:inst18|inst2                                                                        ; out              ;
+; |top_level|data_mem2:inst18|inst31                                                                       ; |top_level|data_mem2:inst18|inst31                                                                       ; out              ;
+; |top_level|data_mem2:inst18|inst6                                                                        ; |top_level|data_mem2:inst18|inst6                                                                        ; regout           ;
 ; |top_level|4bit_register:inst5|inst                                                                      ; |top_level|4bit_register:inst5|inst                                                                      ; regout           ;
 ; |top_level|4bit_register:inst5|inst7                                                                     ; |top_level|4bit_register:inst5|inst7                                                                     ; out0             ;
 ; |top_level|4bit_register:inst5|inst12                                                                    ; |top_level|4bit_register:inst5|inst12                                                                    ; out              ;
@@ -309,218 +297,23 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
-    Info: Processing started: Thu Dec 29 11:40:27 2011
+    Info: Processing started: Wed Jan 04 11:00:07 2012
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off top_level -c top_level
 Info: Using vector source file "E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/top_level.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
-Warning: Found logic contention at time 20.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 20.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 20.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
-Warning: Found logic contention at time 20.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 20.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 20.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
 Warning: Found clock-sensitive change during active clock edge at time 25.0 ns on register "|top_level|instruction_decode:inst1|inst"
-Warning: Found logic contention at time 25.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of X
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 25.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of X
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 25.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of X
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
 Warning: Found clock-sensitive change during active clock edge at time 35.0 ns on register "|top_level|4bit_register:inst5|inst1"
 Warning: Found clock-sensitive change during active clock edge at time 35.0 ns on register "|top_level|4bit_register:inst5|inst2"
 Warning: Found clock-sensitive change during active clock edge at time 35.0 ns on register "|top_level|4bit_register:inst5|inst3"
-Warning: Found logic contention at time 45.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 45.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 45.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
 Warning: Found clock-sensitive change during active clock edge at time 135.0 ns on register "|top_level|instruction_decode:inst1|inst45"
-Warning: Found logic contention at time 135.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of X
-    Info: Node "data_memory:inst12|inst8" has logic level of 0
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
-Warning: Found logic contention at time 135.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of X
-    Info: Node "data_memory:inst12|inst8" has logic level of 0
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 135.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of X
-    Info: Node "data_memory:inst12|inst8" has logic level of 0
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 145.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of X
-    Info: Node "data_memory:inst12|inst8" has logic level of 0
-    Info: Node "data_memory:inst12|inst26" has logic level of U
-Warning: Found logic contention at time 145.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of X
-    Info: Node "data_memory:inst12|inst8" has logic level of 0
-    Info: Node "data_memory:inst12|inst25" has logic level of U
-Warning: Found logic contention at time 145.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of X
-    Info: Node "data_memory:inst12|inst8" has logic level of 0
-    Info: Node "data_memory:inst12|inst24" has logic level of U
-Warning: Found logic contention at time 155.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 0
-    Info: Node "data_memory:inst12|inst26" has logic level of U
-Warning: Found logic contention at time 155.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 0
-    Info: Node "data_memory:inst12|inst25" has logic level of U
-Warning: Found logic contention at time 155.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 0
-    Info: Node "data_memory:inst12|inst24" has logic level of U
-Warning: Found logic contention at time 210.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 210.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 210.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
-Warning: Found logic contention at time 210.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
-Warning: Found logic contention at time 210.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 210.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 240.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 240.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 240.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
-Warning: Found logic contention at time 240.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 240.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 240.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
-Warning: Found logic contention at time 370.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of X
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
-Warning: Found logic contention at time 370.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of X
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 370.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of X
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
-Warning: Found logic contention at time 490.0 ns on bus node "|top_level|data_memory:inst12|data[2]"
-    Info: Node "data_memory:inst12|inst13[1]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst12" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst26" has logic level of 0
-Warning: Found logic contention at time 490.0 ns on bus node "|top_level|data_memory:inst12|data[1]"
-    Info: Node "data_memory:inst12|inst13[2]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst13" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst25" has logic level of 0
-Warning: Found logic contention at time 490.0 ns on bus node "|top_level|data_memory:inst12|data[0]"
-    Info: Node "data_memory:inst12|inst13[3]" has logic level of Z
-    Info: Node "4bit_register:inst5|inst14" has logic level of Z
-    Info: Node "data_memory:inst12|inst8" has logic level of 1
-    Info: Node "data_memory:inst12|inst24" has logic level of 0
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      51.22 %
-Info: Number of transitions in simulation is 483
-Info: Quartus II Simulator was successful. 0 errors, 44 warnings
+Info: Simulation coverage is      56.00 %
+Info: Number of transitions in simulation is 519
+Info: Quartus II Simulator was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 107 megabytes
-    Info: Processing ended: Thu Dec 29 11:40:30 2011
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Wed Jan 04 11:00:11 2012
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 
