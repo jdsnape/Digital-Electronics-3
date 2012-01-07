@@ -1,5 +1,5 @@
 Simulator report for multiplier
-Thu Dec 22 10:09:53 2011
+Fri Jan 06 16:47:13 2012
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 103 nodes    ;
-; Simulation Coverage         ;      71.30 % ;
-; Total Number of Transitions ; 1071         ;
+; Simulation Netlist Size     ; 107 nodes    ;
+; Simulation Coverage         ;      71.68 % ;
+; Total Number of Transitions ; 1011         ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone      ;
 ; Device                      ; EP1C20F400C7 ;
@@ -95,189 +95,186 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      71.30 % ;
-; Total nodes checked                                 ; 103          ;
-; Total output ports checked                          ; 115          ;
-; Total output ports with complete 1/0-value coverage ; 82           ;
-; Total output ports with no 1/0-value coverage       ; 33           ;
-; Total output ports with no 1-value coverage         ; 33           ;
-; Total output ports with no 0-value coverage         ; 33           ;
+; Total coverage as a percentage                      ;      71.68 % ;
+; Total nodes checked                                 ; 107          ;
+; Total output ports checked                          ; 113          ;
+; Total output ports with complete 1/0-value coverage ; 81           ;
+; Total output ports with no 1/0-value coverage       ; 32           ;
+; Total output ports with no 1-value coverage         ; 32           ;
+; Total output ports with no 0-value coverage         ; 32           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                                                                                                                                                                                 ;
-+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                                                                ; Output Port Name                                                                                                              ; Output Port Type ;
-+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------+
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~577 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~577      ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~583 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~583      ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~583 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~584      ; cout0            ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~583 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~584COUT1 ; cout1            ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~589 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~589      ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~589 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~590      ; cout0            ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~589 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~590COUT1 ; cout1            ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~593 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~593      ; combout          ;
-; |multiplier|state_machine:inst1|inst1                                                                                    ; |multiplier|state_machine:inst1|inst1                                                                                         ; regout           ;
-; |multiplier|state_machine:inst1|inst5                                                                                    ; |multiplier|state_machine:inst1|inst5                                                                                         ; combout          ;
-; |multiplier|inst28                                                                                                       ; |multiplier|inst28                                                                                                            ; regout           ;
-; |multiplier|state_machine:inst1|inst12                                                                                   ; |multiplier|state_machine:inst1|inst12                                                                                        ; combout          ;
-; |multiplier|state_machine:inst1|inst65                                                                                   ; |multiplier|state_machine:inst1|inst65                                                                                        ; combout          ;
-; |multiplier|state_machine:inst1|inst66                                                                                   ; |multiplier|state_machine:inst1|inst66                                                                                        ; combout          ;
-; |multiplier|np_register:inst16|inst7                                                                                     ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~579      ; combout          ;
-; |multiplier|np_register:inst16|inst7                                                                                     ; |multiplier|np_register:inst16|inst7                                                                                          ; regout           ;
-; |multiplier|np_register:inst16|inst8                                                                                     ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~580      ; combout          ;
-; |multiplier|np_register:inst16|inst8                                                                                     ; |multiplier|np_register:inst16|inst8                                                                                          ; regout           ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~581 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~581      ; combout          ;
-; |multiplier|adder:inst17|CLAadder:inst2|Pout                                                                             ; |multiplier|adder:inst17|CLAadder:inst2|Pout                                                                                  ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~582 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~582      ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~585 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~585      ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~586 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~586      ; combout          ;
-; |multiplier|adder:inst17|CLAadder:inst3|Pout                                                                             ; |multiplier|adder:inst17|CLAadder:inst3|Pout                                                                                  ; combout          ;
-; |multiplier|np_register:inst16|inst3                                                                                     ; |multiplier|np_register:inst16|inst3                                                                                          ; regout           ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~588 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~588      ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~591 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~591      ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~592 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~592      ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~595 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~595      ; combout          ;
-; |multiplier|adder:inst17|logic:inst|C3~38                                                                                ; |multiplier|adder:inst17|logic:inst|C3~38                                                                                     ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~597 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~597      ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~598 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~598      ; combout          ;
-; |multiplier|input_select:inst9|inst10                                                                                    ; |multiplier|input_select:inst9|inst10                                                                                         ; combout          ;
-; |multiplier|input_select:inst9|inst19~87                                                                                 ; |multiplier|input_select:inst9|inst19~87                                                                                      ; combout          ;
-; |multiplier|np_register:inst16|inst6                                                                                     ; |multiplier|input_select:inst9|inst20~87                                                                                      ; combout          ;
-; |multiplier|np_register:inst16|inst6                                                                                     ; |multiplier|np_register:inst16|inst6                                                                                          ; regout           ;
-; |multiplier|np_register:inst16|inst5                                                                                     ; |multiplier|input_select:inst9|inst21~87                                                                                      ; combout          ;
-; |multiplier|np_register:inst16|inst5                                                                                     ; |multiplier|np_register:inst16|inst5                                                                                          ; regout           ;
-; |multiplier|np_register:inst16|inst4                                                                                     ; |multiplier|input_select:inst9|inst22~87                                                                                      ; combout          ;
-; |multiplier|np_register:inst16|inst4                                                                                     ; |multiplier|np_register:inst16|inst4                                                                                          ; regout           ;
-; |multiplier|state_machine:inst1|inst3                                                                                    ; |multiplier|state_machine:inst1|inst3                                                                                         ; combout          ;
-; |multiplier|inst43                                                                                                       ; |multiplier|inst43                                                                                                            ; combout          ;
-; |multiplier|np_register:inst16|inst2                                                                                     ; |multiplier|input_select:inst9|inst16                                                                                         ; combout          ;
-; |multiplier|np_register:inst16|inst2                                                                                     ; |multiplier|np_register:inst16|inst2                                                                                          ; regout           ;
-; |multiplier|np_register:inst16|inst                                                                                      ; |multiplier|input_select:inst9|inst17                                                                                         ; combout          ;
-; |multiplier|np_register:inst16|inst                                                                                      ; |multiplier|np_register:inst16|inst                                                                                           ; regout           ;
-; |multiplier|input_select:inst9|inst15                                                                                    ; |multiplier|input_select:inst9|inst15                                                                                         ; combout          ;
-; |multiplier|complete                                                                                                     ; |multiplier|complete                                                                                                          ; padio            ;
-; |multiplier|Enable                                                                                                       ; |multiplier|Enable                                                                                                            ; padio            ;
-; |multiplier|Las                                                                                                          ; |multiplier|Las                                                                                                               ; padio            ;
-; |multiplier|Li                                                                                                           ; |multiplier|Li                                                                                                                ; padio            ;
-; |multiplier|sm_start                                                                                                     ; |multiplier|sm_start                                                                                                          ; padio            ;
-; |multiplier|p_load                                                                                                       ; |multiplier|p_load                                                                                                            ; padio            ;
-; |multiplier|data[0]                                                                                                      ; |multiplier|data[0]                                                                                                           ; padio            ;
-; |multiplier|data[1]                                                                                                      ; |multiplier|data[1]                                                                                                           ; padio            ;
-; |multiplier|data[2]                                                                                                      ; |multiplier|data[2]                                                                                                           ; padio            ;
-; |multiplier|data[3]                                                                                                      ; |multiplier|data[3]                                                                                                           ; padio            ;
-; |multiplier|data[4]                                                                                                      ; |multiplier|data[4]                                                                                                           ; padio            ;
-; |multiplier|data[5]                                                                                                      ; |multiplier|data[5]                                                                                                           ; padio            ;
-; |multiplier|data[6]                                                                                                      ; |multiplier|data[6]                                                                                                           ; padio            ;
-; |multiplier|data[7]                                                                                                      ; |multiplier|data[7]                                                                                                           ; padio            ;
-; |multiplier|data[8]                                                                                                      ; |multiplier|data[8]                                                                                                           ; padio            ;
-; |multiplier|data_out[0]                                                                                                  ; |multiplier|data_out[0]                                                                                                       ; padio            ;
-; |multiplier|data_out[1]                                                                                                  ; |multiplier|data_out[1]                                                                                                       ; padio            ;
-; |multiplier|data_out[2]                                                                                                  ; |multiplier|data_out[2]                                                                                                       ; padio            ;
-; |multiplier|data_out[3]                                                                                                  ; |multiplier|data_out[3]                                                                                                       ; padio            ;
-; |multiplier|data_out[4]                                                                                                  ; |multiplier|data_out[4]                                                                                                       ; padio            ;
-; |multiplier|data_out[5]                                                                                                  ; |multiplier|data_out[5]                                                                                                       ; padio            ;
-; |multiplier|data_out[6]                                                                                                  ; |multiplier|data_out[6]                                                                                                       ; padio            ;
-; |multiplier|data_out[7]                                                                                                  ; |multiplier|data_out[7]                                                                                                       ; padio            ;
-; |multiplier|data_out[8]                                                                                                  ; |multiplier|data_out[8]                                                                                                       ; padio            ;
-; |multiplier|p_input[0]                                                                                                   ; |multiplier|p_input[0]                                                                                                        ; padio            ;
-; |multiplier|p_input[1]                                                                                                   ; |multiplier|p_input[1]                                                                                                        ; padio            ;
-; |multiplier|p_input[2]                                                                                                   ; |multiplier|p_input[2]                                                                                                        ; padio            ;
-; |multiplier|p_input[3]                                                                                                   ; |multiplier|p_input[3]                                                                                                        ; padio            ;
-; |multiplier|p_input[4]                                                                                                   ; |multiplier|p_input[4]                                                                                                        ; padio            ;
-; |multiplier|p_input[5]                                                                                                   ; |multiplier|p_input[5]                                                                                                        ; padio            ;
-; |multiplier|p_input[6]                                                                                                   ; |multiplier|p_input[6]                                                                                                        ; padio            ;
-; |multiplier|p_input[7]                                                                                                   ; |multiplier|p_input[7]                                                                                                        ; padio            ;
-; |multiplier|p_input[8]                                                                                                   ; |multiplier|p_input[8]                                                                                                        ; padio            ;
-; |multiplier|clock                                                                                                        ; |multiplier|clock~corein                                                                                                      ; combout          ;
-; |multiplier|start                                                                                                        ; |multiplier|start~corein                                                                                                      ; combout          ;
-+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                        ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |multiplier|state_machine:inst1|inst1          ; |multiplier|state_machine:inst1|inst1          ; regout           ;
+; |multiplier|state_machine:inst1|inst5          ; |multiplier|state_machine:inst1|inst5          ; combout          ;
+; |multiplier|inst28                             ; |multiplier|inst28                             ; regout           ;
+; |multiplier|state_machine:inst1|inst12         ; |multiplier|state_machine:inst1|inst12         ; combout          ;
+; |multiplier|state_machine:inst1|inst65         ; |multiplier|state_machine:inst1|inst65         ; combout          ;
+; |multiplier|state_machine:inst1|inst66         ; |multiplier|state_machine:inst1|inst66         ; combout          ;
+; |multiplier|adder:inst17|CLAadder:inst1|Pout~4 ; |multiplier|adder:inst17|CLAadder:inst1|Pout~4 ; combout          ;
+; |multiplier|add_subt_select:inst21|inst16~70   ; |multiplier|add_subt_select:inst21|inst16~70   ; combout          ;
+; |multiplier|adder:inst18|CLAadder:inst1|Pout~9 ; |multiplier|adder:inst18|CLAadder:inst1|Pout~9 ; combout          ;
+; |multiplier|add_subt_select:inst21|inst16~71   ; |multiplier|add_subt_select:inst21|inst16~71   ; combout          ;
+; |multiplier|np_register:inst16|inst            ; |multiplier|add_subt_select:inst21|inst15~251  ; combout          ;
+; |multiplier|np_register:inst16|inst            ; |multiplier|np_register:inst16|inst            ; regout           ;
+; |multiplier|add_subt_select:inst21|inst15~252  ; |multiplier|add_subt_select:inst21|inst15~252  ; combout          ;
+; |multiplier|np_register:inst16|inst8           ; |multiplier|add_subt_select:inst21|inst14~317  ; combout          ;
+; |multiplier|np_register:inst16|inst8           ; |multiplier|np_register:inst16|inst8           ; regout           ;
+; |multiplier|adder:inst17|CLAadder:inst2|Pout   ; |multiplier|adder:inst17|CLAadder:inst2|Pout   ; combout          ;
+; |multiplier|add_subt_select:inst21|inst15~253  ; |multiplier|add_subt_select:inst21|inst15~253  ; combout          ;
+; |multiplier|add_subt_select:inst21|inst2~2     ; |multiplier|add_subt_select:inst21|inst2~2     ; combout          ;
+; |multiplier|add_subt_select:inst21|inst15~254  ; |multiplier|add_subt_select:inst21|inst15~254  ; combout          ;
+; |multiplier|adder:inst17|logic:inst|C2~16      ; |multiplier|adder:inst17|logic:inst|C2~16      ; combout          ;
+; |multiplier|add_subt_select:inst21|inst14~318  ; |multiplier|add_subt_select:inst21|inst14~318  ; combout          ;
+; |multiplier|np_register:inst16|inst7           ; |multiplier|add_subt_select:inst21|inst14~319  ; combout          ;
+; |multiplier|np_register:inst16|inst7           ; |multiplier|np_register:inst16|inst7           ; regout           ;
+; |multiplier|add_subt_select:inst21|inst14~320  ; |multiplier|add_subt_select:inst21|inst14~320  ; combout          ;
+; |multiplier|adder:inst17|logic:inst|C3~56      ; |multiplier|adder:inst17|logic:inst|C3~56      ; combout          ;
+; |multiplier|add_subt_select:inst21|inst11~49   ; |multiplier|add_subt_select:inst21|inst11~49   ; combout          ;
+; |multiplier|adder:inst18|logic:inst|C3~48      ; |multiplier|adder:inst18|logic:inst|C3~48      ; combout          ;
+; |multiplier|add_subt_select:inst21|inst11~50   ; |multiplier|add_subt_select:inst21|inst11~50   ; combout          ;
+; |multiplier|add_subt_select:inst21|inst11~51   ; |multiplier|add_subt_select:inst21|inst11~51   ; combout          ;
+; |multiplier|input_select:inst9|inst10          ; |multiplier|input_select:inst9|inst10          ; combout          ;
+; |multiplier|input_select:inst9|inst19~87       ; |multiplier|input_select:inst9|inst19~87       ; combout          ;
+; |multiplier|np_register:inst16|inst6           ; |multiplier|input_select:inst9|inst20~87       ; combout          ;
+; |multiplier|np_register:inst16|inst6           ; |multiplier|np_register:inst16|inst6           ; regout           ;
+; |multiplier|np_register:inst16|inst5           ; |multiplier|input_select:inst9|inst21~87       ; combout          ;
+; |multiplier|np_register:inst16|inst5           ; |multiplier|np_register:inst16|inst5           ; regout           ;
+; |multiplier|np_register:inst16|inst4           ; |multiplier|input_select:inst9|inst22~87       ; combout          ;
+; |multiplier|np_register:inst16|inst4           ; |multiplier|np_register:inst16|inst4           ; regout           ;
+; |multiplier|add_subt_select:inst21|inst11~52   ; |multiplier|add_subt_select:inst21|inst11~52   ; combout          ;
+; |multiplier|input_select:inst9|inst17          ; |multiplier|input_select:inst9|inst17          ; combout          ;
+; |multiplier|state_machine:inst1|inst3          ; |multiplier|state_machine:inst1|inst3          ; combout          ;
+; |multiplier|inst43                             ; |multiplier|inst43                             ; combout          ;
+; |multiplier|add_subt_select:inst21|inst14~321  ; |multiplier|add_subt_select:inst21|inst14~321  ; combout          ;
+; |multiplier|np_register:inst16|inst3           ; |multiplier|input_select:inst9|inst15          ; combout          ;
+; |multiplier|np_register:inst16|inst3           ; |multiplier|np_register:inst16|inst3           ; regout           ;
+; |multiplier|np_register:inst16|inst2           ; |multiplier|input_select:inst9|inst16          ; combout          ;
+; |multiplier|np_register:inst16|inst2           ; |multiplier|np_register:inst16|inst2           ; regout           ;
+; |multiplier|complete                           ; |multiplier|complete                           ; padio            ;
+; |multiplier|Enable                             ; |multiplier|Enable                             ; padio            ;
+; |multiplier|Las                                ; |multiplier|Las                                ; padio            ;
+; |multiplier|Li                                 ; |multiplier|Li                                 ; padio            ;
+; |multiplier|sm_start                           ; |multiplier|sm_start                           ; padio            ;
+; |multiplier|p_load                             ; |multiplier|p_load                             ; padio            ;
+; |multiplier|data[0]                            ; |multiplier|data[0]                            ; padio            ;
+; |multiplier|data[1]                            ; |multiplier|data[1]                            ; padio            ;
+; |multiplier|data[2]                            ; |multiplier|data[2]                            ; padio            ;
+; |multiplier|data[3]                            ; |multiplier|data[3]                            ; padio            ;
+; |multiplier|data[4]                            ; |multiplier|data[4]                            ; padio            ;
+; |multiplier|data[5]                            ; |multiplier|data[5]                            ; padio            ;
+; |multiplier|data[6]                            ; |multiplier|data[6]                            ; padio            ;
+; |multiplier|data[7]                            ; |multiplier|data[7]                            ; padio            ;
+; |multiplier|data[8]                            ; |multiplier|data[8]                            ; padio            ;
+; |multiplier|data_out[0]                        ; |multiplier|data_out[0]                        ; padio            ;
+; |multiplier|data_out[1]                        ; |multiplier|data_out[1]                        ; padio            ;
+; |multiplier|data_out[2]                        ; |multiplier|data_out[2]                        ; padio            ;
+; |multiplier|data_out[3]                        ; |multiplier|data_out[3]                        ; padio            ;
+; |multiplier|data_out[4]                        ; |multiplier|data_out[4]                        ; padio            ;
+; |multiplier|data_out[5]                        ; |multiplier|data_out[5]                        ; padio            ;
+; |multiplier|data_out[6]                        ; |multiplier|data_out[6]                        ; padio            ;
+; |multiplier|data_out[7]                        ; |multiplier|data_out[7]                        ; padio            ;
+; |multiplier|data_out[8]                        ; |multiplier|data_out[8]                        ; padio            ;
+; |multiplier|p_input[0]                         ; |multiplier|p_input[0]                         ; padio            ;
+; |multiplier|p_input[1]                         ; |multiplier|p_input[1]                         ; padio            ;
+; |multiplier|p_input[2]                         ; |multiplier|p_input[2]                         ; padio            ;
+; |multiplier|p_input[3]                         ; |multiplier|p_input[3]                         ; padio            ;
+; |multiplier|p_input[4]                         ; |multiplier|p_input[4]                         ; padio            ;
+; |multiplier|p_input[5]                         ; |multiplier|p_input[5]                         ; padio            ;
+; |multiplier|p_input[6]                         ; |multiplier|p_input[6]                         ; padio            ;
+; |multiplier|p_input[7]                         ; |multiplier|p_input[7]                         ; padio            ;
+; |multiplier|p_input[8]                         ; |multiplier|p_input[8]                         ; padio            ;
+; |multiplier|clock                              ; |multiplier|clock~corein                       ; combout          ;
+; |multiplier|start                              ; |multiplier|start~corein                       ; combout          ;
++------------------------------------------------+------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                                                                                                                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                                                                ; Output Port Name                                                                                                              ; Output Port Type ;
-+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------+
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~577 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~578      ; cout0            ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~577 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~578COUT1 ; cout1            ;
-; |multiplier|bit_flips:inst|inst12                                                                                        ; |multiplier|bit_flips:inst|inst12                                                                                             ; combout          ;
-; |multiplier|bit_flips:inst|inst11                                                                                        ; |multiplier|bit_flips:inst|inst11                                                                                             ; combout          ;
-; |multiplier|bit_flips:inst|inst10                                                                                        ; |multiplier|bit_flips:inst|inst10                                                                                             ; combout          ;
-; |multiplier|bit_flips:inst|inst                                                                                          ; |multiplier|bit_flips:inst|inst                                                                                               ; combout          ;
-; |multiplier|bit_flips:inst|inst8                                                                                         ; |multiplier|bit_flips:inst|inst8                                                                                              ; combout          ;
-; |multiplier|bit_flips:inst|inst26~550                                                                                    ; |multiplier|bit_flips:inst|inst26~550                                                                                         ; combout          ;
-; |multiplier|bit_flips:inst|inst26~551                                                                                    ; |multiplier|bit_flips:inst|inst26~551                                                                                         ; combout          ;
-; |multiplier|bit_flips:inst|inst26~552                                                                                    ; |multiplier|bit_flips:inst|inst26~552                                                                                         ; combout          ;
-; |multiplier|bit_flips:inst|inst9                                                                                         ; |multiplier|bit_flips:inst|inst9                                                                                              ; combout          ;
-; |multiplier|bit_flips:inst|inst26~553                                                                                    ; |multiplier|bit_flips:inst|inst26~553                                                                                         ; combout          ;
-; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[3]~127                        ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[3]~127                             ; combout          ;
-; |multiplier|np_register:inst16|inst3                                                                                     ; |multiplier|adder:inst17|CLAadder:inst1|Gout                                                                                  ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~587 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~587      ; combout          ;
-; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[0]~128                        ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[0]~128                             ; combout          ;
-; |multiplier|adder:inst17|logic:inst|C3~36                                                                                ; |multiplier|adder:inst17|logic:inst|C3~36                                                                                     ; combout          ;
-; |multiplier|adder:inst17|logic:inst|C3~37                                                                                ; |multiplier|adder:inst17|logic:inst|C3~37                                                                                     ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~596 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~596      ; combout          ;
-; |multiplier|input_select:inst9|inst19~86                                                                                 ; |multiplier|input_select:inst9|inst19~86                                                                                      ; combout          ;
-; |multiplier|input_select:inst9|inst20~86                                                                                 ; |multiplier|input_select:inst9|inst20~86                                                                                      ; combout          ;
-; |multiplier|input_select:inst9|inst21~86                                                                                 ; |multiplier|input_select:inst9|inst21~86                                                                                      ; combout          ;
-; |multiplier|input_select:inst9|inst22~86                                                                                 ; |multiplier|input_select:inst9|inst22~86                                                                                      ; combout          ;
-; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~129                        ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~129                             ; combout          ;
-; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[1]~130                        ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[1]~130                             ; combout          ;
-; |multiplier|a[0]                                                                                                         ; |multiplier|a[0]~corein                                                                                                       ; combout          ;
-; |multiplier|b[0]                                                                                                         ; |multiplier|b[0]~corein                                                                                                       ; combout          ;
-; |multiplier|b[2]                                                                                                         ; |multiplier|b[2]~corein                                                                                                       ; combout          ;
-; |multiplier|b[3]                                                                                                         ; |multiplier|b[3]~corein                                                                                                       ; combout          ;
-; |multiplier|b[1]                                                                                                         ; |multiplier|b[1]~corein                                                                                                       ; combout          ;
-; |multiplier|a[1]                                                                                                         ; |multiplier|a[1]~corein                                                                                                       ; combout          ;
-; |multiplier|a[2]                                                                                                         ; |multiplier|a[2]~corein                                                                                                       ; combout          ;
-; |multiplier|a[3]                                                                                                         ; |multiplier|a[3]~corein                                                                                                       ; combout          ;
-+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                 ;
++---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                         ; Output Port Name                                                                                  ; Output Port Type ;
++---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; |multiplier|bit_flips:inst|inst12                                                                 ; |multiplier|bit_flips:inst|inst12                                                                 ; combout          ;
+; |multiplier|bit_flips:inst|inst11                                                                 ; |multiplier|bit_flips:inst|inst11                                                                 ; combout          ;
+; |multiplier|bit_flips:inst|inst10                                                                 ; |multiplier|bit_flips:inst|inst10                                                                 ; combout          ;
+; |multiplier|bit_flips:inst|inst                                                                   ; |multiplier|bit_flips:inst|inst                                                                   ; combout          ;
+; |multiplier|bit_flips:inst|inst8                                                                  ; |multiplier|bit_flips:inst|inst8                                                                  ; combout          ;
+; |multiplier|bit_flips:inst|inst26~542                                                             ; |multiplier|bit_flips:inst|inst26~542                                                             ; combout          ;
+; |multiplier|bit_flips:inst|inst26~543                                                             ; |multiplier|bit_flips:inst|inst26~543                                                             ; combout          ;
+; |multiplier|bit_flips:inst|inst26~544                                                             ; |multiplier|bit_flips:inst|inst26~544                                                             ; combout          ;
+; |multiplier|bit_flips:inst|inst9                                                                  ; |multiplier|bit_flips:inst|inst9                                                                  ; combout          ;
+; |multiplier|bit_flips:inst|inst26~545                                                             ; |multiplier|bit_flips:inst|inst26~545                                                             ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[1]~140 ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[1]~140 ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[0]~141 ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[0]~141 ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[3]~142 ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[3]~142 ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~3   ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~3   ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~2   ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~2   ; combout          ;
+; |multiplier|adder:inst17|CLAadder:inst1|Gout                                                      ; |multiplier|adder:inst17|CLAadder:inst1|Gout                                                      ; combout          ;
+; |multiplier|adder:inst17|logic:inst|C3~54                                                         ; |multiplier|adder:inst17|logic:inst|C3~54                                                         ; combout          ;
+; |multiplier|adder:inst17|logic:inst|C3~55                                                         ; |multiplier|adder:inst17|logic:inst|C3~55                                                         ; combout          ;
+; |multiplier|adder:inst17|logic:inst|C3~57                                                         ; |multiplier|adder:inst17|logic:inst|C3~57                                                         ; combout          ;
+; |multiplier|adder:inst18|logic:inst|C3~47                                                         ; |multiplier|adder:inst18|logic:inst|C3~47                                                         ; combout          ;
+; |multiplier|input_select:inst9|inst19~86                                                          ; |multiplier|input_select:inst9|inst19~86                                                          ; combout          ;
+; |multiplier|input_select:inst9|inst20~86                                                          ; |multiplier|input_select:inst9|inst20~86                                                          ; combout          ;
+; |multiplier|input_select:inst9|inst21~86                                                          ; |multiplier|input_select:inst9|inst21~86                                                          ; combout          ;
+; |multiplier|input_select:inst9|inst22~86                                                          ; |multiplier|input_select:inst9|inst22~86                                                          ; combout          ;
+; |multiplier|b[2]                                                                                  ; |multiplier|b[2]~corein                                                                           ; combout          ;
+; |multiplier|b[3]                                                                                  ; |multiplier|b[3]~corein                                                                           ; combout          ;
+; |multiplier|b[1]                                                                                  ; |multiplier|b[1]~corein                                                                           ; combout          ;
+; |multiplier|b[0]                                                                                  ; |multiplier|b[0]~corein                                                                           ; combout          ;
+; |multiplier|a[1]                                                                                  ; |multiplier|a[1]~corein                                                                           ; combout          ;
+; |multiplier|a[0]                                                                                  ; |multiplier|a[0]~corein                                                                           ; combout          ;
+; |multiplier|a[2]                                                                                  ; |multiplier|a[2]~corein                                                                           ; combout          ;
+; |multiplier|a[3]                                                                                  ; |multiplier|a[3]~corein                                                                           ; combout          ;
++---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                                                                                                                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                                                                ; Output Port Name                                                                                                              ; Output Port Type ;
-+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------+
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~577 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~578      ; cout0            ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~577 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~578COUT1 ; cout1            ;
-; |multiplier|bit_flips:inst|inst12                                                                                        ; |multiplier|bit_flips:inst|inst12                                                                                             ; combout          ;
-; |multiplier|bit_flips:inst|inst11                                                                                        ; |multiplier|bit_flips:inst|inst11                                                                                             ; combout          ;
-; |multiplier|bit_flips:inst|inst10                                                                                        ; |multiplier|bit_flips:inst|inst10                                                                                             ; combout          ;
-; |multiplier|bit_flips:inst|inst                                                                                          ; |multiplier|bit_flips:inst|inst                                                                                               ; combout          ;
-; |multiplier|bit_flips:inst|inst8                                                                                         ; |multiplier|bit_flips:inst|inst8                                                                                              ; combout          ;
-; |multiplier|bit_flips:inst|inst26~550                                                                                    ; |multiplier|bit_flips:inst|inst26~550                                                                                         ; combout          ;
-; |multiplier|bit_flips:inst|inst26~551                                                                                    ; |multiplier|bit_flips:inst|inst26~551                                                                                         ; combout          ;
-; |multiplier|bit_flips:inst|inst26~552                                                                                    ; |multiplier|bit_flips:inst|inst26~552                                                                                         ; combout          ;
-; |multiplier|bit_flips:inst|inst9                                                                                         ; |multiplier|bit_flips:inst|inst9                                                                                              ; combout          ;
-; |multiplier|bit_flips:inst|inst26~553                                                                                    ; |multiplier|bit_flips:inst|inst26~553                                                                                         ; combout          ;
-; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[3]~127                        ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[3]~127                             ; combout          ;
-; |multiplier|np_register:inst16|inst3                                                                                     ; |multiplier|adder:inst17|CLAadder:inst1|Gout                                                                                  ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~587 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~587      ; combout          ;
-; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[0]~128                        ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[0]~128                             ; combout          ;
-; |multiplier|adder:inst17|logic:inst|C3~36                                                                                ; |multiplier|adder:inst17|logic:inst|C3~36                                                                                     ; combout          ;
-; |multiplier|adder:inst17|logic:inst|C3~37                                                                                ; |multiplier|adder:inst17|logic:inst|C3~37                                                                                     ; combout          ;
-; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~596 ; |multiplier|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~596      ; combout          ;
-; |multiplier|input_select:inst9|inst19~86                                                                                 ; |multiplier|input_select:inst9|inst19~86                                                                                      ; combout          ;
-; |multiplier|input_select:inst9|inst20~86                                                                                 ; |multiplier|input_select:inst9|inst20~86                                                                                      ; combout          ;
-; |multiplier|input_select:inst9|inst21~86                                                                                 ; |multiplier|input_select:inst9|inst21~86                                                                                      ; combout          ;
-; |multiplier|input_select:inst9|inst22~86                                                                                 ; |multiplier|input_select:inst9|inst22~86                                                                                      ; combout          ;
-; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~129                        ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~129                             ; combout          ;
-; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[1]~130                        ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[1]~130                             ; combout          ;
-; |multiplier|a[0]                                                                                                         ; |multiplier|a[0]~corein                                                                                                       ; combout          ;
-; |multiplier|b[0]                                                                                                         ; |multiplier|b[0]~corein                                                                                                       ; combout          ;
-; |multiplier|b[2]                                                                                                         ; |multiplier|b[2]~corein                                                                                                       ; combout          ;
-; |multiplier|b[3]                                                                                                         ; |multiplier|b[3]~corein                                                                                                       ; combout          ;
-; |multiplier|b[1]                                                                                                         ; |multiplier|b[1]~corein                                                                                                       ; combout          ;
-; |multiplier|a[1]                                                                                                         ; |multiplier|a[1]~corein                                                                                                       ; combout          ;
-; |multiplier|a[2]                                                                                                         ; |multiplier|a[2]~corein                                                                                                       ; combout          ;
-; |multiplier|a[3]                                                                                                         ; |multiplier|a[3]~corein                                                                                                       ; combout          ;
-+--------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                 ;
++---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                         ; Output Port Name                                                                                  ; Output Port Type ;
++---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
+; |multiplier|bit_flips:inst|inst12                                                                 ; |multiplier|bit_flips:inst|inst12                                                                 ; combout          ;
+; |multiplier|bit_flips:inst|inst11                                                                 ; |multiplier|bit_flips:inst|inst11                                                                 ; combout          ;
+; |multiplier|bit_flips:inst|inst10                                                                 ; |multiplier|bit_flips:inst|inst10                                                                 ; combout          ;
+; |multiplier|bit_flips:inst|inst                                                                   ; |multiplier|bit_flips:inst|inst                                                                   ; combout          ;
+; |multiplier|bit_flips:inst|inst8                                                                  ; |multiplier|bit_flips:inst|inst8                                                                  ; combout          ;
+; |multiplier|bit_flips:inst|inst26~542                                                             ; |multiplier|bit_flips:inst|inst26~542                                                             ; combout          ;
+; |multiplier|bit_flips:inst|inst26~543                                                             ; |multiplier|bit_flips:inst|inst26~543                                                             ; combout          ;
+; |multiplier|bit_flips:inst|inst26~544                                                             ; |multiplier|bit_flips:inst|inst26~544                                                             ; combout          ;
+; |multiplier|bit_flips:inst|inst9                                                                  ; |multiplier|bit_flips:inst|inst9                                                                  ; combout          ;
+; |multiplier|bit_flips:inst|inst26~545                                                             ; |multiplier|bit_flips:inst|inst26~545                                                             ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[1]~140 ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[1]~140 ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[0]~141 ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[0]~141 ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[3]~142 ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[3]~142 ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~3   ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~3   ; combout          ;
+; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~2   ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated|result_node[2]~2   ; combout          ;
+; |multiplier|adder:inst17|CLAadder:inst1|Gout                                                      ; |multiplier|adder:inst17|CLAadder:inst1|Gout                                                      ; combout          ;
+; |multiplier|adder:inst17|logic:inst|C3~54                                                         ; |multiplier|adder:inst17|logic:inst|C3~54                                                         ; combout          ;
+; |multiplier|adder:inst17|logic:inst|C3~55                                                         ; |multiplier|adder:inst17|logic:inst|C3~55                                                         ; combout          ;
+; |multiplier|adder:inst17|logic:inst|C3~57                                                         ; |multiplier|adder:inst17|logic:inst|C3~57                                                         ; combout          ;
+; |multiplier|adder:inst18|logic:inst|C3~47                                                         ; |multiplier|adder:inst18|logic:inst|C3~47                                                         ; combout          ;
+; |multiplier|input_select:inst9|inst19~86                                                          ; |multiplier|input_select:inst9|inst19~86                                                          ; combout          ;
+; |multiplier|input_select:inst9|inst20~86                                                          ; |multiplier|input_select:inst9|inst20~86                                                          ; combout          ;
+; |multiplier|input_select:inst9|inst21~86                                                          ; |multiplier|input_select:inst9|inst21~86                                                          ; combout          ;
+; |multiplier|input_select:inst9|inst22~86                                                          ; |multiplier|input_select:inst9|inst22~86                                                          ; combout          ;
+; |multiplier|b[2]                                                                                  ; |multiplier|b[2]~corein                                                                           ; combout          ;
+; |multiplier|b[3]                                                                                  ; |multiplier|b[3]~corein                                                                           ; combout          ;
+; |multiplier|b[1]                                                                                  ; |multiplier|b[1]~corein                                                                           ; combout          ;
+; |multiplier|b[0]                                                                                  ; |multiplier|b[0]~corein                                                                           ; combout          ;
+; |multiplier|a[1]                                                                                  ; |multiplier|a[1]~corein                                                                           ; combout          ;
+; |multiplier|a[0]                                                                                  ; |multiplier|a[0]~corein                                                                           ; combout          ;
+; |multiplier|a[2]                                                                                  ; |multiplier|a[2]~corein                                                                           ; combout          ;
+; |multiplier|a[3]                                                                                  ; |multiplier|a[3]~corein                                                                           ; combout          ;
++---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -293,9 +290,9 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
-    Info: Processing started: Thu Dec 22 10:09:51 2011
+    Info: Processing started: Fri Jan 06 16:47:10 2012
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off multiplier -c multiplier
-Info: Using vector source file "E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/multiplier.vwf"
+Info: Using vector source file "E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/multiplier.vwf"
 Warning: Ignored node in vector source file. Can't find corresponding node name "calc" in design.
 Warning: Ignored node in vector source file. Can't find corresponding node name "mult_result[8]" in design.
 Warning: Ignored node in vector source file. Can't find corresponding node name "mult_result[7]" in design.
@@ -309,12 +306,12 @@ Warning: Ignored node in vector source file. Can't find corresponding node name 
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      71.30 %
-Info: Number of transitions in simulation is 1071
+Info: Simulation coverage is      71.68 %
+Info: Number of transitions in simulation is 1011
 Info: Quartus II Simulator was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 109 megabytes
-    Info: Processing ended: Thu Dec 22 10:09:53 2011
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Fri Jan 06 16:47:13 2012
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

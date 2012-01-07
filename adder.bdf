@@ -52,6 +52,22 @@ applicable agreement for further details.
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect 56 368 224 384)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "C0" (rect 5 0 19 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 1264 264 1440 280)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -380,23 +396,6 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 280 112)(line_width 1))
-	)
-)
-(symbol
-	(rect 208 376 240 408)
-	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "inst5" (rect 3 21 26 33)(font "Arial" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0)(line_width 1))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16)(line_width 1))
-		(line (pt 16 16)(pt 24 8)(line_width 1))
-		(line (pt 8 8)(pt 24 8)(line_width 1))
 	)
 )
 (connector

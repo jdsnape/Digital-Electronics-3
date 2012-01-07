@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 192 144)
+	(rect 16 16 216 144)
 	(text "4bit_register" (rect 5 0 75 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
@@ -52,13 +52,20 @@ applicable agreement for further details.
 		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port
-		(pt 176 32)
+		(pt 200 32)
+		(output)
+		(text "alu_output[0..3]" (rect 0 0 87 14)(font "Arial" (font_size 8)))
+		(text "alu_output[0..3]" (rect 92 27 179 41)(font "Arial" (font_size 8)))
+		(line (pt 200 32)(pt 184 32)(line_width 3))
+	)
+	(port
+		(pt 200 48)
 		(output)
 		(text "output[0..3]" (rect 0 0 63 14)(font "Arial" (font_size 8)))
-		(text "output[0..3]" (rect 92 27 155 41)(font "Arial" (font_size 8)))
-		(line (pt 176 32)(pt 160 32)(line_width 3))
+		(text "output[0..3]" (rect 116 43 179 57)(font "Arial" (font_size 8)))
+		(line (pt 200 48)(pt 184 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 160 112)(line_width 1))
+		(rectangle (rect 16 16 184 112)(line_width 1))
 	)
 )

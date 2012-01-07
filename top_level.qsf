@@ -61,6 +61,9 @@ set_global_assignment -name BDF_FILE instruction_decode.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE top_level.vwf
 set_global_assignment -name BDF_FILE instruction_load.bdf
 set_global_assignment -name BDF_FILE instruction_pointer.bdf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE top_level.vwf
 set_global_assignment -name BDF_FILE data_memory.bdf
 set_global_assignment -name BDF_FILE data_mem2.bdf
+set_global_assignment -name BDF_FILE str_decode.bdf
+set_global_assignment -name BDF_FILE ldr_decode.bdf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE top_level.vwf
+set_global_assignment -name BDF_FILE instruction_mem.bdf

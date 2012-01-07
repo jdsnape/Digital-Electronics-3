@@ -13,10 +13,9 @@ instruction[1] => instruction_decode:inst1.instruction[1]
 instruction[0] => instruction_decode:inst1.instruction[0]
 r1_enable <= instruction_decode:inst1.r1_enable
 r0_enable <= instruction_decode:inst1.r0_enable
-set <= instruction_decode:inst1.x_set
 data_mem_enable <= instruction_decode:inst1.data_mem_enable
-reg_select <= instruction_decode:inst1.reg_select
 data_mem_load <= instruction_decode:inst1.data_mem_load
+a_select <= instruction_decode:inst1.a_select
 a_contents[3] <= data_bus[3].DB_MAX_OUTPUT_PORT_TYPE
 a_contents[2] <= data_bus[2].DB_MAX_OUTPUT_PORT_TYPE
 a_contents[1] <= data_bus[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -29,12 +28,10 @@ data[3] <= instruction_decode:inst1.data[3]
 data[2] <= instruction_decode:inst1.data[2]
 data[1] <= instruction_decode:inst1.data[1]
 data[0] <= instruction_decode:inst1.data[0]
-memory_contents[3] <= data_mem2:inst18.data[3]
-memory_contents[2] <= data_mem2:inst18.data[2]
-memory_contents[1] <= data_mem2:inst18.data[1]
-memory_contents[0] <= data_mem2:inst18.data[0]
-state_machine[1] <= instruction_decode:inst1.state_machine[1]
-state_machine[0] <= instruction_decode:inst1.state_machine[0]
+memory_contents[3] <= data_bus[3].DB_MAX_OUTPUT_PORT_TYPE
+memory_contents[2] <= data_bus[2].DB_MAX_OUTPUT_PORT_TYPE
+memory_contents[1] <= data_bus[1].DB_MAX_OUTPUT_PORT_TYPE
+memory_contents[0] <= data_bus[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|instruction_decode:inst1
@@ -56,23 +53,25 @@ instruction[4] => BUSMUX:inst58.dataa[0]
 instruction[4] => BUSMUX:inst58.datab[1]
 instruction[3] => BUSMUX:inst58.dataa[1]
 instruction[3] => BUSMUX:inst58.datab[2]
+instruction[2] => inst13.IN0
+instruction[2] => inst27.IN0
+instruction[2] => inst23.IN0
 instruction[2] => BUSMUX:inst58.dataa[2]
-instruction[1] => ~NO_FANOUT~
+instruction[1] => inst28.IN0
+instruction[1] => inst21.IN1
+instruction[1] => inst26.IN0
 instruction[0] => ~NO_FANOUT~
-decode => inst44.IN0
-decode => inst46.IN0
-clock => inst25.IN1
-clock => inst24.CLK
-clock => inst26.CLK
-clock => inst47.IN1
+decode => ldr_decode:inst68.enable
+decode => str_decode:inst62.str
+clock => ldr_decode:inst68.clock
+clock => str_decode:inst62.clock
 r0_enable <= inst14.DB_MAX_OUTPUT_PORT_TYPE
 a_enable <= inst20.DB_MAX_OUTPUT_PORT_TYPE
-x_set <= <GND>
 data_mem_enable <= inst38.DB_MAX_OUTPUT_PORT_TYPE
-data_mem_load <= inst53.DB_MAX_OUTPUT_PORT_TYPE
-state_machine[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-state_machine[0] <= inst45.DB_MAX_OUTPUT_PORT_TYPE
-reg_select <= inst55.DB_MAX_OUTPUT_PORT_TYPE
+data_mem_load <= str_decode:inst62.state1
+a_select <= inst63.DB_MAX_OUTPUT_PORT_TYPE
+r1_select <= inst64.DB_MAX_OUTPUT_PORT_TYPE
+r0_select <= inst65.DB_MAX_OUTPUT_PORT_TYPE
 address[2] <= BUSMUX:inst58.result[0]
 address[1] <= BUSMUX:inst58.result[1]
 address[0] <= BUSMUX:inst58.result[2]
@@ -80,6 +79,24 @@ data[3] <= <GND>
 data[2] <= <GND>
 data[1] <= <GND>
 data[0] <= <GND>
+
+
+|top_level|instruction_decode:inst1|ldr_decode:inst68
+state0 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+enable => inst44.IN0
+ldr => inst44.IN1
+clock => inst25.IN1
+clock => inst24.CLK
+state1 <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|instruction_decode:inst1|str_decode:inst62
+state0 <= inst51.DB_MAX_OUTPUT_PORT_TYPE
+str => inst46.IN0
+enable => inst46.IN1
+clock => inst47.IN1
+clock => inst26.CLK
+state1 <= inst53.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|instruction_decode:inst1|BUSMUX:inst58
@@ -118,10 +135,10 @@ result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|4bit_register:inst5
-output[3] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
-output[0] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[2] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 load => inst.CLK
 load => inst1.CLK
 load => inst2.CLK
@@ -134,6 +151,64 @@ enable => inst7.IN1
 enable => inst8.IN1
 enable => inst9.IN1
 enable => inst10.IN1
+output[3] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+output[0] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+select => inst11.OE
+select => inst12.OE
+select => inst13.OE
+select => inst14.OE
+
+
+|top_level|4bit_register:inst4
+alu_output[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[2] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+load => inst.CLK
+load => inst1.CLK
+load => inst2.CLK
+load => inst3.CLK
+input[3] => inst7.IN0
+input[2] => inst8.IN0
+input[1] => inst9.IN0
+input[0] => inst10.IN0
+enable => inst7.IN1
+enable => inst8.IN1
+enable => inst9.IN1
+enable => inst10.IN1
+output[3] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+output[0] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+select => inst11.OE
+select => inst12.OE
+select => inst13.OE
+select => inst14.OE
+
+
+|top_level|4bit_register:inst3
+alu_output[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[2] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+alu_output[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+load => inst.CLK
+load => inst1.CLK
+load => inst2.CLK
+load => inst3.CLK
+input[3] => inst7.IN0
+input[2] => inst8.IN0
+input[1] => inst9.IN0
+input[0] => inst10.IN0
+enable => inst7.IN1
+enable => inst8.IN1
+enable => inst9.IN1
+enable => inst10.IN1
+output[3] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+output[0] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
 select => inst11.OE
 select => inst12.OE
 select => inst13.OE
@@ -363,6 +438,8 @@ subtract_enable <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 
 |top_level|multiplier:inst|adder:inst17
 carry_out <= logic:inst.C4
+C0 => logic:inst.C0
+C0 => CLAadder:inst1.Cin
 a[3] => CLAadder:inst4.A
 a[2] => CLAadder:inst3.A
 a[1] => CLAadder:inst2.A
@@ -576,211 +653,101 @@ result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
 result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_level|multiplier:inst|lpm_add_sub0:inst36
-dataa[0] => lpm_add_sub:lpm_add_sub_component.dataa[0]
-dataa[1] => lpm_add_sub:lpm_add_sub_component.dataa[1]
-dataa[2] => lpm_add_sub:lpm_add_sub_component.dataa[2]
-dataa[3] => lpm_add_sub:lpm_add_sub_component.dataa[3]
-datab[0] => lpm_add_sub:lpm_add_sub_component.datab[0]
-datab[1] => lpm_add_sub:lpm_add_sub_component.datab[1]
-datab[2] => lpm_add_sub:lpm_add_sub_component.datab[2]
-datab[3] => lpm_add_sub:lpm_add_sub_component.datab[3]
-result[0] <= lpm_add_sub:lpm_add_sub_component.result[0]
-result[1] <= lpm_add_sub:lpm_add_sub_component.result[1]
-result[2] <= lpm_add_sub:lpm_add_sub_component.result[2]
-result[3] <= lpm_add_sub:lpm_add_sub_component.result[3]
+|top_level|multiplier:inst|adder:inst18
+carry_out <= logic:inst.C4
+C0 => logic:inst.C0
+C0 => CLAadder:inst1.Cin
+a[3] => CLAadder:inst4.A
+a[2] => CLAadder:inst3.A
+a[1] => CLAadder:inst2.A
+a[0] => CLAadder:inst1.A
+multiplicand[3] => CLAadder:inst4.B
+multiplicand[2] => CLAadder:inst3.B
+multiplicand[1] => CLAadder:inst2.B
+multiplicand[0] => CLAadder:inst1.B
+sum[3] <= Sout[3].DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= Sout[2].DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= Sout[1].DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= Sout[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_level|multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component
-dataa[0] => addcore:adder.dataa[0]
-dataa[1] => addcore:adder.dataa[1]
-dataa[2] => addcore:adder.dataa[2]
-dataa[3] => addcore:adder.dataa[3]
-datab[0] => addcore:adder.datab[0]
-datab[1] => addcore:adder.datab[1]
-datab[2] => addcore:adder.datab[2]
-datab[3] => addcore:adder.datab[3]
-cin => ~NO_FANOUT~
-add_sub => ~NO_FANOUT~
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= altshift:result_ext_latency_ffs.result[0]
-result[1] <= altshift:result_ext_latency_ffs.result[1]
-result[2] <= altshift:result_ext_latency_ffs.result[2]
-result[3] <= altshift:result_ext_latency_ffs.result[3]
-cout <= cout~0.DB_MAX_OUTPUT_PORT_TYPE
-overflow <= overflow~0.DB_MAX_OUTPUT_PORT_TYPE
+|top_level|multiplier:inst|adder:inst18|logic:inst
+C0 => C4~6.IN0
+C0 => C3~6.IN0
+C0 => C2~3.IN1
+P0 => C3~5.IN0
+P0 => C2~2.IN0
+P0 => C1~0.IN1
+P1 => C4~3.IN0
+P1 => C3~2.IN0
+P1 => C2~2.IN1
+P1 => C2~0.IN1
+P2 => C4~2.IN0
+P2 => C3~2.IN1
+P2 => C3~0.IN1
+P3 => C4~2.IN1
+P3 => C4~0.IN1
+G0 => C4~4.IN0
+G0 => C3~3.IN0
+G0 => C2~0.IN0
+G0 => C1~1.IN0
+G0 => C1~0.IN0
+G1 => C3~0.IN0
+G1 => C2~1.IN1
+G2 => C4~0.IN0
+G2 => C3~1.IN1
+G3 => C4~1.IN1
+C1 <= C1~1.DB_MAX_OUTPUT_PORT_TYPE
+C2 <= C2~4.DB_MAX_OUTPUT_PORT_TYPE
+C3 <= C3~7.DB_MAX_OUTPUT_PORT_TYPE
+C4 <= C4~7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_level|multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder
-datab[0] => datab_node[0].IN0
-datab[1] => datab_node[1].IN0
-datab[2] => datab_node[2].IN0
-datab[3] => datab_node[3].IN0
-cin => ~NO_FANOUT~
-add_sub => ~NO_FANOUT~
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= a_csnbuffer:result_node.sout[0]
-result[1] <= a_csnbuffer:result_node.sout[1]
-result[2] <= a_csnbuffer:result_node.sout[2]
-result[3] <= a_csnbuffer:result_node.sout[3]
-cout <= a_csnbuffer:cout_node.sout[0]
-unreg_result[0] <= unreg_res_node[0].DB_MAX_OUTPUT_PORT_TYPE
-unreg_result[1] <= unreg_res_node[1].DB_MAX_OUTPUT_PORT_TYPE
-unreg_result[2] <= unreg_res_node[2].DB_MAX_OUTPUT_PORT_TYPE
-unreg_result[3] <= unreg_res_node[3].DB_MAX_OUTPUT_PORT_TYPE
-unreg_cout <= unreg_cout_node.DB_MAX_OUTPUT_PORT_TYPE
-overflow <= a_csnbuffer:oflow_node.sout[0]
-bg_out <= <GND>
-bp_out <= <GND>
+|top_level|multiplier:inst|adder:inst18|CLAadder:inst1
+A => P~0.IN0
+A => G~0.IN0
+B => P~0.IN1
+B => G~0.IN1
+Cin => Sout~0.IN0
+Sout <= Sout~0.DB_MAX_OUTPUT_PORT_TYPE
+Gout <= G~0.DB_MAX_OUTPUT_PORT_TYPE
+Pout <= P~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_level|multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node
-sin[0] => sout_node[0].DATAIN
-sin[1] => sout_node[1].DATAIN
-sin[2] => sout_node[2].DATAIN
-sin[3] => sout_node[3].DATAIN
-cin[0] => cout[0]~3.IN0
-cin[1] => cout[1]~2.IN0
-cin[2] => cout[2]~1.IN0
-cin[3] => cout[3]~0.IN0
-clk => ~NO_FANOUT~
-clrn => ~NO_FANOUT~
-ena => ~NO_FANOUT~
-sout[0] <= sout_node[0].DB_MAX_OUTPUT_PORT_TYPE
-sout[1] <= sout_node[1].DB_MAX_OUTPUT_PORT_TYPE
-sout[2] <= sout_node[2].DB_MAX_OUTPUT_PORT_TYPE
-sout[3] <= sout_node[3].DB_MAX_OUTPUT_PORT_TYPE
-cout[0] <= cout[0]~3.DB_MAX_OUTPUT_PORT_TYPE
-cout[1] <= cout[1]~2.DB_MAX_OUTPUT_PORT_TYPE
-cout[2] <= cout[2]~1.DB_MAX_OUTPUT_PORT_TYPE
-cout[3] <= cout[3]~0.DB_MAX_OUTPUT_PORT_TYPE
+|top_level|multiplier:inst|adder:inst18|CLAadder:inst2
+A => P~0.IN0
+A => G~0.IN0
+B => P~0.IN1
+B => G~0.IN1
+Cin => Sout~0.IN0
+Sout <= Sout~0.DB_MAX_OUTPUT_PORT_TYPE
+Gout <= G~0.DB_MAX_OUTPUT_PORT_TYPE
+Pout <= P~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_level|multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node
-sin[0] => cs_buffer[0].SUM_IN
-sin[1] => cs_buffer[1].SUM_IN
-sin[2] => cs_buffer[2].SUM_IN
-sin[3] => cs_buffer[3].SUM_IN
-cin[0] => cs_buffer[0].CIN
-cin[1] => cs_buffer[1].CIN
-cin[2] => cs_buffer[2].CIN
-cin[3] => cs_buffer[3].CIN
-clk => ~NO_FANOUT~
-clrn => ~NO_FANOUT~
-ena => ~NO_FANOUT~
-sout[0] <= cs_buffer[0].DB_MAX_OUTPUT_PORT_TYPE
-sout[1] <= cs_buffer[1].DB_MAX_OUTPUT_PORT_TYPE
-sout[2] <= cs_buffer[2].DB_MAX_OUTPUT_PORT_TYPE
-sout[3] <= cs_buffer[3].DB_MAX_OUTPUT_PORT_TYPE
-cout[0] <= cs_buffer[0].DB_MAX_OUTPUT_PORT_TYPE
-cout[1] <= cs_buffer[1].DB_MAX_OUTPUT_PORT_TYPE
-cout[2] <= cs_buffer[2].DB_MAX_OUTPUT_PORT_TYPE
-cout[3] <= cs_buffer[3].DB_MAX_OUTPUT_PORT_TYPE
+|top_level|multiplier:inst|adder:inst18|CLAadder:inst3
+A => P~0.IN0
+A => G~0.IN0
+B => P~0.IN1
+B => G~0.IN1
+Cin => Sout~0.IN0
+Sout <= Sout~0.DB_MAX_OUTPUT_PORT_TYPE
+Gout <= G~0.DB_MAX_OUTPUT_PORT_TYPE
+Pout <= P~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_level|multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:cout_node
-sin[0] => sout_node[0].DATAIN
-sin[1] => sout_node[1].DATAIN
-sin[2] => sout_node[2].DATAIN
-sin[3] => sout_node[3].DATAIN
-cin[0] => cout[0]~3.IN0
-cin[1] => cout[1]~2.IN0
-cin[2] => cout[2]~1.IN0
-cin[3] => cout[3]~0.IN0
-clk => ~NO_FANOUT~
-clrn => ~NO_FANOUT~
-ena => ~NO_FANOUT~
-sout[0] <= sout_node[0].DB_MAX_OUTPUT_PORT_TYPE
-sout[1] <= sout_node[1].DB_MAX_OUTPUT_PORT_TYPE
-sout[2] <= sout_node[2].DB_MAX_OUTPUT_PORT_TYPE
-sout[3] <= sout_node[3].DB_MAX_OUTPUT_PORT_TYPE
-cout[0] <= cout[0]~3.DB_MAX_OUTPUT_PORT_TYPE
-cout[1] <= cout[1]~2.DB_MAX_OUTPUT_PORT_TYPE
-cout[2] <= cout[2]~1.DB_MAX_OUTPUT_PORT_TYPE
-cout[3] <= cout[3]~0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top_level|multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs
-data[0] => result[0].DATAIN
-data[1] => result[1].DATAIN
-data[2] => result[2].DATAIN
-data[3] => result[3].DATAIN
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top_level|multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs
-data[0] => result[0].DATAIN
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top_level|multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
-data[0] => result[0].DATAIN
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+|top_level|multiplier:inst|adder:inst18|CLAadder:inst4
+A => P~0.IN0
+A => G~0.IN0
+B => P~0.IN1
+B => G~0.IN1
+Cin => Sout~0.IN0
+Sout <= Sout~0.DB_MAX_OUTPUT_PORT_TYPE
+Gout <= G~0.DB_MAX_OUTPUT_PORT_TYPE
+Pout <= P~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|instruction_load:inst10
-
-
-|top_level|4bit_register:inst3
-output[3] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
-output[0] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
-load => inst.CLK
-load => inst1.CLK
-load => inst2.CLK
-load => inst3.CLK
-input[3] => inst7.IN0
-input[2] => inst8.IN0
-input[1] => inst9.IN0
-input[0] => inst10.IN0
-enable => inst7.IN1
-enable => inst8.IN1
-enable => inst9.IN1
-enable => inst10.IN1
-select => inst11.OE
-select => inst12.OE
-select => inst13.OE
-select => inst14.OE
-
-
-|top_level|4bit_register:inst4
-output[3] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
-output[2] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
-output[0] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
-load => inst.CLK
-load => inst1.CLK
-load => inst2.CLK
-load => inst3.CLK
-input[3] => inst7.IN0
-input[2] => inst8.IN0
-input[1] => inst9.IN0
-input[0] => inst10.IN0
-enable => inst7.IN1
-enable => inst8.IN1
-enable => inst9.IN1
-enable => inst10.IN1
-select => inst11.OE
-select => inst12.OE
-select => inst13.OE
-select => inst14.OE
 
 
 |top_level|instruction_pointer:inst9

@@ -4,6 +4,5 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|instruction_decode:inst1|BUSMUX:inst58|lpm_mux:$00000" CBX_FILE_NAME="mux_5fc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|multiplier:inst|bit_flips:inst|BUSMUX:inst41|lpm_mux:$00000" CBX_FILE_NAME="mux_6fc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|multiplier:inst|bit_flips:inst|BUSMUX:inst42|lpm_mux:$00000" CBX_FILE_NAME="mux_6fc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_ndh.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -38,6 +38,13 @@ applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
+		(pt 0 64)
+		(input)
+		(text "C0" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "C0" (rect 21 59 36 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
 		(pt 200 32)
 		(output)
 		(text "sum[0..3]" (rect 0 0 51 14)(font "Arial" (font_size 8)))

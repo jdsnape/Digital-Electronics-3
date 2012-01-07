@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Thu Dec 29 10:55:06 2011
+Thu Jan 05 10:28:34 2012
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
 
 
@@ -9,11 +9,16 @@ Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Source assignments for multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder
-  5. Parameter Settings for User Entity Instance: multiplier:inst|bit_flips:inst|BUSMUX:inst42
-  6. Parameter Settings for User Entity Instance: multiplier:inst|bit_flips:inst|BUSMUX:inst41
-  7. Parameter Settings for User Entity Instance: multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component
-  8. Analysis & Synthesis Messages
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Source assignments for multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder
+  9. Parameter Settings for User Entity Instance: instruction_decode:inst1|BUSMUX:inst58
+ 10. Parameter Settings for User Entity Instance: multiplier:inst|bit_flips:inst|BUSMUX:inst42
+ 11. Parameter Settings for User Entity Instance: multiplier:inst|bit_flips:inst|BUSMUX:inst41
+ 12. Parameter Settings for User Entity Instance: multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -39,17 +44,17 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Dec 29 10:55:06 2011        ;
+; Analysis & Synthesis Status ; Successful - Thu Jan 05 10:28:34 2012    ;
 ; Quartus II Version          ; 8.0 Build 215 05/29/2008 SJ Full Version ;
 ; Revision Name               ; top_level                                ;
 ; Top-level Entity Name       ; top_level                                ;
 ; Family                      ; Cyclone                                  ;
-; Total logic elements        ; N/A until Partition Merge                ;
-; Total pins                  ; N/A until Partition Merge                ;
-; Total virtual pins          ; N/A until Partition Merge                ;
-; Total memory bits           ; N/A until Partition Merge                ;
+; Total logic elements        ; 56                                       ;
+; Total pins                  ; 33                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
 ; DSP block 9-bit elements    ; N/A until Partition Merge                ;
-; Total PLLs                  ; N/A until Partition Merge                ;
+; Total PLLs                  ; 0                                        ;
 ; Total DLLs                  ; N/A until Partition Merge                ;
 +-----------------------------+------------------------------------------+
 
@@ -127,6 +132,121 @@ applicable agreement for further details.
 +--------------------------------------------------------------+--------------------+--------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------+
+; add_subt_decision.bdf            ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/add_subt_decision.bdf   ;
+; add_subt_select.bdf              ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/add_subt_select.bdf     ;
+; adder.bdf                        ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/adder.bdf               ;
+; bit_flips.bdf                    ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/bit_flips.bdf           ;
+; bus_combine.bdf                  ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/bus_combine.bdf         ;
+; CLAadder.vhd                     ; yes             ; User VHDL File                     ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/CLAadder.vhd            ;
+; input_select.bdf                 ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/input_select.bdf        ;
+; logic.vhd                        ; yes             ; User VHDL File                     ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/logic.vhd               ;
+; lpm_add_sub0.vhd                 ; yes             ; User VHDL File                     ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/lpm_add_sub0.vhd        ;
+; multiplier.bdf                   ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/multiplier.bdf          ;
+; np_register.bdf                  ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/np_register.bdf         ;
+; state_machine.bdf                ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/state_machine.bdf       ;
+; top_level.bdf                    ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/top_level.bdf           ;
+; 4bit_register.bdf                ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/4bit_register.bdf       ;
+; instruction_decode.bdf           ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/instruction_decode.bdf  ;
+; instruction_load.bdf             ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/instruction_load.bdf    ;
+; instruction_pointer.bdf          ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/instruction_pointer.bdf ;
+; data_mem2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/data_mem2.bdf           ;
+; str_decode.bdf                   ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/str_decode.bdf          ;
+; ldr_decode.bdf                   ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/ldr_decode.bdf          ;
+; BUSMUX.tdf                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/BUSMUX.tdf                                                             ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_mux.inc                                                            ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_mux.tdf                                                            ;
+; aglobal80.inc                    ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/aglobal80.inc                                                          ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/muxlut.inc                                                             ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/bypassff.inc                                                           ;
+; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altshift.inc                                                           ;
+; db/mux_5fc.tdf                   ; yes             ; Auto-Generated Megafunction        ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/db/mux_5fc.tdf          ;
+; db/mux_6fc.tdf                   ; yes             ; Auto-Generated Megafunction        ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/db/mux_6fc.tdf          ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                        ;
+; addcore.inc                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/addcore.inc                                                            ;
+; look_add.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/look_add.inc                                                           ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                                ;
+; alt_mercury_add_sub.inc          ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/alt_mercury_add_sub.inc                                                ;
+; addcore.tdf                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/addcore.tdf                                                            ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/a_csnbuffer.inc                                                        ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/a_csnbuffer.tdf                                                        ;
+; altshift.tdf                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altshift.tdf                                                           ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Total logic elements                        ; 56                          ;
+;     -- Combinational with no register       ; 34                          ;
+;     -- Register only                        ; 1                           ;
+;     -- Combinational with a register        ; 21                          ;
+;                                             ;                             ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 23                          ;
+;     -- 3 input functions                    ; 24                          ;
+;     -- 2 input functions                    ; 8                           ;
+;     -- 1 input functions                    ; 0                           ;
+;     -- 0 input functions                    ; 0                           ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 56                          ;
+;     -- arithmetic mode                      ; 0                           ;
+;     -- qfbk mode                            ; 0                           ;
+;     -- register cascade mode                ; 0                           ;
+;     -- synchronous clear/load mode          ; 0                           ;
+;     -- asynchronous clear/load mode         ; 0                           ;
+;                                             ;                             ;
+; Total registers                             ; 22                          ;
+; I/O pins                                    ; 33                          ;
+; Maximum fan-out node                        ; data_mem2:inst18|inst13~198 ;
+; Maximum fan-out                             ; 24                          ;
+; Total fan-out                               ; 216                         ;
+; Average fan-out                             ; 2.43                        ;
++---------------------------------------------+-----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                 ;
++--------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                     ; Library Name ;
++--------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
+; |top_level                           ; 56 (1)      ; 22           ; 0           ; 33   ; 0            ; 34 (1)       ; 1 (0)             ; 21 (0)           ; 0 (0)           ; 0 (0)      ; |top_level                                                                              ; work         ;
+;    |4bit_register:inst3|             ; 4 (4)       ; 4            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |top_level|4bit_register:inst3                                                          ; work         ;
+;    |4bit_register:inst4|             ; 4 (4)       ; 4            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |top_level|4bit_register:inst4                                                          ; work         ;
+;    |4bit_register:inst5|             ; 4 (4)       ; 4            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |top_level|4bit_register:inst5                                                          ; work         ;
+;    |data_mem2:inst18|                ; 20 (20)     ; 4            ; 0           ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |top_level|data_mem2:inst18                                                             ; work         ;
+;    |instruction_decode:inst1|        ; 23 (9)      ; 6            ; 0           ; 0    ; 0            ; 17 (9)       ; 1 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |top_level|instruction_decode:inst1                                                     ; work         ;
+;       |busmux:inst58|                ; 3 (0)       ; 0            ; 0           ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |top_level|instruction_decode:inst1|busmux:inst58                                       ; work         ;
+;          |lpm_mux:$00000|            ; 3 (0)       ; 0            ; 0           ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |top_level|instruction_decode:inst1|busmux:inst58|lpm_mux:$00000                        ; work         ;
+;             |mux_5fc:auto_generated| ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |top_level|instruction_decode:inst1|busmux:inst58|lpm_mux:$00000|mux_5fc:auto_generated ; work         ;
+;       |ldr_decode:inst68|            ; 5 (5)       ; 3            ; 0           ; 0    ; 0            ; 2 (2)        ; 1 (1)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |top_level|instruction_decode:inst1|ldr_decode:inst68                                   ; work         ;
+;       |str_decode:inst62|            ; 6 (6)       ; 3            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |top_level|instruction_decode:inst1|str_decode:inst62                                   ; work         ;
++--------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 22    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
 +------------------------------------------------------------------------------------------------------------+
 ; Source assignments for multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|addcore:adder ;
 +---------------------------+-------+------+-----------------------------------------------------------------+
@@ -134,6 +254,16 @@ applicable agreement for further details.
 +---------------------------+-------+------+-----------------------------------------------------------------+
 ; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                               ;
 +---------------------------+-------+------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: instruction_decode:inst1|BUSMUX:inst58 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 3     ; Untyped                                                    ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------------+
@@ -190,7 +320,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
-    Info: Processing started: Thu Dec 29 10:54:59 2011
+    Info: Processing started: Thu Jan 05 10:28:24 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_level -c top_level
 Info: Found 1 design units, including 1 entities, in source file add_subt_decision.bdf
     Info: Found entity 1: add_subt_decision
@@ -239,6 +369,12 @@ Info: Found 1 design units, including 1 entities, in source file instruction_poi
     Info: Found entity 1: instruction_pointer
 Info: Found 1 design units, including 1 entities, in source file data_memory.bdf
     Info: Found entity 1: data_memory
+Info: Found 1 design units, including 1 entities, in source file data_mem2.bdf
+    Info: Found entity 1: data_mem2
+Info: Found 1 design units, including 1 entities, in source file str_decode.bdf
+    Info: Found entity 1: str_decode
+Info: Found 1 design units, including 1 entities, in source file ldr_decode.bdf
+    Info: Found entity 1: ldr_decode
 Info: Elaborating entity "top_level" for the top level hierarchy
 Warning: Undeclared parameter R1
 Warning: Can't find a definition for parameter type -- assuming R1 was intended to be a quoted string
@@ -247,16 +383,20 @@ Warning: Can't find a definition for parameter type -- assuming R0 was intended 
 Warning: Undeclared parameter A
 Warning: Can't find a definition for parameter type -- assuming A was intended to be a quoted string
 Info: Elaborating entity "instruction_decode" for hierarchy "instruction_decode:inst1"
-Warning: Pin "x_set" is missing source
 Warning: Pin "data[0..3]" is missing source
+Info: Elaborating entity "ldr_decode" for hierarchy "instruction_decode:inst1|ldr_decode:inst68"
+Info: Elaborating entity "str_decode" for hierarchy "instruction_decode:inst1|str_decode:inst62"
+Info: Elaborating entity "BUSMUX" for hierarchy "instruction_decode:inst1|BUSMUX:inst58"
+Info: Elaborated megafunction instantiation "instruction_decode:inst1|BUSMUX:inst58"
+Info: Instantiated megafunction "instruction_decode:inst1|BUSMUX:inst58" with the following parameter:
+    Info: Parameter "WIDTH" = "3"
+Info: Elaborating entity "lpm_mux" for hierarchy "instruction_decode:inst1|BUSMUX:inst58|lpm_mux:$00000"
+Info: Elaborated megafunction instantiation "instruction_decode:inst1|BUSMUX:inst58|lpm_mux:$00000", which is child of megafunction instantiation "instruction_decode:inst1|BUSMUX:inst58"
+Info: Found 1 design units, including 1 entities, in source file db/mux_5fc.tdf
+    Info: Found entity 1: mux_5fc
+Info: Elaborating entity "mux_5fc" for hierarchy "instruction_decode:inst1|BUSMUX:inst58|lpm_mux:$00000|mux_5fc:auto_generated"
 Info: Elaborating entity "4bit_register" for hierarchy "4bit_register:inst5"
-Info: Elaborating entity "data_memory" for hierarchy "data_memory:inst12"
-Warning: Pin "load" not connected
-Warning: Pin "data_in" not connected
-Warning: Primitive "DFF" of instance "inst4" not used
-Warning: Primitive "DFF" of instance "inst5" not used
-Warning: Primitive "DFF" of instance "inst6" not used
-Warning: Primitive "DFF" of instance "inst7" not used
+Info: Elaborating entity "data_mem2" for hierarchy "data_mem2:inst18"
 Info: Elaborating entity "multiplier" for hierarchy "multiplier:inst"
 Info: Elaborating entity "state_machine" for hierarchy "multiplier:inst|state_machine:inst1"
 Info: Elaborating entity "np_register" for hierarchy "multiplier:inst|np_register:inst16"
@@ -301,20 +441,26 @@ Info: Elaborating entity "altshift" for hierarchy "multiplier:inst|lpm_add_sub0:
 Info: Elaborated megafunction instantiation "multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "multiplier:inst|lpm_add_sub0:inst36|lpm_add_sub:lpm_add_sub_component"
 Info: Elaborating entity "instruction_load" for hierarchy "instruction_load:inst10"
 Info: Elaborating entity "instruction_pointer" for hierarchy "instruction_pointer:inst9"
-Warning: The following nodes have both tri-state and non-tri-state drivers
-    Warning: Inserted always-enabled tri-state buffer between "data_memory:inst12|inst13[3]" and its non-tri-state driver.
-    Warning: Inserted always-enabled tri-state buffer between "data_memory:inst12|inst13[1]" and its non-tri-state driver.
-Warning: The following tri-state nodes are fed by constants
-    Warning: The node "data_memory:inst12|inst13[2]" is fed by GND
-    Warning: The node "data_memory:inst12|inst13[0]" is fed by GND
-Error: The tri-state buffer "data_memory:inst12|inst13[3]" directly or indirectly feeds itself.
-Error: The tri-state buffer "data_memory:inst12|inst13[2]" directly or indirectly feeds itself.
-Error: The tri-state buffer "data_memory:inst12|inst13[1]" directly or indirectly feeds itself.
-Error: The tri-state buffer "data_memory:inst12|inst13[0]" directly or indirectly feeds itself.
-Error: Quartus II Analysis & Synthesis was unsuccessful. 4 errors, 23 warnings
-    Error: Peak virtual memory: 180 megabytes
-    Error: Processing ended: Thu Dec 29 10:55:06 2011
-    Error: Elapsed time: 00:00:07
-    Error: Total CPU time (on all processors): 00:00:03
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted the fan-out from the tri-state buffer "data_mem2:inst18|inst13" to the node "4bit_register:inst3|inst10" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "data_mem2:inst18|inst29" to the node "4bit_register:inst3|inst9" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "data_mem2:inst18|inst2" to the node "4bit_register:inst3|inst8" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "data_mem2:inst18|inst32" to the node "4bit_register:inst3|inst7" into an OR gate
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "data[0]" is stuck at GND
+    Warning (13410): Pin "data[1]" is stuck at GND
+    Warning (13410): Pin "data[2]" is stuck at GND
+    Warning (13410): Pin "data[3]" is stuck at GND
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "instruction[0]"
+Info: Implemented 89 device resources after synthesis - the final resource count might be different
+    Info: Implemented 12 input pins
+    Info: Implemented 21 output pins
+    Info: Implemented 56 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 180 megabytes
+    Info: Processing ended: Thu Jan 05 10:28:34 2012
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:05
 
 
