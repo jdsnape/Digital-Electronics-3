@@ -1,5 +1,5 @@
 Flow report for top_level
-Thu Jan 05 10:28:52 2012
+Sun Jan 08 17:41:57 2012
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +--------------------------+------------------------------------------+
-; Flow Status              ; Successful - Thu Jan 05 10:28:52 2012    ;
+; Flow Status              ; Successful - Sun Jan 08 17:41:56 2012    ;
 ; Quartus II Version       ; 8.0 Build 215 05/29/2008 SJ Full Version ;
 ; Revision Name            ; top_level                                ;
 ; Top-level Entity Name    ; top_level                                ;
@@ -45,8 +45,8 @@ applicable agreement for further details.
 ; Device                   ; EP1C20F400C7                             ;
 ; Timing Models            ; Final                                    ;
 ; Met timing requirements  ; No                                       ;
-; Total logic elements     ; 55 / 20,060 ( < 1 % )                    ;
-; Total pins               ; 33 / 301 ( 11 % )                        ;
+; Total logic elements     ; 74 / 20,060 ( < 1 % )                    ;
+; Total pins               ; 58 / 301 ( 19 % )                        ;
 ; Total virtual pins       ; 0                                        ;
 ; Total memory bits        ; 0 / 294,912 ( 0 % )                      ;
 ; DSP block 9-bit elements ; N/A until Partition Merge                ;
@@ -60,7 +60,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/05/2012 10:28:27 ;
+; Start date & time ; 01/08/2012 17:41:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_level           ;
 +-------------------+---------------------+
@@ -71,7 +71,7 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------+---------------+-------------+------------+
 ; Assignment Name                    ; Value                         ; Default Value ; Entity Name ; Section Id ;
 +------------------------------------+-------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID              ; 8796758409933.132575930700172 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID              ; 8796758409933.132604448201700 ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                       ; LPM_ADD_SUB                   ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                    ; 8.0                           ; --            ; --          ; --         ;
 ; MISC_FILE                          ; lpm_add_sub0.bsf              ; --            ; --          ; --         ;
@@ -87,11 +87,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:09     ; 1.0                     ; 180 MB              ; 00:00:04                           ;
-; Fitter                  ; 00:00:05     ; 1.0                     ; 186 MB              ; 00:00:04                           ;
+; Analysis & Synthesis    ; 00:00:11     ; 1.0                     ; 179 MB              ; 00:00:05                           ;
+; Fitter                  ; 00:00:09     ; 1.0                     ; 186 MB              ; 00:00:06                           ;
 ; Assembler               ; 00:00:05     ; 1.0                     ; 173 MB              ; 00:00:03                           ;
-; Classic Timing Analyzer ; 00:00:04     ; 1.0                     ; 108 MB              ; 00:00:02                           ;
-; Total                   ; 00:00:23     ; --                      ; --                  ; 00:00:13                           ;
+; Classic Timing Analyzer ; 00:00:05     ; 1.0                     ; 108 MB              ; 00:00:02                           ;
+; Total                   ; 00:00:30     ; --                      ; --                  ; 00:00:16                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

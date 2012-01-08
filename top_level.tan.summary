@@ -5,19 +5,19 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 11.420 ns
-From           : instruction[7]
-To             : instruction_decode:inst1|ldr_decode:inst68|inst24
+Actual Time    : 19.083 ns
+From           : instruction[8]
+To             : 4bit_register:inst5|inst1
 From Clock     : --
-To Clock       : clock
+To Clock       : instruction[5]
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 28.413 ns
-From           : instruction_decode:inst1|str_decode:inst62|inst2
-To             : a_contents[3]
+Actual Time    : 26.047 ns
+From           : 4bit_register:inst7|inst3
+To             : mul_a_in[0]
 From Clock     : clock
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 24.248 ns
-From           : instruction[7]
-To             : a_contents[3]
+Actual Time    : 29.140 ns
+From           : instruction[8]
+To             : a_contents[2]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 9.896 ns
-From           : instruction[5]
-To             : 4bit_register:inst5|inst1
+Actual Time    : 9.513 ns
+From           : reg_select_overide
+To             : 4bit_register:inst7|inst
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 91.89 MHz ( period = 10.882 ns )
-From           : instruction_decode:inst1|ldr_decode:inst68|inst
-To             : instruction_decode:inst1|ldr_decode:inst68|inst24
+Actual Time    : 96.80 MHz ( period = 10.331 ns )
+From           : instruction_decode:inst1|mul_decode:inst2|inst2
+To             : instruction_decode:inst1|mul_decode:inst2|inst26
 From Clock     : clock
 To Clock       : clock
 Failed Paths   : 0
@@ -55,9 +55,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'instruction[5]'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 309.12 MHz ( period = 3.235 ns )
-From           : 4bit_register:inst4|inst3
-To             : 4bit_register:inst5|inst3
+Actual Time    : 149.79 MHz ( period = 6.676 ns )
+From           : 4bit_register:inst7|inst
+To             : 4bit_register:inst5|inst
 From Clock     : instruction[5]
 To Clock       : instruction[5]
 Failed Paths   : 0
@@ -65,9 +65,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'instruction[4]'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 309.41 MHz ( period = 3.232 ns )
-From           : 4bit_register:inst4|inst3
-To             : 4bit_register:inst5|inst3
+Actual Time    : 149.84 MHz ( period = 6.674 ns )
+From           : 4bit_register:inst7|inst
+To             : 4bit_register:inst5|inst
 From Clock     : instruction[4]
 To Clock       : instruction[4]
 Failed Paths   : 0
@@ -76,11 +76,31 @@ Type           : Clock Hold: 'clock'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : instruction_decode:inst1|ldr_decode:inst68|inst24
-To             : instruction_decode:inst1|ldr_decode:inst68|inst
+From           : instruction_decode:inst1|mul_decode:inst2|inst26
+To             : instruction_decode:inst1|mul_decode:inst2|inst45
 From Clock     : clock
 To Clock       : clock
-Failed Paths   : 109
+Failed Paths   : 53
+
+Type           : Clock Hold: 'instruction[5]'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : 4bit_register:inst5|inst3
+To             : 4bit_register:inst7|inst3
+From Clock     : instruction[5]
+To Clock       : instruction[5]
+Failed Paths   : 8
+
+Type           : Clock Hold: 'instruction[4]'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : 4bit_register:inst5|inst3
+To             : 4bit_register:inst7|inst3
+From Clock     : instruction[4]
+To Clock       : instruction[4]
+Failed Paths   : 8
 
 Type           : Total number of failed paths
 Slack          : 
@@ -90,7 +110,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 109
+Failed Paths   : 69
 
 --------------------------------------------------------------------------------------
 
