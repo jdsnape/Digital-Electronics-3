@@ -1,6 +1,7 @@
 |top_level
 a_enable <= instruction_decode:inst1.a_enable
 clock => instruction_decode:inst1.clock
+clock => multiplier:inst.clock
 decode => instruction_decode:inst1.decode
 instruction[8] => instruction_decode:inst1.instruction[8]
 instruction[7] => instruction_decode:inst1.instruction[7]
@@ -17,6 +18,7 @@ data_mem_enable <= instruction_decode:inst1.data_mem_enable
 data_mem_load <= instruction_decode:inst1.data_mem_load
 a_select <= instruction_decode:inst1.a_select
 r1_select <= instruction_decode:inst1.r1_select
+mul_start <= instruction_decode:inst1.mul_start
 a_contents[3] <= data_bus[3].DB_MAX_OUTPUT_PORT_TYPE
 a_contents[2] <= data_bus[2].DB_MAX_OUTPUT_PORT_TYPE
 a_contents[1] <= data_bus[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -57,6 +59,24 @@ mul_b_in[1] <= mul_mux:inst10.data[1]
 mul_b_in[0] <= mul_mux:inst10.data[0]
 mul_b_select[1] <= instruction_decode:inst1.mul_b_select[1]
 mul_b_select[0] <= instruction_decode:inst1.mul_b_select[0]
+mul_data[8] <= multiplier:inst.data[8]
+mul_data[7] <= multiplier:inst.data[7]
+mul_data[6] <= multiplier:inst.data[6]
+mul_data[5] <= multiplier:inst.data[5]
+mul_data[4] <= multiplier:inst.data[4]
+mul_data[3] <= multiplier:inst.data[3]
+mul_data[2] <= multiplier:inst.data[2]
+mul_data[1] <= multiplier:inst.data[1]
+mul_data[0] <= multiplier:inst.data[0]
+mul_p_input[8] <= multiplier:inst.p_input[8]
+mul_p_input[7] <= multiplier:inst.p_input[7]
+mul_p_input[6] <= multiplier:inst.p_input[6]
+mul_p_input[5] <= multiplier:inst.p_input[5]
+mul_p_input[4] <= multiplier:inst.p_input[4]
+mul_p_input[3] <= multiplier:inst.p_input[3]
+mul_p_input[2] <= multiplier:inst.p_input[2]
+mul_p_input[1] <= multiplier:inst.p_input[1]
+mul_p_input[0] <= multiplier:inst.p_input[0]
 
 
 |top_level|instruction_decode:inst1
@@ -105,13 +125,14 @@ data_mem_load <= str_decode:inst62.state1
 a_select <= inst63.DB_MAX_OUTPUT_PORT_TYPE
 r1_select <= inst64.DB_MAX_OUTPUT_PORT_TYPE
 r0_select <= inst65.DB_MAX_OUTPUT_PORT_TYPE
+mul_start <= mul_decode:inst2.state0
 address[2] <= BUSMUX:inst58.result[0]
 address[1] <= BUSMUX:inst58.result[1]
 address[0] <= BUSMUX:inst58.result[2]
 data[3] <= <GND>
 data[2] <= <GND>
 data[1] <= <GND>
-data[0] <= mul_decode:inst2.state0
+data[0] <= <GND>
 mul_a_select[1] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 mul_a_select[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 mul_b_select[1] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
@@ -131,6 +152,15 @@ state1 <= inst37.DB_MAX_OUTPUT_PORT_TYPE
 state0 <= inst51.DB_MAX_OUTPUT_PORT_TYPE
 str => inst46.IN0
 enable => inst46.IN1
+clock => inst47.IN1
+clock => inst26.CLK
+state1 <= inst53.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|instruction_decode:inst1|mul_decode:inst2
+state0 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+enable => inst46.IN0
+mul => inst46.IN1
 clock => inst47.IN1
 clock => inst26.CLK
 state1 <= inst53.DB_MAX_OUTPUT_PORT_TYPE
@@ -169,15 +199,6 @@ result[2] <= mux_5fc:auto_generated.result[2]
 result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
 result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
 result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top_level|instruction_decode:inst1|mul_decode:inst2
-state0 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-enable => inst46.IN0
-mul => inst46.IN1
-clock => inst47.IN1
-clock => inst26.CLK
-state1 <= inst53.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|4bit_register:inst5

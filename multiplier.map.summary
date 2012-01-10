@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Jan 06 16:46:49 2012
+Analysis & Synthesis Status : Successful - Tue Jan 10 08:38:02 2012
 Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
 Revision Name : multiplier
 Top-level Entity Name : multiplier
 Family : Cyclone
-Total logic elements : 72
-Total pins : 43
+Total logic elements : 71
+Total pins : 51
 Total virtual pins : 0
 Total memory bits : 0
 DSP block 9-bit elements : N/A until Partition Merge

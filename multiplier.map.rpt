@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multiplier
-Fri Jan 06 16:46:49 2012
+Tue Jan 10 08:38:02 2012
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
 
 
@@ -42,13 +42,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Jan 06 16:46:49 2012    ;
+; Analysis & Synthesis Status ; Successful - Tue Jan 10 08:38:02 2012    ;
 ; Quartus II Version          ; 8.0 Build 215 05/29/2008 SJ Full Version ;
 ; Revision Name               ; multiplier                               ;
 ; Top-level Entity Name       ; multiplier                               ;
 ; Family                      ; Cyclone                                  ;
-; Total logic elements        ; 72                                       ;
-; Total pins                  ; 43                                       ;
+; Total logic elements        ; 71                                       ;
+; Total pins                  ; 51                                       ;
 ; Total virtual pins          ; 0                                        ;
 ; Total memory bits           ; 0                                        ;
 ; DSP block 9-bit elements    ; N/A until Partition Merge                ;
@@ -157,38 +157,38 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                             ;
-+---------------------------------------------+---------------------------+
-; Resource                                    ; Usage                     ;
-+---------------------------------------------+---------------------------+
-; Total logic elements                        ; 72                        ;
-;     -- Combinational with no register       ; 60                        ;
-;     -- Register only                        ; 8                         ;
-;     -- Combinational with a register        ; 4                         ;
-;                                             ;                           ;
-; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 31                        ;
-;     -- 3 input functions                    ; 20                        ;
-;     -- 2 input functions                    ; 13                        ;
-;     -- 1 input functions                    ; 0                         ;
-;     -- 0 input functions                    ; 0                         ;
-;                                             ;                           ;
-; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 72                        ;
-;     -- arithmetic mode                      ; 0                         ;
-;     -- qfbk mode                            ; 0                         ;
-;     -- register cascade mode                ; 0                         ;
-;     -- synchronous clear/load mode          ; 0                         ;
-;     -- asynchronous clear/load mode         ; 3                         ;
-;                                             ;                           ;
-; Total registers                             ; 12                        ;
-; I/O pins                                    ; 43                        ;
-; Maximum fan-out node                        ; bit_flips:inst|inst26~545 ;
-; Maximum fan-out                             ; 16                        ;
-; Total fan-out                               ; 266                       ;
-; Average fan-out                             ; 2.31                      ;
-+---------------------------------------------+---------------------------+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Total logic elements                        ; 71                      ;
+;     -- Combinational with no register       ; 59                      ;
+;     -- Register only                        ; 8                       ;
+;     -- Combinational with a register        ; 4                       ;
+;                                             ;                         ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 36                      ;
+;     -- 3 input functions                    ; 15                      ;
+;     -- 2 input functions                    ; 12                      ;
+;     -- 1 input functions                    ; 0                       ;
+;     -- 0 input functions                    ; 0                       ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 71                      ;
+;     -- arithmetic mode                      ; 0                       ;
+;     -- qfbk mode                            ; 0                       ;
+;     -- register cascade mode                ; 0                       ;
+;     -- synchronous clear/load mode          ; 0                       ;
+;     -- asynchronous clear/load mode         ; 3                       ;
+;                                             ;                         ;
+; Total registers                             ; 12                      ;
+; I/O pins                                    ; 51                      ;
+; Maximum fan-out node                        ; np_register:inst16|inst ;
+; Maximum fan-out                             ; 13                      ;
+; Total fan-out                               ; 277                     ;
+; Average fan-out                             ; 2.27                    ;
++---------------------------------------------+-------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -196,20 +196,25 @@ applicable agreement for further details.
 +--------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                            ; Library Name ;
 +--------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
-; |multiplier                          ; 72 (2)      ; 12           ; 0           ; 43   ; 0            ; 60 (1)       ; 8 (0)             ; 4 (1)            ; 0 (0)           ; 0 (0)      ; |multiplier                                                                    ; work         ;
+; |multiplier                          ; 71 (2)      ; 12           ; 0           ; 51   ; 0            ; 59 (1)       ; 8 (0)             ; 4 (1)            ; 0 (0)           ; 0 (0)      ; |multiplier                                                                    ;              ;
 ;    |add_subt_select:inst21|          ; 16 (16)     ; 0            ; 0           ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|add_subt_select:inst21                                             ; work         ;
-;    |adder:inst17|                    ; 8 (0)       ; 0            ; 0           ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17                                                       ; work         ;
+;    |adder:inst17|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17                                                       ; work         ;
 ;       |CLAadder:inst1|               ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17|CLAadder:inst1                                        ; work         ;
 ;       |CLAadder:inst2|               ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17|CLAadder:inst2                                        ; work         ;
+;       |CLAadder:inst3|               ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17|CLAadder:inst3                                        ; work         ;
 ;       |logic:inst|                   ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17|logic:inst                                            ; work         ;
 ;    |adder:inst18|                    ; 3 (0)       ; 0            ; 0           ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18                                                       ; work         ;
 ;       |CLAadder:inst1|               ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|CLAadder:inst1                                        ; work         ;
-;       |logic:inst|                   ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|logic:inst                                            ; work         ;
-;    |bit_flips:inst|                  ; 15 (10)     ; 0            ; 0           ; 0    ; 0            ; 15 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst                                                     ; work         ;
-;       |busmux:inst42|                ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst42                                       ; work         ;
-;          |lpm_mux:$00000|            ; 5 (0)       ; 0            ; 0           ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000                        ; work         ;
-;             |mux_6fc:auto_generated| ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated ; work         ;
-;    |input_select:inst9|              ; 12 (12)     ; 0            ; 0           ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|input_select:inst9                                                 ; work         ;
+;       |CLAadder:inst4|               ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|CLAadder:inst4                                        ; work         ;
+;       |logic:inst|                   ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|logic:inst                                            ; work         ;
+;    |bit_flips:inst|                  ; 17 (9)      ; 0            ; 0           ; 0    ; 0            ; 17 (9)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst                                                     ; work         ;
+;       |busmux:inst41|                ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst41                                       ; work         ;
+;          |lpm_mux:$00000|            ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst41|lpm_mux:$00000                        ; work         ;
+;             |mux_6fc:auto_generated| ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst41|lpm_mux:$00000|mux_6fc:auto_generated ; work         ;
+;       |busmux:inst42|                ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst42                                       ; work         ;
+;          |lpm_mux:$00000|            ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000                        ; work         ;
+;             |mux_6fc:auto_generated| ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst42|lpm_mux:$00000|mux_6fc:auto_generated ; work         ;
+;    |input_select:inst9|              ; 8 (8)       ; 0            ; 0           ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|input_select:inst9                                                 ; work         ;
 ;    |np_register:inst16|              ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|np_register:inst16                                                 ; work         ;
 ;    |state_machine:inst1|             ; 8 (8)       ; 3            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |multiplier|state_machine:inst1                                                ; work         ;
 +--------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
@@ -267,7 +272,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
-    Info: Processing started: Fri Jan 06 16:46:40 2012
+    Info: Processing started: Tue Jan 10 08:37:55 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multiplier -c multiplier
 Warning: Can't analyze file -- file E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/logic.tdf is missing
 Info: Found 1 design units, including 1 entities, in source file multiplier.bdf
@@ -328,14 +333,14 @@ Info: Found 1 design units, including 1 entities, in source file db/mux_6fc.tdf
 Info: Elaborating entity "mux_6fc" for hierarchy "bit_flips:inst|BUSMUX:inst42|lpm_mux:$00000|mux_6fc:auto_generated"
 Info: Duplicate registers merged to single register
     Info (13350): Duplicate register "np_register:inst16|inst1" merged to single register "np_register:inst16|inst"
-Info: Implemented 115 device resources after synthesis - the final resource count might be different
+Info: Implemented 122 device resources after synthesis - the final resource count might be different
     Info: Implemented 10 input pins
-    Info: Implemented 33 output pins
-    Info: Implemented 72 logic cells
+    Info: Implemented 41 output pins
+    Info: Implemented 71 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 178 megabytes
-    Info: Processing ended: Fri Jan 06 16:46:49 2012
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Tue Jan 10 08:38:02 2012
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
 
 
