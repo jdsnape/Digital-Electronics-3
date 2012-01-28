@@ -22,26 +22,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-state_machine
-# storage
-db|multiplier.(1).cnf
-db|multiplier.(1).cnf
-# case_insensitive
-# source_file
-state_machine.bdf
-e1b064c6b8b05443836c10e761a04dba
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-state_machine:inst1
-}
-# macro_sequence
-
-# end
-# entity
 np_register
 # storage
 db|multiplier.(2).cnf
@@ -148,26 +128,6 @@ ON
 # lmf
 c:|altera|80|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-bit_flips
-# storage
-db|multiplier.(10).cnf
-db|multiplier.(10).cnf
-# case_insensitive
-# source_file
-bit_flips.bdf
-dafd93978a95b9d3fdfbff848d98c
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-bit_flips:inst
-}
 # macro_sequence
 
 # end
@@ -408,26 +368,6 @@ bit_flips:inst|busmux:inst41|lpm_mux:$00000|mux_6fc:auto_generated
 
 # end
 # entity
-add_subt_select
-# storage
-db|multiplier.(5).cnf
-db|multiplier.(5).cnf
-# case_insensitive
-# source_file
-add_subt_select.bdf
-83c9d5423f8c5c1d5bacc951684fe6b8
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-add_subt_select:inst21
-}
-# macro_sequence
-
-# end
-# entity
 adder
 # storage
 db|multiplier.(7).cnf
@@ -538,6 +478,26 @@ adder_subtractor:inst25|simple_adder:inst9
 
 # end
 # entity
+add_subt_select
+# storage
+db|multiplier.(5).cnf
+db|multiplier.(5).cnf
+# case_insensitive
+# source_file
+add_subt_select.bdf
+ece61ad886482d2b17b8c8320f1ab
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+add_subt_select:inst21
+}
+# macro_sequence
+
+# end
+# entity
 multiplier
 # storage
 db|multiplier.(0).cnf
@@ -545,7 +505,7 @@ db|multiplier.(0).cnf
 # case_insensitive
 # source_file
 multiplier.bdf
-8ec29ee3e6692aa06147f1139a4b2b5
+1bacbd0b64c97f9a5a816d1ed1dbf5
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -553,6 +513,46 @@ AUTO
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+state_machine
+# storage
+db|multiplier.(1).cnf
+db|multiplier.(1).cnf
+# case_insensitive
+# source_file
+state_machine.bdf
+7332732a762110c7d2e8406c4cd118
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+state_machine:inst1
+}
+# macro_sequence
+
+# end
+# entity
+bit_flips
+# storage
+db|multiplier.(10).cnf
+db|multiplier.(10).cnf
+# case_insensitive
+# source_file
+bit_flips.bdf
+f8f86bcdf7a431307e98f438ce561135
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+bit_flips:inst
 }
 # macro_sequence
 

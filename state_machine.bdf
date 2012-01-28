@@ -54,7 +54,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1424 696 1600 712)
+	(rect 1304 360 1480 376)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Li" (rect 90 0 98 12)(font "Arial" ))
 	(pt 0 8)
@@ -86,7 +86,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1168 200 1344 216)
+	(rect 1304 208 1480 224)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "complete" (rect 90 0 134 12)(font "Arial" ))
 	(pt 0 8)
@@ -102,7 +102,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1392 560 1568 576)
+	(rect 1304 280 1480 296)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "start" (rect 90 0 112 12)(font "Arial" ))
 	(pt 0 8)
@@ -323,7 +323,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1280 728 1328 760)
+	(rect 1152 392 1200 424)
 	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst36" (rect 3 21 32 33)(font "Arial" ))
 	(port
@@ -348,7 +348,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1264 696 1312 728)
+	(rect 1136 360 1184 392)
 	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst37" (rect 3 21 32 33)(font "Arial" ))
 	(port
@@ -373,7 +373,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1360 680 1424 728)
+	(rect 1232 344 1296 392)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "inst65" (rect 3 37 32 49)(font "Arial" ))
 	(port
@@ -412,7 +412,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1232 544 1296 592)
+	(rect 1232 264 1296 312)
 	(text "BAND3" (rect 1 0 31 10)(font "Arial" (font_size 6)))
 	(text "inst66" (rect 3 37 32 49)(font "Arial" ))
 	(port
@@ -715,29 +715,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1296 568)
-	(pt 1392 568)
-)
-(connector
-	(pt 904 712)
-	(pt 904 840)
-)
-(connector
-	(text "<<__$DEF_ALIAS3127>>" (rect 1234 696 1357 708)(font "Arial" )(invisible))
-	(pt 904 712)
-	(pt 1264 712)
-)
-(connector
-	(text "<<__$DEF_ALIAS3133>>" (rect 1234 680 1357 692)(font "Arial" )(invisible))
-	(pt 872 696)
-	(pt 1360 696)
-)
-(connector
-	(text "<<__$DEF_ALIAS3139>>" (rect 1186 560 1309 572)(font "Arial" )(invisible))
-	(pt 936 576)
-	(pt 1232 576)
-)
-(connector
 	(pt 848 40)
 	(pt 368 40)
 )
@@ -754,10 +731,6 @@ applicable agreement for further details.
 	(pt 872 24)
 	(pt 904 24)
 	(bus)
-)
-(connector
-	(pt 872 696)
-	(pt 872 864)
 )
 (connector
 	(pt 824 48)
@@ -798,66 +771,6 @@ applicable agreement for further details.
 	(pt 272 24)
 	(pt 368 24)
 	(bus)
-)
-(connector
-	(pt 936 24)
-	(pt 1032 24)
-	(bus)
-)
-(connector
-	(pt 1320 712)
-	(pt 1320 704)
-)
-(connector
-	(pt 1312 712)
-	(pt 1320 712)
-)
-(connector
-	(pt 1320 704)
-	(pt 1360 704)
-)
-(connector
-	(pt 936 576)
-	(pt 936 744)
-)
-(connector
-	(pt 936 744)
-	(pt 936 840)
-)
-(connector
-	(text "<<__$DEF_ALIAS3129>>" (rect 1250 728 1373 740)(font "Arial" )(invisible))
-	(pt 936 744)
-	(pt 1280 744)
-)
-(connector
-	(pt 1328 712)
-	(pt 1360 712)
-)
-(connector
-	(pt 1328 744)
-	(pt 1328 712)
-)
-(connector
-	(pt 968 328)
-	(pt 968 840)
-)
-(connector
-	(text "<<__$DEF_ALIAS3137>>" (rect 1186 552 1309 564)(font "Arial" )(invisible))
-	(pt 904 568)
-	(pt 1232 568)
-)
-(connector
-	(pt 904 568)
-	(pt 904 712)
-)
-(connector
-	(text "<<__$DEF_ALIAS3135>>" (rect 1186 544 1309 556)(font "Arial" )(invisible))
-	(pt 872 560)
-	(pt 1232 560)
-)
-(connector
-	(pt 872 560)
-	(pt 872 696)
 )
 (connector
 	(pt 824 224)
@@ -909,11 +822,6 @@ applicable agreement for further details.
 	(pt 872 224)
 )
 (connector
-	(text "output[0]" (rect 856 41 868 84)(font "Arial" )(vertical))
-	(pt 872 24)
-	(pt 872 224)
-)
-(connector
 	(pt 1104 208)
 	(pt 936 208)
 )
@@ -943,55 +851,6 @@ applicable agreement for further details.
 	(pt 1216 104)
 )
 (connector
-	(pt 968 328)
-	(pt 1024 328)
-)
-(connector
-	(pt 936 384)
-	(pt 1024 384)
-)
-(connector
-	(pt 904 440)
-	(pt 1024 440)
-)
-(connector
-	(pt 872 464)
-	(pt 1024 464)
-)
-(connector
-	(pt 936 208)
-	(pt 936 384)
-)
-(connector
-	(pt 936 384)
-	(pt 936 576)
-)
-(connector
-	(pt 904 200)
-	(pt 904 440)
-)
-(connector
-	(pt 904 440)
-	(pt 904 568)
-)
-(connector
-	(pt 872 224)
-	(pt 872 464)
-)
-(connector
-	(pt 872 464)
-	(pt 872 560)
-)
-(connector
-	(pt 904 80)
-	(pt 904 200)
-)
-(connector
-	(text "output[2]" (rect 920 57 932 100)(font "Arial" )(vertical))
-	(pt 936 64)
-	(pt 936 208)
-)
-(connector
 	(pt 936 64)
 	(pt 1056 64)
 )
@@ -1015,6 +874,114 @@ applicable agreement for further details.
 	(pt 136 264)
 	(pt 248 264)
 )
+(connector
+	(text "<<__$DEF_ALIAS3139>>" (rect 1186 280 1309 292)(font "Arial" )(invisible))
+	(pt 936 296)
+	(pt 1232 296)
+)
+(connector
+	(text "<<__$DEF_ALIAS3137>>" (rect 1186 272 1309 284)(font "Arial" )(invisible))
+	(pt 904 288)
+	(pt 1232 288)
+)
+(connector
+	(text "<<__$DEF_ALIAS3135>>" (rect 1186 264 1309 276)(font "Arial" )(invisible))
+	(pt 872 280)
+	(pt 1232 280)
+)
+(connector
+	(text "output[0]" (rect 856 41 868 84)(font "Arial" )(vertical))
+	(pt 872 24)
+	(pt 872 224)
+)
+(connector
+	(pt 904 80)
+	(pt 904 200)
+)
+(connector
+	(pt 904 200)
+	(pt 904 288)
+)
+(connector
+	(pt 872 224)
+	(pt 872 280)
+)
+(connector
+	(text "output[2]" (rect 920 57 932 100)(font "Arial" )(vertical))
+	(pt 936 64)
+	(pt 936 208)
+)
+(connector
+	(pt 936 208)
+	(pt 936 296)
+)
+(connector
+	(text "<<__$DEF_ALIAS3133>>" (rect 1106 344 1229 356)(font "Arial" )(invisible))
+	(pt 872 360)
+	(pt 1232 360)
+)
+(connector
+	(text "<<__$DEF_ALIAS3127>>" (rect 1106 360 1229 372)(font "Arial" )(invisible))
+	(pt 904 376)
+	(pt 1136 376)
+)
+(connector
+	(pt 1192 376)
+	(pt 1192 368)
+)
+(connector
+	(pt 1184 376)
+	(pt 1192 376)
+)
+(connector
+	(pt 1192 368)
+	(pt 1232 368)
+)
+(connector
+	(text "<<__$DEF_ALIAS3129>>" (rect 1122 392 1245 404)(font "Arial" )(invisible))
+	(pt 936 408)
+	(pt 1152 408)
+)
+(connector
+	(pt 1200 376)
+	(pt 1232 376)
+)
+(connector
+	(pt 1200 408)
+	(pt 1200 376)
+)
+(connector
+	(pt 872 280)
+	(pt 872 360)
+)
+(connector
+	(pt 904 288)
+	(pt 904 376)
+)
+(connector
+	(pt 936 296)
+	(pt 936 408)
+)
+(connector
+	(pt 1296 368)
+	(pt 1304 368)
+)
+(connector
+	(pt 1296 288)
+	(pt 1304 288)
+)
+(connector
+	(pt 1176 208)
+	(pt 1176 216)
+)
+(connector
+	(pt 1168 208)
+	(pt 1176 208)
+)
+(connector
+	(pt 1176 216)
+	(pt 1304 216)
+)
 (junction (pt 272 160))
 (junction (pt 272 88))
 (junction (pt 456 160))
@@ -1028,21 +995,14 @@ applicable agreement for further details.
 (junction (pt 496 224))
 (junction (pt 872 24))
 (junction (pt 904 24))
-(junction (pt 936 24))
-(junction (pt 936 384))
-(junction (pt 904 440))
-(junction (pt 872 464))
-(junction (pt 936 576))
-(junction (pt 872 696))
-(junction (pt 904 712))
-(junction (pt 936 744))
 (junction (pt 368 40))
 (junction (pt 552 48))
-(junction (pt 904 568))
-(junction (pt 872 560))
 (junction (pt 272 56))
 (junction (pt 904 200))
 (junction (pt 872 224))
 (junction (pt 936 208))
 (junction (pt 936 64))
 (junction (pt 904 80))
+(junction (pt 936 296))
+(junction (pt 904 288))
+(junction (pt 872 280))

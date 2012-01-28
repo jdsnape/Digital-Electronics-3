@@ -182,32 +182,22 @@ new_data_in[0] => data_out[8].DATAIN
 
 
 |multiplier|add_subt_select:inst21
-result[3] <= inst16.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
-result[0] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
-subtract_result[3] => inst13.IN0
-subtract_result[2] => inst9.IN0
-subtract_result[1] => inst5.IN0
-subtract_result[0] => inst1.IN0
-subtract_enable => inst1.IN1
-subtract_enable => inst2.IN1
-subtract_enable => inst5.IN1
-subtract_enable => inst9.IN1
-subtract_enable => inst13.IN1
+result[3] <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+result[0] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
 add_enable => inst2.IN0
-add_enable => inst.IN1
-add_enable => inst4.IN1
-add_enable => inst8.IN1
-add_enable => inst12.IN1
+add_enable => inst23.IN1
+subtract_enable => inst2.IN1
+subtract_enable => inst23.IN0
 old_data[3] => inst10.IN1
 old_data[2] => inst7.IN1
 old_data[1] => inst6.IN1
 old_data[0] => inst3.IN1
-add_result[3] => inst12.IN0
-add_result[2] => inst8.IN0
-add_result[1] => inst4.IN0
-add_result[0] => inst.IN0
+addsubtract_result[3] => inst12.IN0
+addsubtract_result[2] => inst8.IN0
+addsubtract_result[1] => inst4.IN0
+addsubtract_result[0] => inst.IN0
 
 
 |multiplier|adder_subtractor:inst25
