@@ -1,6 +1,6 @@
 Flow report for top_level
-Sun Jan 08 17:41:57 2012
-Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+Fri Jan 20 12:47:45 2012
+Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -34,25 +34,25 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------+
-; Flow Summary                                                        ;
-+--------------------------+------------------------------------------+
-; Flow Status              ; Successful - Sun Jan 08 17:41:56 2012    ;
-; Quartus II Version       ; 8.0 Build 215 05/29/2008 SJ Full Version ;
-; Revision Name            ; top_level                                ;
-; Top-level Entity Name    ; top_level                                ;
-; Family                   ; Cyclone                                  ;
-; Device                   ; EP1C20F400C7                             ;
-; Timing Models            ; Final                                    ;
-; Met timing requirements  ; No                                       ;
-; Total logic elements     ; 74 / 20,060 ( < 1 % )                    ;
-; Total pins               ; 58 / 301 ( 19 % )                        ;
-; Total virtual pins       ; 0                                        ;
-; Total memory bits        ; 0 / 294,912 ( 0 % )                      ;
-; DSP block 9-bit elements ; N/A until Partition Merge                ;
-; Total PLLs               ; 0 / 2 ( 0 % )                            ;
-; Total DLLs               ; N/A until Partition Merge                ;
-+--------------------------+------------------------------------------+
++--------------------------------------------------------------------------+
+; Flow Summary                                                             ;
++--------------------------+-----------------------------------------------+
+; Flow Status              ; Successful - Fri Jan 20 12:47:45 2012         ;
+; Quartus II Version       ; 8.0 Build 231 07/10/2008 SP 1 SJ Full Version ;
+; Revision Name            ; top_level                                     ;
+; Top-level Entity Name    ; top_level                                     ;
+; Family                   ; Cyclone                                       ;
+; Device                   ; EP1C20F400C7                                  ;
+; Timing Models            ; Final                                         ;
+; Met timing requirements  ; No                                            ;
+; Total logic elements     ; 161 / 20,060 ( < 1 % )                        ;
+; Total pins               ; 84 / 301 ( 28 % )                             ;
+; Total virtual pins       ; 0                                             ;
+; Total memory bits        ; 0 / 294,912 ( 0 % )                           ;
+; DSP block 9-bit elements ; N/A until Partition Merge                     ;
+; Total PLLs               ; 0 / 2 ( 0 % )                                 ;
+; Total DLLs               ; N/A until Partition Merge                     ;
++--------------------------+-----------------------------------------------+
 
 
 +-----------------------------------------+
@@ -60,26 +60,26 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/08/2012 17:41:22 ;
+; Start date & time ; 01/20/2012 12:47:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_level           ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                              ;
-+------------------------------------+-------------------------------+---------------+-------------+------------+
-; Assignment Name                    ; Value                         ; Default Value ; Entity Name ; Section Id ;
-+------------------------------------+-------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID              ; 8796758409933.132604448201700 ; --            ; --          ; --         ;
-; IP_TOOL_NAME                       ; LPM_ADD_SUB                   ; --            ; --          ; --         ;
-; IP_TOOL_VERSION                    ; 8.0                           ; --            ; --          ; --         ;
-; MISC_FILE                          ; lpm_add_sub0.bsf              ; --            ; --          ; --         ;
-; MISC_FILE                          ; lpm_add_sub0.cmp              ; --            ; --          ; --         ;
-; PARTITION_COLOR                    ; 14622752                      ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                        ; --            ; --          ; Top        ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                           ; --            ; --          ; eda_palace ;
-+------------------------------------+-------------------------------+---------------+-------------+------------+
++--------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                             ;
++------------------------------------+------------------------------+---------------+-------------+------------+
+; Assignment Name                    ; Value                        ; Default Value ; Entity Name ; Section Id ;
++------------------------------------+------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID              ; 123487450462.132706365305108 ; --            ; --          ; --         ;
+; IP_TOOL_NAME                       ; LPM_ADD_SUB                  ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                    ; 8.0                          ; --            ; --          ; --         ;
+; MISC_FILE                          ; lpm_add_sub0.bsf             ; --            ; --          ; --         ;
+; MISC_FILE                          ; lpm_add_sub0.cmp             ; --            ; --          ; --         ;
+; PARTITION_COLOR                    ; 14622752                     ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                       ; --            ; --          ; Top        ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                          ; --            ; --          ; eda_palace ;
++------------------------------------+------------------------------+---------------+-------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -87,11 +87,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:11     ; 1.0                     ; 179 MB              ; 00:00:05                           ;
-; Fitter                  ; 00:00:09     ; 1.0                     ; 186 MB              ; 00:00:06                           ;
-; Assembler               ; 00:00:05     ; 1.0                     ; 173 MB              ; 00:00:03                           ;
-; Classic Timing Analyzer ; 00:00:05     ; 1.0                     ; 108 MB              ; 00:00:02                           ;
-; Total                   ; 00:00:30     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 184 MB              ; 00:00:03                           ;
+; Fitter                  ; 00:00:04     ; 1.0                     ; 195 MB              ; 00:00:04                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 178 MB              ; 00:00:02                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 114 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

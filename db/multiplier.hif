@@ -22,18 +22,41 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-p_register
+state_machine
+# storage
+db|multiplier.(1).cnf
+db|multiplier.(1).cnf
+# case_insensitive
+# source_file
+state_machine.bdf
+e1b064c6b8b05443836c10e761a04dba
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+state_machine:inst1
+}
+# macro_sequence
+
+# end
+# entity
+np_register
 # storage
 db|multiplier.(2).cnf
 db|multiplier.(2).cnf
 # case_insensitive
 # source_file
-p_register.bdf
-26f3f996e5b848fede89e18af8ac32
+np_register.bdf
+fc5463d1dbcf1c655a717229243324
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+np_register:inst16
 }
 # macro_sequence
 
@@ -59,21 +82,21 @@ input_select:inst9
 
 # end
 # entity
-add_subt_select
+bus_combine
 # storage
-db|multiplier.(5).cnf
-db|multiplier.(5).cnf
+db|multiplier.(4).cnf
+db|multiplier.(4).cnf
 # case_insensitive
 # source_file
-add_subt_select.bdf
-cc2d70e98628fd7628a91171a7af7ff
+bus_combine.bdf
+3cb49238cc060ec39e198b2b7fcd41
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-add_subt_select:inst21
+bus_combine:inst19
 }
 # macro_sequence
 
@@ -95,40 +118,6 @@ AUTO
 # hierarchies {
 add_subt_decision:inst14
 }
-# macro_sequence
-
-# end
-# entity
-logic
-# storage
-db|multiplier.(8).cnf
-db|multiplier.(8).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-logic.vhd
-2f6f5a599426cae1d0ec30bdc1212b5
-4
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-adder:inst17|logic:inst
-adder:inst18|logic:inst
-}
-# lmf
-c:|altera|80|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end
@@ -180,7 +169,7 @@ db|multiplier.(10).cnf
 # case_insensitive
 # source_file
 bit_flips.bdf
-83a371e1cccce6325f1de25268d0ccea
+dafd93978a95b9d3fdfbff848d98c
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -429,551 +418,42 @@ bit_flips:inst|busmux:inst41|lpm_mux:$00000|mux_6fc:auto_generated
 
 # end
 # entity
-lpm_add_sub
+multiplier
 # storage
-db|multiplier.(15).cnf
-db|multiplier.(15).cnf
+db|multiplier.(0).cnf
+db|multiplier.(0).cnf
 # case_insensitive
 # source_file
-c:|altera|80|quartus|libraries|megafunctions|lpm_add_sub.tdf
-7ed3ce32dc22ef23ef21070b6a0bdff
-6
-# user_parameter {
-LPM_WIDTH
-4
-PARAMETER_SIGNED_DEC
-USR
-LPM_REPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-LPM_DIRECTION
-SUB
-PARAMETER_UNKNOWN
-USR
-ONE_INPUT_IS_CONSTANT
-NO
-PARAMETER_UNKNOWN
-USR
-LPM_PIPELINE
-0
-PARAMETER_UNKNOWN
-DEF
-MAXIMIZE_SPEED
-5
-PARAMETER_UNKNOWN
-DEF
-REGISTERED_AT_END
-0
-PARAMETER_UNKNOWN
-DEF
-OPTIMIZE_FOR_SPEED
-5
-PARAMETER_UNKNOWN
-USR
-USE_CS_BUFFERS
-1
-PARAMETER_UNKNOWN
-DEF
-CARRY_CHAIN
-MANUAL
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN_LENGTH
-48
-CARRY_CHAIN_LENGTH
-USR
-DEVICE_FAMILY
-Cyclone
-PARAMETER_UNKNOWN
-USR
-USE_WYS
-OFF
-PARAMETER_UNKNOWN
-DEF
-STYLE
-FAST
-PARAMETER_UNKNOWN
-USR
-CBXI_PARAMETER
-add_sub_ndh
-PARAMETER_UNKNOWN
-USR
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-result3
--1
-3
-result2
--1
-3
-result1
--1
-3
-result0
--1
-3
-datab3
--1
-3
-datab2
--1
-3
-datab1
--1
-3
-datab0
--1
-3
-dataa3
--1
-3
-dataa2
--1
-3
-dataa1
--1
-3
-dataa0
--1
-3
-}
-# include_file {
-c:|altera|80|quartus|libraries|megafunctions|altshift.inc
-70fa13aee7d6d160ef20b2de32813a
-c:|altera|80|quartus|libraries|megafunctions|aglobal80.inc
-9274497d636e3ed37111b8c54bf938
-c:|altera|80|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
-c:|altera|80|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
-c08f604aefba5b4f1f554e565113c6
-c:|altera|80|quartus|libraries|megafunctions|look_add.inc
-ab9f577d30c5ef3166fab6c1c32c4a
-c:|altera|80|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
-ae39f15ed67cc9a095d29f68f6ad0f8
-c:|altera|80|quartus|libraries|megafunctions|bypassff.inc
-8e8df160d449a63ec15dc86ecf2b373f
-}
-# macro_sequence
-
-# end
-# entity
-addcore
-# storage
-db|multiplier.(16).cnf
-db|multiplier.(16).cnf
-# case_insensitive
-# source_file
-c:|altera|80|quartus|libraries|megafunctions|addcore.tdf
-2cad15b672cb85c21754eff1590dc6c
-6
-# user_parameter {
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-width
-4
-PARAMETER_UNKNOWN
-USR
-REPRESENTATION
-UNSIGNED
-PARAMETER_UNKNOWN
-USR
-DIRECTION
-SUB
-PARAMETER_UNKNOWN
-USR
-USE_CS_BUFFERS
-1
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN
-MANUAL
-PARAMETER_UNKNOWN
-USR
-CARRY_CHAIN_LENGTH
-48
-CARRY_CHAIN_LENGTH
-USR
-DEVICE_FAMILY
-Cyclone
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-result3
--1
-3
-result2
--1
-3
-result1
--1
-3
-result0
--1
-3
-datab3
--1
-3
-datab2
--1
-3
-datab1
--1
-3
-datab0
--1
-3
-dataa3
--1
-3
-dataa2
--1
-3
-dataa1
--1
-3
-dataa0
--1
-3
-}
-# include_file {
-c:|altera|80|quartus|libraries|megafunctions|aglobal80.inc
-9274497d636e3ed37111b8c54bf938
-c:|altera|80|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
-c:|altera|80|quartus|libraries|megafunctions|a_csnbuffer.inc
-49de46f6a395e2e6edecabe6eac9d873
-}
-# macro_sequence
-
-# end
-# entity
-a_csnbuffer
-# storage
-db|multiplier.(17).cnf
-db|multiplier.(17).cnf
-# case_insensitive
-# source_file
-c:|altera|80|quartus|libraries|megafunctions|a_csnbuffer.tdf
-0a953daa377c9212d3c374d37725bd
-6
-# user_parameter {
-WIDTH
-4
-PARAMETER_UNKNOWN
-USR
-NEED_CARRY
-0
-PARAMETER_UNKNOWN
-DEF
-USE_CS_BUFFERS
-1
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-sout0
--1
-3
-sin0
--1
-3
-}
-# macro_sequence
-
-# end
-# entity
-a_csnbuffer
-# storage
-db|multiplier.(18).cnf
-db|multiplier.(18).cnf
-# case_insensitive
-# source_file
-c:|altera|80|quartus|libraries|megafunctions|a_csnbuffer.tdf
-0a953daa377c9212d3c374d37725bd
-6
-# user_parameter {
-WIDTH
-4
-PARAMETER_UNKNOWN
-USR
-NEED_CARRY
-1
-PARAMETER_UNKNOWN
-USR
-USE_CS_BUFFERS
-1
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-sout3
--1
-3
-sout2
--1
-3
-sout1
--1
-3
-sout0
--1
-3
-sin3
--1
-3
-sin2
--1
-3
-sin1
--1
-3
-sin0
--1
-3
-cout3
--1
-3
-cout2
--1
-3
-cout1
--1
-3
-cout0
--1
-3
-cin3
--1
-3
-cin2
--1
-3
-cin1
--1
-3
-cin0
--1
-3
-}
-# macro_sequence
-
-# end
-# entity
-altshift
-# storage
-db|multiplier.(19).cnf
-db|multiplier.(19).cnf
-# case_insensitive
-# source_file
-c:|altera|80|quartus|libraries|megafunctions|altshift.tdf
-104af1c91d9166cdeca72d5b588cebf
-6
-# user_parameter {
-WIDTH
-4
-PARAMETER_UNKNOWN
-USR
-DEPTH
-0
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-result3
--1
-3
-result2
--1
-3
-result1
--1
-3
-result0
--1
-3
-data3
--1
-3
-data2
--1
-3
-data1
--1
-3
-data0
--1
-3
-}
-# macro_sequence
-
-# end
-# entity
-altshift
-# storage
-db|multiplier.(20).cnf
-db|multiplier.(20).cnf
-# case_insensitive
-# source_file
-c:|altera|80|quartus|libraries|megafunctions|altshift.tdf
-104af1c91d9166cdeca72d5b588cebf
-6
-# user_parameter {
-WIDTH
-1
-PARAMETER_UNKNOWN
-USR
-DEPTH
-0
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-result0
--1
-3
-data0
--1
-3
-}
-# macro_sequence
-
-# end
-# entity
-np_register
-# storage
-db|multiplier.(4).cnf
-db|multiplier.(4).cnf
-# case_insensitive
-# source_file
-np_register.bdf
-fc5463d1dbcf1c655a717229243324
+multiplier.bdf
+36d903337a03b650a3c35625be19b4
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-np_register:inst16
+|
 }
 # macro_sequence
 
 # end
 # entity
-temp_register
+add_subt_select
 # storage
-db|multiplier.(21).cnf
-db|multiplier.(21).cnf
+db|multiplier.(5).cnf
+db|multiplier.(5).cnf
 # case_insensitive
 # source_file
-temp_register.bdf
-6fc638c6b843fca7c18dba2e66c7d513
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# macro_sequence
-
-# end
-# entity
-bus_combine
-# storage
-db|multiplier.(22).cnf
-db|multiplier.(22).cnf
-# case_insensitive
-# source_file
-bus_combine.bdf
-436ce9618338f9bb81e0c429ee14f5a2
+add_subt_select.bdf
+83c9d5423f8c5c1d5bacc951684fe6b8
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-bus_combine:inst19
+add_subt_select:inst21
 }
-# macro_sequence
-
-# end
-# entity
-state_machine
-# storage
-db|multiplier.(1).cnf
-db|multiplier.(1).cnf
-# case_insensitive
-# source_file
-state_machine.bdf
-e1b064c6b8b05443836c10e761a04dba
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-state_machine:inst1
-}
-# macro_sequence
-
-# end
-# entity
-lpm_add_sub0
-# storage
-db|multiplier.(14).cnf
-db|multiplier.(14).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-lpm_add_sub0.vhd
-413767d69baf976aa63b636db2bb6dd4
-4
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# lmf
-c:|altera|80|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end
@@ -985,7 +465,7 @@ db|multiplier.(7).cnf
 # case_insensitive
 # source_file
 adder.bdf
-1a099f296d5614862dc3c4b332c54e
+52da92acc87abcd264149657f7577fac
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -999,22 +479,36 @@ adder:inst18
 
 # end
 # entity
-multiplier
+logic
 # storage
-db|multiplier.(0).cnf
-db|multiplier.(0).cnf
+db|multiplier.(8).cnf
+db|multiplier.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
 # case_insensitive
 # source_file
-multiplier.bdf
-44dc48aacc3f5b1bcefba6287851cff7
-25
+logic.vhd
+c04d5ea80346cf3affca3ee4aca627
+4
 # internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
 }
 # hierarchies {
-|
+adder:inst17|logic:inst
+adder:inst18|logic:inst
 }
+# lmf
+c:|altera|80|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end

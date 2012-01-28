@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multiplier
-Tue Jan 10 08:38:02 2012
+Sat Jan 28 12:14:05 2012
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
 
 
@@ -42,13 +42,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Jan 10 08:38:02 2012    ;
+; Analysis & Synthesis Status ; Successful - Sat Jan 28 12:14:05 2012    ;
 ; Quartus II Version          ; 8.0 Build 215 05/29/2008 SJ Full Version ;
 ; Revision Name               ; multiplier                               ;
 ; Top-level Entity Name       ; multiplier                               ;
 ; Family                      ; Cyclone                                  ;
-; Total logic elements        ; 71                                       ;
-; Total pins                  ; 51                                       ;
+; Total logic elements        ; 67                                       ;
+; Total pins                  ; 69                                       ;
 ; Total virtual pins          ; 0                                        ;
 ; Total memory bits           ; 0                                        ;
 ; DSP block 9-bit elements    ; N/A until Partition Merge                ;
@@ -135,17 +135,17 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                      ;
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------+
-; multiplier.bdf                   ; yes             ; User Block Diagram/Schematic File  ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/multiplier.bdf        ;
-; state_machine.bdf                ; yes             ; User Block Diagram/Schematic File  ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/state_machine.bdf     ;
-; input_select.bdf                 ; yes             ; User Block Diagram/Schematic File  ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/input_select.bdf      ;
-; bit_flips.bdf                    ; yes             ; User Block Diagram/Schematic File  ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/bit_flips.bdf         ;
-; add_subt_decision.bdf            ; yes             ; User Block Diagram/Schematic File  ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/add_subt_decision.bdf ;
-; adder.bdf                        ; yes             ; User Block Diagram/Schematic File  ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/adder.bdf             ;
-; add_subt_select.bdf              ; yes             ; User Block Diagram/Schematic File  ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/add_subt_select.bdf   ;
-; bus_combine.bdf                  ; yes             ; User Block Diagram/Schematic File  ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/bus_combine.bdf       ;
-; np_register.bdf                  ; yes             ; User Block Diagram/Schematic File  ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/np_register.bdf       ;
-; logic.vhd                        ; yes             ; Other                              ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/logic.vhd             ;
-; CLAadder.vhd                     ; yes             ; Other                              ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/CLAadder.vhd          ;
+; multiplier.bdf                   ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/multiplier.bdf        ;
+; state_machine.bdf                ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/state_machine.bdf     ;
+; input_select.bdf                 ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/input_select.bdf      ;
+; bit_flips.bdf                    ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/bit_flips.bdf         ;
+; add_subt_decision.bdf            ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/add_subt_decision.bdf ;
+; adder.bdf                        ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/adder.bdf             ;
+; add_subt_select.bdf              ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/add_subt_select.bdf   ;
+; bus_combine.bdf                  ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/bus_combine.bdf       ;
+; np_register.bdf                  ; yes             ; User Block Diagram/Schematic File  ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/np_register.bdf       ;
+; logic.vhd                        ; yes             ; Other                              ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/logic.vhd             ;
+; CLAadder.vhd                     ; yes             ; Other                              ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/CLAadder.vhd          ;
 ; BUSMUX.tdf                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/BUSMUX.tdf                                                           ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_mux.inc                                                          ;
 ; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/lpm_mux.tdf                                                          ;
@@ -153,42 +153,42 @@ applicable agreement for further details.
 ; muxlut.inc                       ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/muxlut.inc                                                           ;
 ; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/bypassff.inc                                                         ;
 ; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/80/quartus/libraries/megafunctions/altshift.inc                                                         ;
-; db/mux_6fc.tdf                   ; yes             ; Auto-Generated Megafunction        ; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/db/mux_6fc.tdf        ;
+; db/mux_6fc.tdf                   ; yes             ; Auto-Generated Megafunction        ; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/db/mux_6fc.tdf        ;
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Total logic elements                        ; 71                      ;
-;     -- Combinational with no register       ; 59                      ;
-;     -- Register only                        ; 8                       ;
-;     -- Combinational with a register        ; 4                       ;
-;                                             ;                         ;
-; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 36                      ;
-;     -- 3 input functions                    ; 15                      ;
-;     -- 2 input functions                    ; 12                      ;
-;     -- 1 input functions                    ; 0                       ;
-;     -- 0 input functions                    ; 0                       ;
-;                                             ;                         ;
-; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 71                      ;
-;     -- arithmetic mode                      ; 0                       ;
-;     -- qfbk mode                            ; 0                       ;
-;     -- register cascade mode                ; 0                       ;
-;     -- synchronous clear/load mode          ; 0                       ;
-;     -- asynchronous clear/load mode         ; 3                       ;
-;                                             ;                         ;
-; Total registers                             ; 12                      ;
-; I/O pins                                    ; 51                      ;
-; Maximum fan-out node                        ; np_register:inst16|inst ;
-; Maximum fan-out                             ; 13                      ;
-; Total fan-out                               ; 277                     ;
-; Average fan-out                             ; 2.27                    ;
-+---------------------------------------------+-------------------------+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Total logic elements                        ; 67                       ;
+;     -- Combinational with no register       ; 55                       ;
+;     -- Register only                        ; 8                        ;
+;     -- Combinational with a register        ; 4                        ;
+;                                             ;                          ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 38                       ;
+;     -- 3 input functions                    ; 12                       ;
+;     -- 2 input functions                    ; 9                        ;
+;     -- 1 input functions                    ; 0                        ;
+;     -- 0 input functions                    ; 0                        ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 67                       ;
+;     -- arithmetic mode                      ; 0                        ;
+;     -- qfbk mode                            ; 0                        ;
+;     -- register cascade mode                ; 0                        ;
+;     -- synchronous clear/load mode          ; 0                        ;
+;     -- asynchronous clear/load mode         ; 3                        ;
+;                                             ;                          ;
+; Total registers                             ; 12                       ;
+; I/O pins                                    ; 69                       ;
+; Maximum fan-out node                        ; np_register:inst16|inst7 ;
+; Maximum fan-out                             ; 12                       ;
+; Total fan-out                               ; 288                      ;
+; Average fan-out                             ; 2.12                     ;
++---------------------------------------------+--------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -196,18 +196,19 @@ applicable agreement for further details.
 +--------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                            ; Library Name ;
 +--------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------+--------------+
-; |multiplier                          ; 71 (2)      ; 12           ; 0           ; 51   ; 0            ; 59 (1)       ; 8 (0)             ; 4 (1)            ; 0 (0)           ; 0 (0)      ; |multiplier                                                                    ;              ;
-;    |add_subt_select:inst21|          ; 16 (16)     ; 0            ; 0           ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|add_subt_select:inst21                                             ; work         ;
-;    |adder:inst17|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17                                                       ; work         ;
-;       |CLAadder:inst1|               ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17|CLAadder:inst1                                        ; work         ;
-;       |CLAadder:inst2|               ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17|CLAadder:inst2                                        ; work         ;
-;       |CLAadder:inst3|               ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17|CLAadder:inst3                                        ; work         ;
+; |multiplier                          ; 67 (2)      ; 12           ; 0           ; 69   ; 0            ; 55 (1)       ; 8 (0)             ; 4 (1)            ; 0 (0)           ; 0 (0)      ; |multiplier                                                                    ;              ;
+;    |add_subt_decision:inst14|        ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|add_subt_decision:inst14                                           ; work         ;
+;    |add_subt_select:inst21|          ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|add_subt_select:inst21                                             ; work         ;
+;    |adder:inst17|                    ; 6 (0)       ; 0            ; 0           ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17                                                       ; work         ;
+;       |CLAadder:inst1|               ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17|CLAadder:inst1                                        ; work         ;
 ;       |logic:inst|                   ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst17|logic:inst                                            ; work         ;
-;    |adder:inst18|                    ; 3 (0)       ; 0            ; 0           ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18                                                       ; work         ;
+;    |adder:inst18|                    ; 9 (0)       ; 0            ; 0           ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18                                                       ; work         ;
 ;       |CLAadder:inst1|               ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|CLAadder:inst1                                        ; work         ;
+;       |CLAadder:inst2|               ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|CLAadder:inst2                                        ; work         ;
+;       |CLAadder:inst3|               ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|CLAadder:inst3                                        ; work         ;
 ;       |CLAadder:inst4|               ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|CLAadder:inst4                                        ; work         ;
-;       |logic:inst|                   ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|logic:inst                                            ; work         ;
-;    |bit_flips:inst|                  ; 17 (9)      ; 0            ; 0           ; 0    ; 0            ; 17 (9)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst                                                     ; work         ;
+;       |logic:inst|                   ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|adder:inst18|logic:inst                                            ; work         ;
+;    |bit_flips:inst|                  ; 14 (6)      ; 0            ; 0           ; 0    ; 0            ; 14 (6)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst                                                     ; work         ;
 ;       |busmux:inst41|                ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst41                                       ; work         ;
 ;          |lpm_mux:$00000|            ; 4 (0)       ; 0            ; 0           ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst41|lpm_mux:$00000                        ; work         ;
 ;             |mux_6fc:auto_generated| ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |multiplier|bit_flips:inst|busmux:inst41|lpm_mux:$00000|mux_6fc:auto_generated ; work         ;
@@ -272,9 +273,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
-    Info: Processing started: Tue Jan 10 08:37:55 2012
+    Info: Processing started: Sat Jan 28 12:13:58 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multiplier -c multiplier
-Warning: Can't analyze file -- file E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/logic.tdf is missing
+Warning: Can't analyze file -- file E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/logic.tdf is missing
 Info: Found 1 design units, including 1 entities, in source file multiplier.bdf
     Info: Found entity 1: multiplier
 Info: Found 1 design units, including 1 entities, in source file state_machine.bdf
@@ -304,6 +305,7 @@ Info: Found 1 design units, including 1 entities, in source file np_register.bdf
     Info: Found entity 1: np_register
 Info: Elaborating entity "multiplier" for the top level hierarchy
 Info: Elaborating entity "state_machine" for hierarchy "state_machine:inst1"
+Info: Elaborating entity "add_subt_decision" for hierarchy "add_subt_decision:inst14"
 Info: Elaborating entity "np_register" for hierarchy "np_register:inst16"
 Info: Elaborating entity "input_select" for hierarchy "input_select:inst9"
 Info: Elaborating entity "bus_combine" for hierarchy "bus_combine:inst19"
@@ -311,7 +313,6 @@ Warning: INPUTC, OUTPUTC and BIDIRC pins not supported for pin "old_data_in[0..4
 Warning: INPUTC, OUTPUTC and BIDIRC pins not supported for pin "new_data_in[0..3]"
 Warning: INPUTC, OUTPUTC and BIDIRC pins not supported for pin "data_out[0..8]"
 Info: Elaborating entity "add_subt_select" for hierarchy "add_subt_select:inst21"
-Info: Elaborating entity "add_subt_decision" for hierarchy "add_subt_decision:inst14"
 Info: Elaborating entity "adder" for hierarchy "adder:inst17"
 Warning: Using design file logic.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: logic-logic_architecture
@@ -322,6 +323,22 @@ Warning: Using design file CLAadder.vhd, which is not specified as a design file
     Info: Found entity 1: CLAadder
 Info: Elaborating entity "CLAadder" for hierarchy "adder:inst17|CLAadder:inst1"
 Info: Elaborating entity "bit_flips" for hierarchy "bit_flips:inst"
+Warning: Primitive "AND3" of instance "inst1" not used
+Warning: Primitive "AND2" of instance "inst19" not used
+Warning: Primitive "AND3" of instance "inst2" not used
+Warning: Primitive "OR3" of instance "inst20" not used
+Warning: Primitive "OR3" of instance "inst21" not used
+Warning: Primitive "AND3" of instance "inst22" not used
+Warning: Primitive "AND3" of instance "inst23" not used
+Warning: Primitive "AND3" of instance "inst24" not used
+Warning: Primitive "OR3" of instance "inst25" not used
+Warning: Primitive "AND2" of instance "inst27" not used
+Warning: Primitive "AND3" of instance "inst28" not used
+Warning: Primitive "AND3" of instance "inst3" not used
+Warning: Primitive "AND3" of instance "inst4" not used
+Warning: Primitive "AND3" of instance "inst5" not used
+Warning: Primitive "AND3" of instance "inst6" not used
+Warning: Primitive "AND3" of instance "inst7" not used
 Info: Elaborating entity "BUSMUX" for hierarchy "bit_flips:inst|BUSMUX:inst42"
 Info: Elaborated megafunction instantiation "bit_flips:inst|BUSMUX:inst42"
 Info: Instantiated megafunction "bit_flips:inst|BUSMUX:inst42" with the following parameter:
@@ -333,13 +350,13 @@ Info: Found 1 design units, including 1 entities, in source file db/mux_6fc.tdf
 Info: Elaborating entity "mux_6fc" for hierarchy "bit_flips:inst|BUSMUX:inst42|lpm_mux:$00000|mux_6fc:auto_generated"
 Info: Duplicate registers merged to single register
     Info (13350): Duplicate register "np_register:inst16|inst1" merged to single register "np_register:inst16|inst"
-Info: Implemented 122 device resources after synthesis - the final resource count might be different
+Info: Implemented 136 device resources after synthesis - the final resource count might be different
     Info: Implemented 10 input pins
-    Info: Implemented 41 output pins
-    Info: Implemented 71 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Implemented 59 output pins
+    Info: Implemented 67 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 22 warnings
     Info: Peak virtual memory: 178 megabytes
-    Info: Processing ended: Tue Jan 10 08:38:02 2012
+    Info: Processing ended: Sat Jan 28 12:14:05 2012
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:04
 

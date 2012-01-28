@@ -55,7 +55,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 688 368 704 544)
+	(rect 688 248 704 424)
 	(text "OUTPUT" (rect 0 1 10 39)(font "Arial" (font_size 6))(vertical))
 	(text "data_out[0..8]" (rect 0 90 12 158)(font "Arial" )(vertical))
 	(pt 8 0)
@@ -171,11 +171,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 696 368)
-	(pt 696 176)
-	(bus)
-)
-(connector
 	(pt 328 176)
 	(pt 288 176)
 	(bus)
@@ -208,22 +203,27 @@ applicable agreement for further details.
 (connector
 	(pt 568 176)
 	(pt 528 176)
-	(bus)
-)
-(connector
-	(pt 696 176)
-	(pt 608 176)
-	(bus)
-)
-(connector
-	(pt 608 176)
-	(pt 568 176)
 	(bus)
 )
 (connector
 	(text "old_data[1..4],new_data[3..0],new_data[0]" (rect 414 214 619 226)(font "Arial" ))
 	(pt 288 176)
 	(pt 280 176)
+	(bus)
+)
+(connector
+	(pt 696 176)
+	(pt 696 248)
+	(bus)
+)
+(connector
+	(pt 568 176)
+	(pt 608 176)
+	(bus)
+)
+(connector
+	(pt 608 176)
+	(pt 696 176)
 	(bus)
 )
 (junction (pt 368 128))

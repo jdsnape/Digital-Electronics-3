@@ -55,7 +55,7 @@ ARCHITECTURE logic_architecture OF logic IS
 
 	
 BEGIN
-	C1 <= G0 or (P0 and G0);
+	C1 <= G0 or (P0 and C0);
 	C2 <= G1 or (P1 and G0) or (P1 and P0 and C0);
 	C3 <= G2 or (P2 and G1) or (P2 and P1 and G0) or (P2 and P1 and P0 and C0);
 	C4 <= G3 or (P3 and G2) or (P3 and P2 and P1 and G0) or (P3 and P2 and P1 and C0);

@@ -1,5 +1,5 @@
 Assembler report for multiplier
-Tue Jan 10 08:38:13 2012
+Sat Jan 28 12:14:16 2012
 Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
 
 
@@ -10,8 +10,8 @@ Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/multiplier.sof
-  6. Assembler Device Options: E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/multiplier.pof
+  5. Assembler Device Options: E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/multiplier.sof
+  6. Assembler Device Options: E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/multiplier.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jan 10 08:38:13 2012 ;
+; Assembler Status      ; Successful - Sat Jan 28 12:14:16 2012 ;
 ; Revision Name         ; multiplier                            ;
 ; Top-level Entity Name ; multiplier                            ;
 ; Family                ; Cyclone                               ;
@@ -82,30 +82,30 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------------------------------+
 ; File Name                                                                                                  ;
 +------------------------------------------------------------------------------------------------------------+
-; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/multiplier.sof ;
-; E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/multiplier.pof ;
+; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/multiplier.sof ;
+; E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/multiplier.pof ;
 +------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/multiplier.sof ;
+; Assembler Device Options: E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/multiplier.sof ;
 +----------------+---------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                             ;
 +----------------+---------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP1C20F400C7                                                                                                        ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                                                                          ;
-; Checksum       ; 0x001CE46A                                                                                                          ;
+; Checksum       ; 0x001CFFF6                                                                                                          ;
 +----------------+---------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/Dropbox/University/Year 4/Digital Electronics/Assignments 3 - processor/multiplier_block/multiplier.pof ;
+; Assembler Device Options: E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/multiplier.pof ;
 +--------------------+-----------------------------------------------------------------------------------------------------------------+
 ; Option             ; Setting                                                                                                         ;
 +--------------------+-----------------------------------------------------------------------------------------------------------------+
 ; Device             ; EPCS4                                                                                                           ;
 ; JTAG usercode      ; 0x00000000                                                                                                      ;
-; Checksum           ; 0x0628A80C                                                                                                      ;
+; Checksum           ; 0x0628C469                                                                                                      ;
 ; Compression Ratio  ; 3                                                                                                               ;
 +--------------------+-----------------------------------------------------------------------------------------------------------------+
 
@@ -116,13 +116,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
-    Info: Processing started: Tue Jan 10 08:38:10 2012
+    Info: Processing started: Sat Jan 28 12:14:12 2012
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off multiplier -c multiplier
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 173 megabytes
-    Info: Processing ended: Tue Jan 10 08:38:13 2012
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Sat Jan 28 12:14:16 2012
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
