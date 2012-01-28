@@ -2027,10 +2027,10 @@ VECTOR("C:/Documents and Settings/hqtf51/Desktop/multiplier_block/multiplier_blo
 VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESSOR/MULTIPLIER_BLOCK/db/multiplier.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 157300;
-		ZEND = 219800;
-		NUMERATOR = 803;
-		DENOMINATOR = 62500;
+		ZBEGIN = 0;
+		ZEND = 239741;
+		NUMERATOR = 820;
+		DENOMINATOR = 239741;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -2482,7 +2482,7 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "subtract_results";
+		SIGNAL = "final_result";
 		INDEX = 55;
 		FORMAT = T;
 		SCALE = 1;
@@ -2490,7 +2490,7 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "subtract_results[3]";
+		SIGNAL = "final_result[3]";
 		INDEX = 56;
 		FORMAT = E;
 		SCALE = 1;
@@ -2498,7 +2498,7 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "subtract_results[2]";
+		SIGNAL = "final_result[2]";
 		INDEX = 57;
 		FORMAT = E;
 		SCALE = 1;
@@ -2506,7 +2506,7 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "subtract_results[1]";
+		SIGNAL = "final_result[1]";
 		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
@@ -2514,7 +2514,7 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "subtract_results[0]";
+		SIGNAL = "final_result[0]";
 		INDEX = 59;
 		FORMAT = E;
 		SCALE = 1;
@@ -2522,128 +2522,8 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "subtract_ip";
-		INDEX = 60;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "subtract_ip[3]";
-		INDEX = 61;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "subtract_ip[2]";
-		INDEX = 62;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "subtract_ip[1]";
-		INDEX = 63;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "subtract_ip[0]";
-		INDEX = 64;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "inv_multiplicand";
-		INDEX = 65;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "inv_multiplicand[3]";
-		INDEX = 66;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "inv_multiplicand[2]";
-		INDEX = 67;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "inv_multiplicand[1]";
-		INDEX = 68;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "inv_multiplicand[0]";
-		INDEX = 69;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "final_result";
-		INDEX = 70;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "final_result[3]";
-		INDEX = 71;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "final_result[2]";
-		INDEX = 72;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "final_result[1]";
-		INDEX = 73;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "final_result[0]";
-		INDEX = 74;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "Enable";
-		INDEX = 75;
+		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -2651,7 +2531,7 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 	}
 	LINE{
 		SIGNAL = "sm_start";
-		INDEX = 76;
+		INDEX = 61;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -2659,7 +2539,7 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 	}
 	LINE{
 		SIGNAL = "p_load";
-		INDEX = 77;
+		INDEX = 62;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -2667,7 +2547,7 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 	}
 	LINE{
 		SIGNAL = "add_enable";
-		INDEX = 78;
+		INDEX = 63;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -2675,7 +2555,7 @@ VECTOR("E:/DROPBOX/UNIVERSITY/YEAR 4/DIGITAL ELECTRONICS/ASSIGNMENTS 3 - PROCESS
 	}
 	LINE{
 		SIGNAL = "subtract_enable";
-		INDEX = 79;
+		INDEX = 64;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

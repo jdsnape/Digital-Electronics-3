@@ -145,16 +145,6 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
-# hierarchies {
-adder:inst17|CLAadder:inst1
-adder:inst17|CLAadder:inst2
-adder:inst17|CLAadder:inst3
-adder:inst17|CLAadder:inst4
-adder:inst18|CLAadder:inst1
-adder:inst18|CLAadder:inst2
-adder:inst18|CLAadder:inst3
-adder:inst18|CLAadder:inst4
-}
 # lmf
 c:|altera|80|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
@@ -418,26 +408,6 @@ bit_flips:inst|busmux:inst41|lpm_mux:$00000|mux_6fc:auto_generated
 
 # end
 # entity
-multiplier
-# storage
-db|multiplier.(0).cnf
-db|multiplier.(0).cnf
-# case_insensitive
-# source_file
-multiplier.bdf
-36d903337a03b650a3c35625be19b4
-25
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 add_subt_select
 # storage
 db|multiplier.(5).cnf
@@ -471,10 +441,6 @@ adder.bdf
 BLOCK_DESIGN_NAMING
 AUTO
 }
-# hierarchies {
-adder:inst17
-adder:inst18
-}
 # macro_sequence
 
 # end
@@ -502,13 +468,92 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
-# hierarchies {
-adder:inst17|logic:inst
-adder:inst18|logic:inst
-}
 # lmf
 c:|altera|80|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+adder_subtractor
+# storage
+db|multiplier.(14).cnf
+db|multiplier.(14).cnf
+# case_insensitive
+# source_file
+adder_subtractor.bdf
+ba17b91f043ff198b31c718fa16acd3
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+adder_subtractor:inst25
+}
+# macro_sequence
+
+# end
+# entity
+CLA_logic
+# storage
+db|multiplier.(15).cnf
+db|multiplier.(15).cnf
+# case_insensitive
+# source_file
+CLA_logic.bdf
+bff54832c6def3b8022399883ca314e
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+adder_subtractor:inst25|CLA_logic:inst4
+}
+# macro_sequence
+
+# end
+# entity
+simple_adder
+# storage
+db|multiplier.(16).cnf
+db|multiplier.(16).cnf
+# case_insensitive
+# source_file
+simple_adder.bdf
+f6e198559fcf230d19b149470bc5c5
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+adder_subtractor:inst25|simple_adder:inst2
+adder_subtractor:inst25|simple_adder:inst3
+adder_subtractor:inst25|simple_adder:inst7
+adder_subtractor:inst25|simple_adder:inst9
+}
+# macro_sequence
+
+# end
+# entity
+multiplier
+# storage
+db|multiplier.(0).cnf
+db|multiplier.(0).cnf
+# case_insensitive
+# source_file
+multiplier.bdf
+8ec29ee3e6692aa06147f1139a4b2b5
+25
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
 # macro_sequence
 
 # end

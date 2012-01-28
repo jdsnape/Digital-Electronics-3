@@ -52,3 +52,6 @@ set_global_assignment -name QIP_FILE lpm_add_sub0.qip
 set_global_assignment -name BDF_FILE temp_register.bdf
 set_global_assignment -name BDF_FILE np_register.bdf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE multiplier.vwf
+set_global_assignment -name BDF_FILE adder_subtractor.bdf
+set_global_assignment -name BDF_FILE simple_adder.bdf
+set_global_assignment -name BDF_FILE CLA_logic.bdf
