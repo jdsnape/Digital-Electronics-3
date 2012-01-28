@@ -6,7 +6,6 @@ clock => inst28.CLK
 clock => state_machine:inst1.clock
 clock => inst32.IN1
 Las <= state_machine:inst1.Las
-Li <= state_machine:inst1.Li
 sm_start <= state_machine:inst1.start
 p_load <= inst43.DB_MAX_OUTPUT_PORT_TYPE
 add_enable <= add_subt_decision:inst14.add_enable

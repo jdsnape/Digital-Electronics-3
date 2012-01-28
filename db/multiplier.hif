@@ -538,6 +538,36 @@ bus_combine:inst19
 
 # end
 # entity
+overflow_generate
+# storage
+db|multiplier.(17).cnf
+db|multiplier.(17).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+overflow_generate.vhd
+45899c9f7f5d11bee1fbed758f06590
+4
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+c:|altera|80|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
 multiplier
 # storage
 db|multiplier.(0).cnf
@@ -545,7 +575,7 @@ db|multiplier.(0).cnf
 # case_insensitive
 # source_file
 multiplier.bdf
-5f84c65649aef5b5b8c4fd11cb
+3ae3bc8f3fcaa894a6a8ec7a1b85f0d9
 25
 # internal_option {
 BLOCK_DESIGN_NAMING
